@@ -1,0 +1,14 @@
+version: 1
+project:
+  title: How the Ontario Electricity Market Works
+  exports:
+    - format: pdf
+      template: plain_latex
+      output: exports/book.pdf
+  toc:
+    - file: 1_introduction.md
+    - file: 2_supply_and_demand_in_economic_markets.md
+site:
+  options:
+    folders: true
+  template: book-theme
