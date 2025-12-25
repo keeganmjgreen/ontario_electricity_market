@@ -4,7 +4,7 @@ project:
   github: keeganmjgreen/ontario_electricity_market
   toc:
     - file: 1_introduction.md
-    - file: 2_supply_and_demand_in_economic_markets.md
+    - file: 2_supply_and_demand_of_electricity.md
   exports:
     - format: pdf
       template: plain_latex
