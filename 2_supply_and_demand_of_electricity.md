@@ -10,9 +10,9 @@ But if a café tries to undercut its neighbors, the other cafés will follow sui
 
 Customers' demand for espresso shots is based on how much the cafés charge for each one; there will be fewer customers if the cafés charge more and vice-versa. Thus, the rate at which customers buy espresso is a function of the price per espresso shot. This function is called the demand curve, which models buyer behavior in aggregate and is generally monotonically decreasing. The demand curve changes with time; for example, demand for espresso is greatest in the morning.
 
-If the cafés have to make more espresso, they will have to purchase more espresso beans. They will have to call upon additional baristas to help, or in general have to pay each barista more per hour&mdash;more per shot, essentially. In other words, the cafés have a cost per espresso shot, which is reflected in the price they charge for each one. However, the cafés' price per shot is not constant. If the cafés are overwhelmed with customers, they may charge more for each espresso shot to take advantage of the situation and make more profit per shot. The cafés may have to augment their baristas' hourly wages with bonus pay to keep them happy. In order to meet the demand, the cafés may also have to bust out their older, less efficient espresso machines from their back rooms that use more espresso beans per shot. On the other hand, if the cafés are having a slow day, they may reduce their price and sacrifice some profit per espresso shot in order to make the most of the low demand. This is called dynamic pricing. The price is a function of the rate at which espresso shots are being sold. This function is called the supply curve, which models seller behavior in aggregate and is generally monotonically increasing.<!-- * -->
+If the cafés have to make more espresso, they will have to purchase more espresso beans. They will have to call upon additional baristas to help, or in general have to pay each barista more per hour&mdash;more per shot, essentially. In other words, the cafés have a cost per espresso shot, which is reflected in the price they charge for each one. However, the cafés' price per shot is not constant. If the cafés are overwhelmed with customers, they may charge more for each espresso shot to take advantage of the situation and make more profit per shot. The cafés may have to augment their baristas' hourly wages with bonus pay to keep them happy. In order to meet the demand, the cafés may also have to bust out their older, less efficient espresso machines from their back rooms that use more espresso beans per shot. On the other hand, if the cafés are having a slow day, they may reduce their price and sacrifice some profit per espresso shot in order to make the most of the low demand. This is called dynamic pricing. The price is a function of the rate at which espresso shots are being sold. This function is called the supply curve, which models seller behavior in aggregate and is generally monotonically increasing.
 
-<!-- *What about economies of scale? Pareto optimality, etc. -->
+A given café is willing to sell espresso at or above a certain price, and a given customer is willing to buy at or below a certain price.
 
 ## The market clearing process
 
@@ -20,7 +20,7 @@ The above principles are true not just for a neighborhood of cafés but for any 
 
 The allocation of buyers to sellers (customers to cafés) is a process called *clearing the market*. This determines the quantity of goods that gets exchanged in the market, $Q^*$, and at what price, $P^*$. This price is known as the *market price* or *market-clearing price*. Sellers who charge a low price are able to produce at a low cost and do not price-gouge. A capitalist market rewards such sellers, giving them priority over other, less efficient ones. At the same time, a capitalist market rewards buyers who are willing to pay a high price, giving them priority over other buyers who don't value the product as much. It follows that we can model the market clearing process by allocating an increasing quantity of goods to the buyers and sellers, starting with the buyers who are willing to pay the most and the sellers who are willing to charge the least, until the buying price equals the selling price.
 
-We can represent this model graphically (or mathematically) by plotting the supply and demand curves as shown in [](#fig_2_1). The market-clearing price $P^*$ and quantity $Q^*$ are dictated by the point where the two curves intersect. The area under the supply curve until a quantity $Q$ represents the cost $C$ of selling that quantity, equal to the production cost plus the profit margin. The area under the demand curve until a quantity $Q$ represents the cumulative value delivered to buyers by that quantity, known in economics as *utility*, $U\!$. Subject to the constraint that the quantity sold must be the same as the quantity bought, $Q^*$ simultaneously maximizes buyer utility and minimizes seller cost, or in other words maximizes $U - C$.
+We can represent this model graphically (or mathematically) by plotting the supply and demand curves as shown in [](#fig_2_1). The market-clearing price $P^*$ and quantity $Q^*$ are dictated by the point where the two curves intersect. The area under the supply curve until a quantity $Q$ represents the cost $C$ of selling that quantity, equal to the production cost plus the profit margin. The area under the demand curve until a quantity $Q$ represents the cumulative value delivered to buyers by that quantity, known in economics as *utility*, $U\!$. Subject to the constraint that the quantity sold must be the same as the quantity bought, $Q^*$ simultaneously maximizes buyer utility and minimizes seller cost. The difference $U - C$ is known as *welfare*, $W\!$, in economics. In clearing the market, welfare is maximized.
 
 ```{figure} img/fig_2_1.png
 :label: fig_2_1
@@ -44,11 +44,61 @@ The second reason for which the electricity market cannot clear itself is that r
 
 Thus, the electricity market must be administered by a regulatory body&mdash;the ISO&mdash;that monitors the demand, and tells each generator how much to supply such that the total supply exactly equals the demand at all times. It is worth it to have an organization that is different to the company or companies who own and operate the generators, because it fosters healthy competition between the generation companies, which reduces the cost of electricity.
 
-## Bids to buy and offers to sell
+## Bids to buy and offers to sell power
 
-Loads and generators submit bids to buy power and offers to sell power, respectively. Bids and offers are known in general as market submissions. Each submission includes a list of price-quantity pairs. For an offer, the price per MWh must monotonically increase as the quantity of power increases, and for a bid, the price per MWh must monotonically decrease as the quantity of power increases. If these sound similar to supply and demand curves, it's because they are! In an electricity market with one generator and one load, the generator's $(P, Q)$ pairs would define the supply curve and the load's $(P, Q)$ pairs would define the demand curve.
+Loads and generators submit bids to buy power and offers to sell power, respectively. Bids and offers are known in general as market submissions. Each submission includes a list of price-quantity pairs. In a given price-quantity pair, the quantity is the maximum quantity of power that a generator is willing to sell, or that a load is willing to buy, at the corresponding price in the pair. The price is measured in units of currency per MWh (we will use dollars as our unit of currency), and the quantity is measured in MW. For an offer, the price must monotonically increase as the quantity increases, and for a bid, the price must monotonically decrease as the quantity increases.
 
-<!-- TODO -->
+If these sound similar to supply and demand curves, it's because they are! In an electricity market with one generator and one load, the generator's $(P_\mathrm{G}, Q_\mathrm{G})$ pairs would define the market's supply curve and the load's $(P_\mathrm{L}, Q_\mathrm{L})$ pairs would define the market's demand curve. The two curves' intersection determines the quantity $Q^*$ of power that will be delivered at the market-clearing price $P^*$, which maximizes $U - C$.
+
+Consider the example shown in {ref}`fig_2_2`. The generator says they are willing to produce up to 6 MW for \$3/MWh, or up to 10 MW for \$10/MWh. The load says they are willing to consume up to 4 MW for \$10/MWh, or up to 10 MW for \$4/MWh. The market clears at $Q^* = 6 \ \mathrm{MW}$ and $P^* = \$4/\mathrm{MWh}$.
+
+```{figure} img/fig_2_2.png
+:label: fig_2_2
+
+Supply and demand curves formed by the price-quantity pairs of a generator and load, respectively, in a market with only the one generator and load.
+```
+
+What if there are two generators, $\mathrm{G1}$ and $\mathrm{G2}$, and two loads, $\mathrm{L1}$ and $\mathrm{L2}$? Consider the price-quantity pairs shown in {ref}`fig_2_3`.
+
+```{figure} img/fig_2_3.png
+:label: fig_2_3
+
+Price-quantity pairs of two generators and two loads.
+```
+
+In clearing the market, we still want to maximize $W = U - C$ subject to the constraint that the total quantity sold, $Q_\mathrm{G1} + Q_\mathrm{G2}$, must equal the total quantity bought, $Q_\mathrm{L1} + Q_\mathrm{L2}$.
+
+(eq_1)=
+$$
+\begin{aligned}
+& \! \max_{Q_\mathrm{G1}, \, Q_\mathrm{G2}, \, Q_\mathrm{L1}, \, Q_\mathrm{L2}} W(Q_\mathrm{G1}, Q_\mathrm{G2}, Q_\mathrm{L1}, Q_\mathrm{L2}) \\
+& \text{subject to} \quad Q_\mathrm{G1} + Q_\mathrm{G2} = Q_\mathrm{L1} + Q_\mathrm{L2}
+\end{aligned}
+$$
+
+Where the total seller cost is the total area under each generator's supply curve, up to the quantity produced by each generator:
+
+$$
+C(Q_\mathrm{G1}, Q_\mathrm{G2}) = \int_0^{\, Q_\mathrm{G1}} p_\mathrm{G1}(q) \, \mathrm{d} q + \int_0^{\, Q_\mathrm{G2}} p_\mathrm{G2}(q) \, \mathrm{d} q
+$$
+
+And the total buyer utility is the total area under each load's demand curve, up to the quantity consumed by each load:
+
+$$
+U(Q_\mathrm{L1}, Q_\mathrm{L2}) = \int_0^{\, Q_\mathrm{L1}} p_\mathrm{L1}(q) \, \mathrm{d} q + \int_0^{\, Q_\mathrm{L2}} p_\mathrm{L2}(q) \, \mathrm{d} q
+$$
+
+```{figure} img/fig_2_4.png
+:label: fig_2_4
+
+Price-quantity pairs of two generators and two loads, showing their optimal costs and utility values, respectively.
+```
+
+```{figure} img/fig_2_5.png
+:label: fig_2_5
+
+Supply and demand curves spliced together from two generators and two loads, respectively, showing the resulting market-clearing price and quantity.
+```
 
 ## The market network
 
