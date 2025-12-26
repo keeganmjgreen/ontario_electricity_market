@@ -1,9 +1,22 @@
 {
     "cSpell.words": [
+        "arrowprops",
+        "arrowstyle",
+        "edgecolor",
+        "fontsize",
         "HVDC",
         "IESO",
         "incentivizes",
-        "keeganmjgreen"
+        "keeganmjgreen",
+        "Labelable",
+        "mathrm",
+        "matplotlib",
+        "ndarray",
+        "numpy",
+        "pydantic",
+        "textcoords",
+        "usetex",
+        "xytext",
     ],
     "editor.lineNumbers": "off",
     "editor.rulers": [],

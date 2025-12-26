@@ -1,4 +1,5 @@
 _build/
 .vscode/tasks.json
+*.pyc
 exports/
 ontario_electricity_market.egg-info/
