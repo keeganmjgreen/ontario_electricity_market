@@ -16,7 +16,9 @@
         "pydantic",
         "textcoords",
         "usetex",
+        "xlim",
         "xytext",
+        "ylim"
     ],
     "editor.lineNumbers": "off",
     "editor.rulers": [],
