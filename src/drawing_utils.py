@@ -50,7 +50,7 @@ class _Labelable(abc.ABC):
     ):
         ax.annotate(
             text,
-            xy=loc._xy,
+            xy=loc.xy,
             textcoords="offset points",
             xytext=offset,
             ha=ha,
@@ -71,7 +71,7 @@ class Point(_Drawable, _Labelable):
             return cls(*point_like)
 
     @property
-    def _xy(self) -> tuple[float, float]:
+    def xy(self) -> tuple[float, float]:
         return self.x, self.y
 
     def drawn(self, ax: Axes) -> Self:
@@ -165,8 +165,8 @@ class Segment(_Rotatable, _Drawable):
     def drawn(self, ax: Axes, linewidth: float = 0.5) -> Self:
         ax.annotate(
             "",
-            xytext=self.start._xy,
-            xy=self.end._xy,
+            xytext=self.start.xy,
+            xy=self.end.xy,
             arrowprops=dict(arrowstyle=self._arrowstyle, linewidth=linewidth),
         )
         return self
