@@ -25,6 +25,7 @@ class _Drawable(abc.ABC):
 
 
 _HorizontalAlignment = Literal["left", "right", "center"]
+_VerticalAlignment = Literal["top", "center_baseline", "center", "baseline", "bottom"]
 
 
 class _Labelable(abc.ABC):
@@ -34,6 +35,7 @@ class _Labelable(abc.ABC):
         text: str,
         offset: tuple[float, float] = (0, 0),
         ha: _HorizontalAlignment = "center",
+        va: _VerticalAlignment = "center",
     ) -> Self:
         raise NotImplementedError
 
@@ -44,6 +46,7 @@ class _Labelable(abc.ABC):
         text: str,
         offset: tuple[float, float],
         ha: _HorizontalAlignment,
+        va: _VerticalAlignment,
     ):
         ax.annotate(
             text,
@@ -51,6 +54,7 @@ class _Labelable(abc.ABC):
             textcoords="offset points",
             xytext=offset,
             ha=ha,
+            va=va,
         )
 
 
@@ -80,8 +84,9 @@ class Point(_Drawable, _Labelable):
         text: str,
         offset: tuple[float, float] = (0, 0),
         ha: _HorizontalAlignment = "center",
+        va: _VerticalAlignment = "center",
     ) -> Self:
-        self._label(ax, self, text, offset, ha)
+        self._label(ax, self, text, offset, ha, va)
         return self
 
     def __add__(self, other: Point) -> Point:
@@ -225,6 +230,7 @@ class Arc(_Rotatable, _Drawable, _Labelable):
         text: str,
         offset: tuple[float, float] = (0, 0),
         ha: _HorizontalAlignment = "center",
+        va: _VerticalAlignment = "center",
     ) -> Self:
-        self._label(ax, self.mid, text, offset, ha)
+        self._label(ax, self.mid, text, offset, ha, va)
         return self
