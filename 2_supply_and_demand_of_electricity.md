@@ -50,7 +50,7 @@ Loads and generators submit bids to buy power and offers to sell power, respecti
 
 If these sound similar to supply and demand curves, it's because they are! In an electricity market with one generator and one load, the generator's $(P_\mathrm{G}, Q_\mathrm{G})$ pairs would define the market's supply curve and the load's $(P_\mathrm{L}, Q_\mathrm{L})$ pairs would define the market's demand curve. The two curves' intersection determines the quantity $Q^*$ of power that will be delivered at the market-clearing price $P^*$, which maximizes $U - C$.
 
-Consider the example shown in {ref}`fig_2_2`. The generator says they are willing to produce up to 6 MW for \$3/MWh, or up to 10 MW for \$10/MWh. The load says they are willing to consume up to 4 MW for \$10/MWh, or up to 10 MW for \$4/MWh. The market clears at $Q^* = 6 \ \mathrm{MW}$ and $P^* = \$4/\mathrm{MWh}$.
+Consider the example shown in {ref}`fig_2_2`. The generator says they are willing to produce up to 6 MW for \$2/MWh, or up to 9 MW for \$7/MWh. The load says they are willing to consume up to 4 MW for \$8/MWh, or up to 8 MW for \$5/MWh. The market clears at $Q^* = 6 \ \mathrm{MW}$ and $P^* = \$5/\mathrm{MWh}$.
 
 ```{figure} img/fig_2_2.png
 :label: fig_2_2
@@ -88,6 +88,8 @@ $$
 U(Q_\mathrm{L1}, Q_\mathrm{L2}) = \int_0^{\, Q_\mathrm{L1}} p_\mathrm{L1}(q) \, \mathrm{d} q + \int_0^{\, Q_\mathrm{L2}} p_\mathrm{L2}(q) \, \mathrm{d} q
 $$
 
+This optimization problem can be simplified by splicing the generators and loads' price-quantity pairs into a unified supply curve and a unified demand curve, respectively.
+
 ```{figure} img/fig_2_4.png
 :label: fig_2_4
 
@@ -97,7 +99,7 @@ Price-quantity pairs of two generators and two loads, showing their optimal cost
 ```{figure} img/fig_2_5.png
 :label: fig_2_5
 
-Supply and demand curves spliced together from two generators and two loads, respectively, showing the resulting market-clearing price and quantity.
+Supply and demand curves spliced together from the price-quantity pairs of two generators and two loads, respectively, showing the resulting market-clearing price and quantity.
 ```
 
 ## The market network
