@@ -24,6 +24,7 @@ We can represent this model graphically (or mathematically) by plotting the supp
 
 ```{figure} img/fig_2_1.png
 :label: fig_2_1
+:width: 100%
 
 Supply and demand curves.
 ```
@@ -54,14 +55,16 @@ Consider the example shown in {ref}`fig_2_2`. The generator says they are willin
 
 ```{figure} img/fig_2_2.png
 :label: fig_2_2
+:width: 100%
 
 Supply and demand curves formed by the price-quantity pairs of a generator and load, respectively, in a market with only the one generator and load.
 ```
 
-What if there are two generators, $\mathrm{G1}$ and $\mathrm{G2}$, and two loads, $\mathrm{L1}$ and $\mathrm{L2}$? Consider the price-quantity pairs shown in {ref}`fig_2_3`.
+What if there are two generators, $\mathrm{G1}$ and $\mathrm{G2}$, and two loads, $\mathrm{L1}$ and $\mathrm{L2}$? Consider the example price-quantity pairs shown in {ref}`fig_2_3`.
 
 ```{figure} img/fig_2_3.png
 :label: fig_2_3
+:width: 100%
 
 Price-quantity pairs of two generators and two loads.
 ```
@@ -88,16 +91,18 @@ $$
 U(Q_\mathrm{L1}, Q_\mathrm{L2}) = \int_0^{\, Q_\mathrm{L1}} p_\mathrm{L1}(q) \, \mathrm{d} q + \int_0^{\, Q_\mathrm{L2}} p_\mathrm{L2}(q) \, \mathrm{d} q
 $$
 
-This optimization problem can be simplified by splicing the generators and loads' price-quantity pairs into a unified supply curve and a unified demand curve, respectively.
+This optimization problem can be simplified by splicing the generators' and loads' price-quantity pairs into a unified supply curve and a unified demand curve, respectively. The optimization problem can then be solved by finding the intersection between the supply and demand curves. The solution to the example at hand is $Q^* = 11$, $P^* = 4$. This is shown in {ref}`fig_2_5`, and {ref}`fig_2_4` shows how $Q^*$ corresponds to the individual quantities $Q_\mathrm{G1}^*$, $Q_\mathrm{G2}^*$, $Q_\mathrm{L1}^*$, and $Q_\mathrm{L2}^*$.
 
 ```{figure} img/fig_2_4.png
 :label: fig_2_4
+:width: 100%
 
 Price-quantity pairs of two generators and two loads, showing their optimal costs and utility values, respectively.
 ```
 
 ```{figure} img/fig_2_5.png
 :label: fig_2_5
+:width: 100%
 
 Supply and demand curves spliced together from the price-quantity pairs of two generators and two loads, respectively, showing the resulting market-clearing price and quantity.
 ```
