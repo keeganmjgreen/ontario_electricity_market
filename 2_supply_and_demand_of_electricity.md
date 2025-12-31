@@ -109,11 +109,20 @@ Supply and demand curves spliced together from the price-quantity pairs of two g
 
 ## The market network
 
-We have established that for a given market, at a given time, there is one market price. For the purposes of market modeling, the grid consists of multiple pricing nodes, each of which has its own market price and thus acts like a market. Each node is analogous to one neighborhood of cafés. But, of course, the grid is an electrical network, and power can be transferred between its nodes through long-distance transmission and distribution lines. This is as if the neighborhoods of cafés were interconnected by an intricate network of pipes! Like electricity, espresso wouldn't even have to be made in the neighborhood in which it is consumed.
+We have established that for a given market, at a given time, there is one market price. For the purposes of market modeling, the grid consists of multiple pricing nodes, each of which has its own market price and in that sense acts like a market. Each node is analogous to one neighborhood of cafés. But, of course, the grid is an electrical network, and power can be transferred between its nodes through long-distance transmission and distribution lines. This is as if the neighborhoods of cafés were interconnected by an intricate network of pipes! Like electricity, espresso wouldn't even have to be made in the neighborhood in which it is consumed. Supply need not equal demand within a grid node. Because quantities of power can be traded between grid nodes, the entire grid must be cleared as one market in order to maximize the system-wide welfare $W\!$. The total welfare is generally higher with trade than without.
 
-However, the network is leaky. Transmission and distribution lines are not ideal wires and have electrical resistance depending on their type and length. Thus, some power is lost to heat for each unit of power transferred.
+However, the network is leaky. Transmission and distribution lines are not ideal wires and have electrical resistance depending on their type and length. Thus, some power is lost to heat for each unit of power transferred. These transmission losses are analogous to a cost of trade between grid nodes. Power transfer between nodes is still usually necessary and beneficial; it is likely be cheaper to use nuclear power transmitted over a great distance, with some lost along the way, than to use power from a nearby gas-fired plant. We need a way to model and account for the costs of trade when clearing the market, as they will affect the optimal quantities of power and cause prices to differ between nodes. In general, each node affects all other nodes.
 
-<!-- TODO -->
+<!-- How to quantify cost of transmission? Delta p times delta q? -->
+<!-- Who pays for losses? -->
+<!-- Welfare evenly distributed? -->
+
+```{figure} img/fig_2_6.png
+:label: fig_2_6
+:width: 100%
+
+Determining the market-clearing prices and quantities for a two-node grid, with a node $\mathrm{G}$ containing only generation and a node $\mathrm{L}$ containing only load.
+```
 
 ## Balancing power supply and demand
 

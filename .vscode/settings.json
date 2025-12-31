@@ -16,6 +16,7 @@
         "mathdollar",
         "mathrm",
         "matplotlib",
+        "nanargmax",
         "nanmax",
         "ncols",
         "ndarray",
@@ -26,6 +27,7 @@
         "scipy",
         "textcoords",
         "usetex",
+        "xaxis",
         "xlim",
         "xticklabels",
         "xticks",
@@ -37,5 +39,6 @@
     ],
     "editor.lineNumbers": "off",
     "editor.rulers": [],
-    "breadcrumbs.enabled": false
+    "breadcrumbs.enabled": false,
+    "python.analysis.typeCheckingMode": "off"
 }
