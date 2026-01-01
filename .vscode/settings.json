@@ -6,6 +6,7 @@
         "edgecolor",
         "figsize",
         "fontsize",
+        "gridspec",
         "HVDC",
         "IESO",
         "incentivizes",
