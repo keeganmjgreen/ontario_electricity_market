@@ -26,6 +26,7 @@
         "retstep",
         "scipy",
         "textcoords",
+        "upsampled",
         "usetex",
         "xaxis",
         "xlim",
