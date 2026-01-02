@@ -17,13 +17,6 @@ DX = 1e-3
 DECIMALS = 10
 
 
-class Labels:
-    COST = "Cost, $C$"
-    UTILITY = "Utility, $U$"
-    WELFARE = "Welfare, $W$"
-    OPTIMUM = "Optimum"
-
-
 class Colors:
     SUPPLY = "#1565C0"
     DEMAND = "#EF6C00"
@@ -35,12 +28,14 @@ class Curve:
     points: list[Point]
     name: str
     integral_name: str
+    integral_symbol: str
     color: str
     fmt: str = "-"
     stepped: bool = True
 
     def __post_init__(self) -> None:
         self.integral_name = self.integral_name.replace("{name}", self.name)
+        self.integral_symbol = self.integral_symbol.replace("{name}", self.name)
 
     @property
     def xs(self) -> np.ndarray:
@@ -132,6 +127,9 @@ class Curve:
             integral_name=(
                 curve.integral_name if mask else f"Total {curve_type.integral_name}"
             ),
+            integral_symbol=(
+                curve.integral_symbol if mask else curve_type.integral_symbol
+            ),
             color=(curve.color if mask else curve_type.color),
             fmt=(curve.fmt if mask else curve_type.fmt),
             stepped=stepped,
@@ -141,14 +139,16 @@ class Curve:
 @dataclasses.dataclass
 class SupplyCurve(Curve):
     name: str = "Supply Curve"
-    integral_name: str = Labels.COST
+    integral_name: str = "Cost"
+    integral_symbol: str = "$C$"
     color: str = Colors.SUPPLY
 
 
 @dataclasses.dataclass
 class DemandCurve(Curve):
     name: str = "Demand Curve"
-    integral_name: str = Labels.UTILITY
+    integral_name: str = "Utility"
+    integral_symbol: str = "$U$"
     color: str = Colors.DEMAND
 
 

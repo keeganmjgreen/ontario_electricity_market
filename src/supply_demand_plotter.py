@@ -6,10 +6,10 @@ import numpy as np
 from src.drawing_utils import Arrow, Point
 from src.plotting_utils import rm
 from src.supply_demand import (
+    DX,
     Curve,
     Colors,
     DemandCurve,
-    Labels,
     SupplyCurve,
     SupplyDemand,
 )
@@ -26,7 +26,7 @@ class _BasePlotter:
     yaxis_label: str = dataclasses.field(init=False)
 
     def __post_init__(self) -> None:
-        self.x_vals = np.linspace(*self.xlim, 501)
+        self.x_vals = np.arange(self.xlim[0], self.xlim[1] + DX, DX)
 
         self.ax.spines[:].set_visible(False)
         self.ax.set_xlim(self.xlim[0] - 0.3, self.xlim[1] * 1.1)
@@ -80,7 +80,7 @@ class SupplyDemandPlotter(_BasePlotter):
                 color=curve.color,
                 hatch={SupplyCurve: r"\\", DemandCurve: "//"}[type(curve)],
                 edgecolor=curve.color,
-                label=rm(curve.integral_name),
+                label=rm(f"{curve.integral_name}, {curve.integral_symbol}"),
             )
 
     def plot_all(self, supply_demand: SupplyDemand) -> None:
@@ -102,48 +102,76 @@ class CostUtilityPlotter(_BasePlotter):
         quantity_vals: np.ndarray,
         cost_or_utility_vals: np.ndarray,
         curve_or_type: SupplyCurve | DemandCurve | type[SupplyCurve | DemandCurve],
+        equilibrium_quantity: float | None = None,
+        label: str | None = None,
     ) -> None:
+        if equilibrium_quantity is not None:
+            print(
+                f"{curve_or_type.integral_name}: {cost_or_utility_vals[list(quantity_vals).index(equilibrium_quantity)]:.3f}"
+            )
+        if label is None:
+            label = f"{curve_or_type.integral_name}, {curve_or_type.integral_symbol}"
         self.ax.plot(
             quantity_vals,
             cost_or_utility_vals,
             curve_or_type.fmt,
             color=curve_or_type.color,
-            label=rm(curve_or_type.integral_name),
+            label=rm(label),
         )
 
-    def plot_cost_or_utility(self, curve: SupplyCurve | DemandCurve) -> None:
+    def plot_cost_or_utility(
+        self,
+        curve: SupplyCurve | DemandCurve,
+        equilibrium_quantity: float | None = None,
+    ) -> None:
         self.plot_cost_or_utility_vals(
-            self.x_vals, curve.integral(self.x_vals), curve
+            self.x_vals, curve.integral(self.x_vals), curve, equilibrium_quantity
         )
 
     def plot_welfare_vals(
         self,
         quantity_vals: np.ndarray,
         welfare_vals: np.ndarray,
-        equilibrium: Point | None = None,
+        equilibrium_quantity: float | None = None,
     ) -> None:
         self.ax.plot(
-            quantity_vals, welfare_vals, color=Colors.WELFARE, label=rm(Labels.WELFARE)
+            quantity_vals, welfare_vals, color=Colors.WELFARE, label=rm("Welfare, $W$")
         )
-        if equilibrium is not None:
-            optimum = Point(equilibrium.x, np.nanmax(welfare_vals))
-            self.ax.plot(*optimum.xy, "ko", markersize=3, label=rm(Labels.OPTIMUM))
+        if equilibrium_quantity is not None:
+            print(
+                f"W(Q_opt) = {welfare_vals[list(quantity_vals).index(equilibrium_quantity)]:.3f}"
+            )
+            optimum = Point(equilibrium_quantity, np.nanmax(welfare_vals))
+            self.ax.plot(*optimum.xy, "ko", markersize=3, label=rm("Optimum"))
         self.legend()
 
     def plot_welfare(self, supply_demand: SupplyDemand) -> None:
-        welfare_vals = supply_demand.welfare()(self.x_vals)
-        self.plot_welfare_vals(self.x_vals, welfare_vals, supply_demand.equilibrium)
+        welfare = supply_demand.welfare()
+        welfare_vals = welfare(self.x_vals)
+        self.plot_welfare_vals(
+            self.x_vals, welfare_vals, supply_demand.equilibrium_quantity()
+        )
 
     def plot_multiple(
-        self, curves: list[SupplyCurve | DemandCurve], total: bool = False
+        self,
+        curves: list[SupplyCurve | DemandCurve],
+        total: bool = False,
+        equilibrium_quantity: float | None = None,
     ) -> None:
         for curve in curves:
-            self.plot_cost_or_utility(Curve.composite(curves, mask=curve.name))
+            self.plot_cost_or_utility(
+                Curve.composite(curves, mask=curve.name), equilibrium_quantity
+            )
         if total:
-            self.plot_cost_or_utility(Curve.composite(curves))
+            self.plot_cost_or_utility(Curve.composite(curves), equilibrium_quantity)
         self.legend()
 
-    def plot_all(self, supply_demand: SupplyDemand, total: bool = False) -> None:
+    def plot_all(
+        self,
+        supply_demand: SupplyDemand,
+        total: bool = False,
+        equilibrium_quantity: float | None = None,
+    ) -> None:
         for curves in [supply_demand.supply_curves, supply_demand.demand_curves]:
-            self.plot_multiple(curves, total)
+            self.plot_multiple(curves, total, equilibrium_quantity)
         self.plot_welfare(supply_demand)

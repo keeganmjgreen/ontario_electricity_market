@@ -42,7 +42,11 @@
         "ylabel",
         "ylim",
         "yticklabels",
-        "yticks"
+        "yticks",
+        "zlabel",
+        "zlim",
+        "zorder",
+        "zticks"
     ],
     "editor.lineNumbers": "off",
     "editor.rulers": [],
