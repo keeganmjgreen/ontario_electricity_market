@@ -51,14 +51,18 @@ Loads and generators submit bids to buy power and offers to sell power, respecti
 
 If these sound similar to supply and demand curves, it's because they are! In an electricity market with one generator and one load, the generator's $(P_\mathrm{G}, Q_\mathrm{G})$ pairs would define the market's supply curve and the load's $(P_\mathrm{L}, Q_\mathrm{L})$ pairs would define the market's demand curve. The two curves' intersection determines the quantity $Q^*$ of power that will be delivered at the market-clearing price $P^*$, which maximizes $U - C$.
 
+### Example 2.1: One generator, one load
+
 Consider the example shown in {ref}`fig_2_2`. The generator says they are willing to produce up to 6 MW for \$2/MWh, or up to 9 MW for \$7/MWh. The load says they are willing to consume up to 4 MW for \$8/MWh, or up to 8 MW for \$5/MWh. The market clears at $Q^* = 6 \ \mathrm{MW}$ and $P^* = \$5/\mathrm{MWh}$.
 
 ```{figure} img/fig_2_2.png
 :label: fig_2_2
 :width: 100%
 
-Supply and demand curves formed by the price-quantity pairs of a generator and load, respectively, in a market with only the one generator and load.
+Supply and demand curves formed by the price-quantity pairs of the one generator and one load of Example 2.1.
 ```
+
+### Example 2.2: Two generators, two loads
 
 What if there are two generators, $\mathrm{G1}$ and $\mathrm{G2}$, and two loads, $\mathrm{L1}$ and $\mathrm{L2}$? Consider the example price-quantity pairs shown in {ref}`fig_2_3`.
 
@@ -66,7 +70,7 @@ What if there are two generators, $\mathrm{G1}$ and $\mathrm{G2}$, and two loads
 :label: fig_2_3
 :width: 100%
 
-Price-quantity pairs of two generators and two loads.
+Price-quantity pairs of the two generators and two loads of Example 2.2.
 ```
 
 In clearing the market, we still want to maximize $W = U - C$ subject to the constraint that the total quantity sold, $Q_\mathrm{G1} + Q_\mathrm{G2}$, must equal the total quantity bought, $Q_\mathrm{L1} + Q_\mathrm{L2}$. This constraint represents conservation of power flow.
@@ -90,27 +94,37 @@ $$
 U(Q_\mathrm{L1}, Q_\mathrm{L2}) = \int_0^{\, Q_\mathrm{L1}} p_\mathrm{L1}(q) \, \mathrm{d} q + \int_0^{\, Q_\mathrm{L2}} p_\mathrm{L2}(q) \, \mathrm{d} q
 $$
 
-This optimization problem can be simplified by splicing the generators' and loads' price-quantity pairs into a unified supply curve and a unified demand curve, respectively. The optimization problem can then be solved by finding the intersection between the supply and demand curves. The solution to the example at hand is $Q^* = 11$, $P^* = 4$. This is shown in {ref}`fig_2_5`, and {ref}`fig_2_4` shows how $Q^*$ corresponds to the individual quantities $Q_\mathrm{G1}^*$, $Q_\mathrm{G2}^*$, $Q_\mathrm{L1}^*$, and $Q_\mathrm{L2}^*$.
+This optimization problem can be simplified by splicing the generators' and loads' price-quantity pairs into a unified supply curve and a unified demand curve, respectively. The optimization problem can then be solved by finding the intersection between the supply and demand curves. The solution to the example at hand is $Q^* = 11$, $P^* = 4$. This is shown in {ref}`fig_2_5`, and {ref}`fig_2_4` shows how $Q^*$ corresponds to the individual quantities $Q_\mathrm{G1}^*$, $Q_\mathrm{G2}^*$, $Q_\mathrm{L1}^*$, and $Q_\mathrm{L2}^*$. The optimal cost, utility, and welfare are tabulated in {ref}`tab_2_1`.
 
 ```{figure} img/fig_2_4.png
 :label: fig_2_4
 :width: 100%
 
-Price-quantity pairs of two generators and two loads, showing their optimal costs and utility values, respectively.
+Price-quantity pairs of the two generators and two loads of Example 2.2, showing their optimal costs and utility values, respectively.
 ```
 
 ```{figure} img/fig_2_5.png
 :label: fig_2_5
 :width: 100%
 
-Supply and demand curves spliced together from the price-quantity pairs of two generators and two loads, respectively, showing the resulting market-clearing price and quantity.
+Supply and demand curves spliced together from the price-quantity pairs of the two generators and two loads of Example 2.2, respectively, showing the resulting market-clearing price and quantity.
+```
+
+```{table} Optimal cost, utility, and welfare of Example 2.2.
+:label: tab_2_1
+
+|        |                   Cost |                Utility | Welfare |
+|-------:|-----------------------:|-----------------------:|--------:|
+|        | $C_\mathrm{G1} = \$12$ | $C_\mathrm{L1} = \$52$ |         |
+|        | $C_\mathrm{G2} = \$20$ | $C_\mathrm{L2} = \$27$ |         |
+| Total: |                 $\$20$ |                 $\$79$ |  $\$47$ |
 ```
 
 ## The market network
 
-We have established that for a given market, at a given time, there is one market price. For the purposes of market modeling, the grid consists of multiple pricing nodes, each of which has its own market price and in that sense acts like a market. Each node is analogous to one neighborhood of cafés. But, of course, the grid is an electrical network, and power can be transferred between its nodes through long-distance transmission and distribution lines. This is as if the neighborhoods of cafés were interconnected by an intricate network of pipes! Like electricity, espresso wouldn't even have to be made in the neighborhood in which it is consumed. Supply need not equal demand within a grid node. Because quantities of power can be traded between grid nodes, the entire grid must be cleared as one market in order to maximize the system-wide welfare $W\!$. The total welfare is generally higher with trade than without.
+We have established that for a given market, at a given time, there is one market price. For the purposes of market modeling, the grid consists of multiple pricing nodes, each of which has its own market price and in that sense acts like a market. Each node is analogous to one neighborhood of cafés. But, of course, the grid is an electrical network, and power can be transferred between its nodes through long-distance transmission and distribution lines. This is as if the neighborhoods of cafés were interconnected by an intricate network of pipes! Like electricity, espresso wouldn't even have to be made in the neighborhood in which it is consumed. Supply need not equal demand within a grid node. Because quantities of power can be traded between grid nodes, the entire grid must be cleared as one market in order to maximize the system-wide welfare $W\!$. The total welfare is generally higher with trade than without, which is why trade takes place.
 
-However, the network is leaky. Transmission and distribution lines are not ideal wires and have electrical resistance depending on their type and length. Thus, some power is lost to heat for each unit of power transferred. These transmission losses are analogous to a cost of trade between grid nodes. Power transfer between nodes is still usually necessary and beneficial; it is likely be cheaper to use nuclear power transmitted over a great distance, with some lost along the way, than to use power from a nearby gas-fired plant. We need a way to model and account for the costs of trade when clearing the market, as they will affect the optimal quantities of power and cause prices to differ between nodes. In general, each node affects all other nodes.
+However, the network is leaky. Transmission and distribution lines are not ideal wires and have electrical resistance depending on their type and length. Thus, some power is lost to heat for each unit of power transferred. These transmission losses are analogous to a cost of trade between grid nodes. Power transfer between nodes is still usually necessary and beneficial. For example, it is likely be cheaper to use nuclear power transmitted over a great distance, with some lost along the way, than to use power from a nearby gas-fired plant. We need a way to model and account for the costs of trade when clearing the market, as they will affect the optimal quantities of power and cause prices to differ between nodes. In general, each node affects all other nodes.
 
 A line's transmission losses can be modeled by the line's efficiency, $\eta$:
 
@@ -118,7 +132,9 @@ $$
 \eta = \frac{\text{power out}}{\text{power in}} = \frac{\text{power out}}{\text{power out} + \text{power lost}}
 $$
 
-Recall the previous section's example of two generators and two loads. Consider now that the generators $\mathrm{G1}$ and $\mathrm{G2}$ are located at a node $\mathrm{A}$, and that the two loads $\mathrm{L1}$ and $\mathrm{L2}$ are located at a node $\mathrm{B}$. The two nodes are connected by a transmission line with 75% efficiency. This is an unrealistically poor efficiency, for illustrative purposes. The optimization problem becomes maximizing $W\!$ subject to the constraint that the total quantity bought, $Q_\mathrm{L}$, must equal 75% of the total quantity sold, $Q_\mathrm{G}$, meaning that for every 1 MW generated, only 0.75 MW are delivered to the load. Of the two quantities $Q_\mathrm{G}$ and $Q_\mathrm{L}$, either can be chosen as the optimization problem's sole decision variable, from which the other quantity can be calculated via the efficiency. The solution to the example at hand is $Q_\mathrm{G}^* = 9.33\overline{3} \ \mathrm{MW}$, $Q_\mathrm{L}^* = 7 \ \mathrm{MW}$, $P_\mathrm{G}^* = \$4/\mathrm{MWh}$, $P_\mathrm{L}^* = \$8/\mathrm{MWh}$. This is shown in {ref}`fig_2_6`.
+### Example 2.3: One generator node, one load node
+
+Recall the previous section's example of two generators and two loads. Consider now that the generators $\mathrm{G1}$ and $\mathrm{G2}$ are located at a node $\mathrm{A}$, and that the two loads $\mathrm{L1}$ and $\mathrm{L2}$ are located at a node $\mathrm{B}$. The two nodes are connected by a transmission line with 75% efficiency. This is an unrealistically poor efficiency, for illustrative purposes. The optimization problem becomes maximizing $W\!$ subject to the constraint that the total quantity bought, $Q_\mathrm{L}$, must equal 75% of the total quantity sold, $Q_\mathrm{G}$, meaning that for every 1 MW generated, only 0.75 MW are delivered to the load, the rest being lost to heat. Of the two quantities $Q_\mathrm{G}$ and $Q_\mathrm{L}$, either can be chosen as the optimization problem's sole decision variable, from which the other quantity can be calculated via the efficiency. The solution to the example at hand is $Q_\mathrm{G}^* = 9.\bar{3} \ \mathrm{MW}$, $Q_\mathrm{L}^* = 7 \ \mathrm{MW}$, $P_\mathrm{G}^* = \$4/\mathrm{MWh}$, $P_\mathrm{L}^* = \$8/\mathrm{MWh}$. This is shown in {ref}`fig_2_6`. The optimal cost, utility, and welfare are tabulated in {ref}`tab_2_2`.
 
 <!-- How to quantify cost of transmission? Delta p times delta q? -->
 <!-- Who pays for losses? -->
@@ -128,8 +144,20 @@ Recall the previous section's example of two generators and two loads. Consider 
 :label: fig_2_6
 :width: 100%
 
-Determining the market-clearing prices and quantities for a two-node grid, with node $\mathrm{A}$ containing only generation and node $\mathrm{B}$ containing only load.
+Determining the market-clearing prices and quantities for the two-node grid of Example 2.3.
 ```
+
+```{table} Optimal cost, utility, and welfare of Example 2.3.
+:label: tab_2_2
+
+|        |                                Cost |                Utility |             Welfare |
+|-------:|------------------------------------:|-----------------------:|--------------------:|
+|        |              $C_\mathrm{G1} = \$12$ | $C_\mathrm{L1} = \$32$ |                     |
+|        | $C_\mathrm{G2} = \$13.\bar{3}$ | $C_\mathrm{L2} = \$27$ |                     |
+| Total: |                 $\$25.\bar{3}$ |                 $\$59$ | $\$33.\bar{6}$ |
+```
+
+### Example 2.4: One generator node, one combined generator/load node
 
 Now consider that only generator $\mathrm{G1}$ is located at node $\mathrm{A}$, while generator $\mathrm{G2}$ and both loads are located at node $\mathrm{B}$. The optimization problem becomes maximizing $W\!$ subject to the constraint that $0.75 \, Q_\mathrm{G1} + Q_\mathrm{G2} = Q_\mathrm{L}$. Any two of these three quantities can be chosen as the decision variables; we will use $Q_\mathrm{G2}$ and $Q_\mathrm{L}$ arbitrarily. The optimization problem is then:
 
@@ -140,12 +168,16 @@ $$
 \end{aligned}
 $$
 
+We can visualize this optimization problem as the 3D surface shown in {ref}`fig_2_7`. The parallelogram shape of the surface in {ref}`fig_2_7`(b) is determined by the above constraint and by the bounds $0 < Q_\mathrm{G2} < 10 \ \mathrm{MWh}$.
+
 ```{figure} img/fig_2_7.png
 :label: fig_2_7
 :width: 100%
 
-Determining the market-clearing quantities $Q_\mathrm{G2}$ and $Q_\mathrm{L}$ that maximize $W\!$.
+Determining the market-clearing quantities $Q_\mathrm{G2}$ and $Q_\mathrm{L}$ that maximize $W\!$ in Example 2.4.
 ```
+
+The solution to the example at hand is $Q_\mathrm{G2}^* = 6.5 \ \mathrm{MW}$, $Q_\mathrm{L}^* = 11 \ \mathrm{MW}$, and $Q_\mathrm{G1}^* = 6 \ \mathrm{MW}$. The market-clearing prices at the two nodes are $P_{\! \mathrm{A}}^* = \$2/\mathrm{MWh}$, $P_{\! \mathrm{B}}^* = \$5/\mathrm{MWh}$.
 
 ## Balancing power supply and demand
 
