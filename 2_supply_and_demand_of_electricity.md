@@ -113,11 +113,11 @@ Supply and demand curves spliced together from the price-quantity pairs of the t
 ```{table} Optimal cost, utility, and welfare of Example 2.2.
 :label: tab_2_1
 
-|        |                   Cost |                Utility | Welfare |
-|-------:|-----------------------:|-----------------------:|--------:|
-|        | $C_\mathrm{G1} = \$12$ | $C_\mathrm{L1} = \$52$ |         |
-|        | $C_\mathrm{G2} = \$20$ | $C_\mathrm{L2} = \$27$ |         |
-| Total: |                 $\$20$ |                 $\$79$ |  $\$47$ |
+|        |                     Cost |                  Utility |  Welfare |
+|-------:|-------------------------:|-------------------------:|---------:|
+|        | $C_\mathrm{G1} = \$12.0$ | $C_\mathrm{L1} = \$52.0$ |          |
+|        | $C_\mathrm{G2} = \$20.0$ | $C_\mathrm{L2} = \$27.0$ |          |
+| Total: |                 $\$20.0$ |                 $\$79.0$ | $\$47.0$ |
 ```
 
 ## The market network
@@ -150,11 +150,11 @@ Determining the market-clearing prices and quantities for the two-node grid of E
 ```{table} Optimal cost, utility, and welfare of Example 2.3.
 :label: tab_2_2
 
-|        |                                Cost |                Utility |             Welfare |
-|-------:|------------------------------------:|-----------------------:|--------------------:|
-|        |              $C_\mathrm{G1} = \$12$ | $C_\mathrm{L1} = \$32$ |                     |
-|        | $C_\mathrm{G2} = \$13.\bar{3}$ | $C_\mathrm{L2} = \$27$ |                     |
-| Total: |                 $\$25.\bar{3}$ |                 $\$59$ | $\$33.\bar{6}$ |
+|        |                           Cost |                  Utility |        Welfare |
+|-------:|-------------------------------:|-------------------------:|---------------:|
+|        |       $C_\mathrm{G1} = \$12.0$ | $C_\mathrm{L1} = \$32.0$ |                |
+|        | $C_\mathrm{G2} = \$13.\bar{3}$ | $C_\mathrm{L2} = \$27.0$ |                |
+| Total: |                 $\$25.\bar{3}$ |                 $\$59.0$ | $\$33.\bar{6}$ |
 ```
 
 ### Example 2.4: One generator node, one combined generator/load node
@@ -177,7 +177,7 @@ We can visualize this optimization problem as the 3D surface shown in {ref}`fig_
 Determining the market-clearing quantities $Q_\mathrm{G2}$ and $Q_\mathrm{L}$ that maximize $W\!$ in Example 2.4.
 ```
 
-The solution to the example at hand is $Q_\mathrm{G2}^* = 6.5 \ \mathrm{MW}$, $Q_\mathrm{L}^* = 11 \ \mathrm{MW}$, and $Q_\mathrm{G1}^* = 6 \ \mathrm{MW}$. The market-clearing prices at the two nodes are $P_{\! \mathrm{A}}^* = \$2/\mathrm{MWh}$, $P_{\! \mathrm{B}}^* = \$5/\mathrm{MWh}$.
+The solution to the example at hand is $Q_\mathrm{G2}^* = 6.5 \ \mathrm{MW}$, $Q_\mathrm{L}^* = 11 \ \mathrm{MW}$, and $Q_\mathrm{G1}^* = 6 \ \mathrm{MW}$. The market-clearing prices at the two nodes are $P_{\! \mathrm{A}}^* = \$2/\mathrm{MWh}$ and $P_{\! \mathrm{B}}^* = \$5/\mathrm{MWh}$.
 
 ## Balancing power supply and demand
 
