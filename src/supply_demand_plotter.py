@@ -97,24 +97,42 @@ class SupplyDemandPlotter(_BasePlotter):
 class CostUtilityPlotter(_BasePlotter):
     yaxis_label: str = r"$\mathdollar$"
 
-    def plot_cost_or_utility(self, curve: SupplyCurve | DemandCurve) -> None:
+    def plot_cost_or_utility_vals(
+        self,
+        quantity_vals: np.ndarray,
+        cost_or_utility_vals: np.ndarray,
+        curve_or_type: SupplyCurve | DemandCurve | type[SupplyCurve | DemandCurve],
+    ) -> None:
         self.ax.plot(
-            self.x_vals,
-            curve.integral(self.x_vals),
-            curve.fmt,
-            color=curve.color,
-            label=rm(curve.integral_name),
+            quantity_vals,
+            cost_or_utility_vals,
+            curve_or_type.fmt,
+            color=curve_or_type.color,
+            label=rm(curve_or_type.integral_name),
         )
 
-    def plot_welfare(self, supply_demand: SupplyDemand) -> None:
-        welfare_vals = supply_demand.welfare()(self.x_vals)
-        self.ax.plot(
-            self.x_vals, welfare_vals, color=Colors.WELFARE, label=rm(Labels.WELFARE)
+    def plot_cost_or_utility(self, curve: SupplyCurve | DemandCurve) -> None:
+        self.plot_cost_or_utility_vals(
+            self.x_vals, curve.integral(self.x_vals), curve
         )
-        if (equilibrium := supply_demand.equilibrium) is not None:
+
+    def plot_welfare_vals(
+        self,
+        quantity_vals: np.ndarray,
+        welfare_vals: np.ndarray,
+        equilibrium: Point | None = None,
+    ) -> None:
+        self.ax.plot(
+            quantity_vals, welfare_vals, color=Colors.WELFARE, label=rm(Labels.WELFARE)
+        )
+        if equilibrium is not None:
             optimum = Point(equilibrium.x, np.nanmax(welfare_vals))
             self.ax.plot(*optimum.xy, "ko", markersize=3, label=rm(Labels.OPTIMUM))
         self.legend()
+
+    def plot_welfare(self, supply_demand: SupplyDemand) -> None:
+        welfare_vals = supply_demand.welfare()(self.x_vals)
+        self.plot_welfare_vals(self.x_vals, welfare_vals, supply_demand.equilibrium)
 
     def plot_multiple(
         self, curves: list[SupplyCurve | DemandCurve], total: bool = False
