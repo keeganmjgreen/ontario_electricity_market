@@ -69,9 +69,8 @@ What if there are two generators, $\mathrm{G1}$ and $\mathrm{G2}$, and two loads
 Price-quantity pairs of two generators and two loads.
 ```
 
-In clearing the market, we still want to maximize $W = U - C$ subject to the constraint that the total quantity sold, $Q_\mathrm{G1} + Q_\mathrm{G2}$, must equal the total quantity bought, $Q_\mathrm{L1} + Q_\mathrm{L2}$.
+In clearing the market, we still want to maximize $W = U - C$ subject to the constraint that the total quantity sold, $Q_\mathrm{G1} + Q_\mathrm{G2}$, must equal the total quantity bought, $Q_\mathrm{L1} + Q_\mathrm{L2}$. This constraint represents conservation of power flow.
 
-(eq_1)=
 $$
 \begin{aligned}
 & \! \max_{Q_\mathrm{G1}, \, Q_\mathrm{G2}, \, Q_\mathrm{L1}, \, Q_\mathrm{L2}} W(Q_\mathrm{G1}, Q_\mathrm{G2}, Q_\mathrm{L1}, Q_\mathrm{L2}) \\
@@ -113,6 +112,8 @@ We have established that for a given market, at a given time, there is one marke
 
 However, the network is leaky. Transmission and distribution lines are not ideal wires and have electrical resistance depending on their type and length. Thus, some power is lost to heat for each unit of power transferred. These transmission losses are analogous to a cost of trade between grid nodes. Power transfer between nodes is still usually necessary and beneficial; it is likely be cheaper to use nuclear power transmitted over a great distance, with some lost along the way, than to use power from a nearby gas-fired plant. We need a way to model and account for the costs of trade when clearing the market, as they will affect the optimal quantities of power and cause prices to differ between nodes. In general, each node affects all other nodes.
 
+Recall the previous section's example of two generators and two loads. Consider now that the generators $\mathrm{G1}$ and $\mathrm{G2}$ are located at a node $\mathrm{A}$, and that the two loads $\mathrm{L1}$ and $\mathrm{L2}$ are located at a node $\mathrm{B}$. The optimization problem becomes maximizing $W\!$ subject to the constraint that the total quantity bought, $Q_\mathrm{L}$, must equal the loss factor $\mathrm{LF}$ times the total quantity sold, $Q_\mathrm{G}$. Of the two quantities, either can be chosen as the optimization problem's sole decision variable, from which the other quantity can be calculated via the loss factor. The solution to the example at hand is $Q_\mathrm{G}^* = 9.33\overline{3}$, $Q_\mathrm{L}^* = 7$, $\mathrm{P}_\mathrm{G}^* = 4$, $\mathrm{P}_\mathrm{L}^* = 8$. This is shown in {ref}`fig_2_6`.
+
 <!-- How to quantify cost of transmission? Delta p times delta q? -->
 <!-- Who pays for losses? -->
 <!-- Welfare evenly distributed? -->
@@ -121,7 +122,23 @@ However, the network is leaky. Transmission and distribution lines are not ideal
 :label: fig_2_6
 :width: 100%
 
-Determining the market-clearing prices and quantities for a two-node grid, with a node $\mathrm{G}$ containing only generation and a node $\mathrm{L}$ containing only load.
+Determining the market-clearing prices and quantities for a two-node grid, with node $\mathrm{A}$ containing only generation and node $\mathrm{B}$ containing only load.
+```
+
+Now consider that only generator $\mathrm{G1}$ is located at node $\mathrm{A}$, while generator $\mathrm{G2}$ and both loads are located at node $\mathrm{B}$. The optimization problem becomes maximizing $W\!$ subject to the constraint that $Q_\mathrm{G1} \cdot \mathrm{LF} = Q_\mathrm{G2} + Q_\mathrm{L}$. Any two of these three quantities can be chosen as the decision variables; we will use $Q_\mathrm{G2}$ and $Q_\mathrm{L}$ arbitrarily. The optimization problem is then:
+
+$$
+\begin{aligned}
+& \!\! \max_{Q_\mathrm{G2}, \, Q_\mathrm{L}} W(Q_\mathrm{G2}, Q_\mathrm{L}) \\
+& \text{subject to} \quad Q_\mathrm{G1} \cdot \mathrm{LF} = Q_\mathrm{G2} + Q_\mathrm{L}
+\end{aligned}
+$$
+
+```{figure} img/fig_2_7.png
+:label: fig_2_7
+:width: 100%
+
+Determining $Q_\mathrm{L}$ and $Q_\mathrm{G2}$ such that $W\!$ is maximized.
 ```
 
 ## Balancing power supply and demand

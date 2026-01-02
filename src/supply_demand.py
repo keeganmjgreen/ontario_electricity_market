@@ -162,6 +162,10 @@ class SupplyDemand:
     def curves(self) -> list[SupplyCurve | DemandCurve]:
         return self.supply_curves + self.demand_curves
 
+    def curve(self, name: str) -> Curve:
+        [curve] = [c for c in self.curves if c.name == name]
+        return curve
+
     def cost(self, mask: str | None = None) -> interp1d:
         return Curve.composite(self.supply_curves, mask).integral
 
@@ -175,9 +179,9 @@ class SupplyDemand:
         quantity_vals = np.arange(0.0, self.max_total_quantity + DX, DX).round(DECIMALS)
         welfare_vals = self.welfare()(quantity_vals)
         idxmax = np.nanargmax(welfare_vals)
-        equilibrium_cumulative_quantity = quantity_vals[idxmax]
+        equilibrium_total_quantity = quantity_vals[idxmax]
         if mask is None:
-            return equilibrium_cumulative_quantity
+            return equilibrium_total_quantity
         else:
             [curve_type] = {type(c) for c in self.curves if c.name == mask}
             curves = [c for c in self.curves if isinstance(c, curve_type)]
@@ -188,7 +192,7 @@ class SupplyDemand:
                 [
                     p.y
                     for p in composite_curve.points
-                    if p.x <= equilibrium_cumulative_quantity
+                    if p.x <= equilibrium_total_quantity
                 ]
             )
             return equilibrium_individual_quantity
