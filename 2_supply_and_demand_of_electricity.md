@@ -20,7 +20,9 @@ The above principles are true not just for a neighborhood of cafés but for any 
 
 The allocation of buyers to sellers (customers to cafés) is a process called *clearing the market*. This determines the quantity of goods that gets exchanged in the market, $Q^*$, and at what price, $P^*$. This price is known as the *market price* or *market-clearing price*. Sellers who charge a low price are able to produce at a low cost and do not price-gouge. A capitalist market rewards such sellers, giving them priority over other, less efficient ones. At the same time, a capitalist market rewards buyers who are willing to pay a high price, giving them priority over other buyers who don't value the product as much. It follows that we can model the market clearing process by allocating an increasing quantity of goods to the buyers and sellers, starting with the buyers who are willing to pay the most and the sellers who are willing to charge the least, until the buying price equals the selling price.
 
-We can represent this model graphically (or mathematically) by plotting the supply and demand curves as shown in [](#fig_2_1). The market-clearing price $P^*$ and quantity $Q^*$ are dictated by the point where the two curves intersect. The area under the supply curve until a quantity $Q$ represents the cost $C$ of selling that quantity, equal to the production cost plus the profit margin. The area under the demand curve until a quantity $Q$ represents the cumulative value delivered to buyers by that quantity, known in economics as *utility*, $U\!$. Subject to the constraint that the quantity sold must be the same as the quantity bought, $Q^*$ simultaneously maximizes buyer utility and minimizes seller cost. The difference $U - C$ is known as *welfare*, $W\!$, in economics. In clearing the market, welfare is maximized.
+We can represent this model graphically (or mathematically) by plotting the supply and demand curves as shown in [](#fig_2_1). The market-clearing price $P^*$ and quantity $Q^*$ are dictated by the point where the two curves intersect. The area under the supply curve until a quantity $Q$ represents the cost $C$ of producing that quantity. The area under the demand curve until a quantity $Q$ represents the cumulative value delivered to buyers by that quantity, known in economics as *utility*, $U\!$. Subject to the constraint that the quantity sold must be the same as the quantity bought, $Q^*$ simultaneously maximizes buyer utility and minimizes seller cost. The difference $U - C$ is known in economics as *surplus* or *welfare*, $W\!$. In clearing the market, welfare is maximized.
+
+Welfare can be split into two parts: producer surplus, and consumer surplus. Producer surplus is the area above the supply curve but below $P^*$, representing the profit earned by selling above the cost of production. Consumer surplus is the area below the demand curve but above $P^*$, representing the extra value delivered to customers beyond what they paid for.
 
 ```{figure} img/fig_2_1.png
 :label: fig_2_1
@@ -113,11 +115,11 @@ Supply and demand curves spliced together from the price-quantity pairs of the t
 ```{table} Optimal cost, utility, and welfare of Example 2.2.
 :label: tab_2_1
 
-|        |                     Cost |                  Utility |  Welfare |
-|-------:|-------------------------:|-------------------------:|---------:|
-|        | $C_\mathrm{G1} = \$12.0$ | $C_\mathrm{L1} = \$52.0$ |          |
-|        | $C_\mathrm{G2} = \$20.0$ | $C_\mathrm{L2} = \$27.0$ |          |
-| Total: |                 $\$20.0$ |                 $\$79.0$ | $\$47.0$ |
+|        |                     Cost |                  Utility |         Producer Surplus |         Consumer Surplus |  Welfare |
+|-------:|-------------------------:|-------------------------:|-------------------------:|-------------------------:|---------:|
+|        | $C_\mathrm{G1} = \$12.0$ | $C_\mathrm{L1} = \$52.0$ | $S_\mathrm{G1} = \$12.0$ | $C_\mathrm{L1} = \$15.0$ |          |
+|        | $C_\mathrm{G2} = \$20.0$ | $C_\mathrm{L2} = \$27.0$ | $S_\mathrm{G2} = \$ 0.0$ | $C_\mathrm{L2} = \$20.0$ |          |
+| Total: |                 $\$20.0$ |                 $\$79.0$ |                 $\$12.0$ |                 $\$35.0$ | $\$47.0$ |
 ```
 
 ## The market network
@@ -150,11 +152,11 @@ Determining the market-clearing prices and quantities for the two-node grid of E
 ```{table} Optimal cost, utility, and welfare of Example 2.3.
 :label: tab_2_2
 
-|        |                           Cost |                  Utility |        Welfare |
-|-------:|-------------------------------:|-------------------------:|---------------:|
-|        |       $C_\mathrm{G1} = \$12.0$ | $C_\mathrm{L1} = \$32.0$ |                |
-|        | $C_\mathrm{G2} = \$13.\bar{3}$ | $C_\mathrm{L2} = \$27.0$ |                |
-| Total: |                 $\$25.\bar{3}$ |                 $\$59.0$ | $\$33.\bar{6}$ |
+|        |                           Cost |                  Utility |         Producer Surplus |         Consumer Surplus |        Welfare |
+|-------:|-------------------------------:|-------------------------:|-------------------------:|-------------------------:|---------------:|
+|        |       $C_\mathrm{G1} = \$12.0$ | $C_\mathrm{L1} = \$32.0$ | $S_\mathrm{G1} = \$12.0$ | $C_\mathrm{L1} = \$12.0$ |                |
+|        | $C_\mathrm{G2} = \$13.\bar{3}$ | $C_\mathrm{L2} = \$27.0$ | $S_\mathrm{G2} = \$ 0.0$ | $C_\mathrm{L2} = \$12.0$ |                |
+| Total: |                 $\$25.\bar{3}$ |                 $\$59.0$ |                 $\$12.0$ |                 $\$24.0$ | $\$33.\bar{6}$ |
 ```
 
 ### Example 2.4: One generator node, one combined generator/load node
