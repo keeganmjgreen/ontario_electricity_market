@@ -168,7 +168,7 @@ $$
 \end{aligned}
 $$
 
-We can visualize this optimization problem as the 3D surface shown in {ref}`fig_2_7`. The parallelogram shape of the surface in {ref}`fig_2_7`(b) is determined by the above constraint and by the bounds $0 < Q_\mathrm{G2} < 10 \ \mathrm{MWh}$.
+We can visualize this optimization problem as the 3D surface shown in {ref}`fig_2_7`. The parallelogram shape of the surface as viewed from above in {ref}`fig_2_7`(b) is determined by the above constraint and by the bounds $0 < Q_\mathrm{G2} < 10 \ \mathrm{MWh}$.
 
 ```{figure} img/fig_2_7.png
 :label: fig_2_7
