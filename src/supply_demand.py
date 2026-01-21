@@ -75,6 +75,7 @@ class Curve:
         y_vals = np.array([0.0, *upsampled.iloc[:-1].cumsum().to_numpy()]) * DX
         return interp1d(upsampled.index, y_vals, bounds_error=False)
 
+    @staticmethod
     def composite[C: SupplyCurve | DemandCurve](
         curves: list[C], mask: str | None = None, individual_quantities: bool = False
     ) -> C:
