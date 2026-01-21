@@ -87,7 +87,7 @@ class SupplyDemandPlotter(_BasePlotter):
         equilibrium = supply_demand.equilibrium
         equilibrium_quantity = equilibrium.x if equilibrium is not None else None
         for curves in [supply_demand.supply_curves, supply_demand.demand_curves]:
-            self.plot(Curve.composite(curves), equilibrium_quantity)
+            self.plot(Curve.aggregate(curves), equilibrium_quantity)
         if equilibrium is not None:
             equilibrium.drawn(self.ax)
         self.legend()
@@ -160,10 +160,10 @@ class CostUtilityPlotter(_BasePlotter):
     ) -> None:
         for curve in curves:
             self.plot_cost_or_utility(
-                Curve.composite(curves, mask=curve.name), equilibrium_quantity
+                Curve.aggregate(curves, mask=curve.name), equilibrium_quantity
             )
         if total:
-            self.plot_cost_or_utility(Curve.composite(curves), equilibrium_quantity)
+            self.plot_cost_or_utility(Curve.aggregate(curves), equilibrium_quantity)
         self.legend()
 
     def plot_all(

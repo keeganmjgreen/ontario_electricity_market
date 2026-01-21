@@ -76,7 +76,7 @@ class Curve:
         return interp1d(upsampled.index, y_vals, bounds_error=False)
 
     @staticmethod
-    def composite[C: SupplyCurve | DemandCurve](
+    def aggregate[C: SupplyCurve | DemandCurve](
         curves: list[C], mask: str | None = None, individual_quantities: bool = False
     ) -> C:
         [curve_type] = {type(c) for c in curves}
@@ -168,10 +168,10 @@ class SupplyDemand:
         return curve
 
     def cost(self, mask: str | None = None) -> interp1d:
-        return Curve.composite(self.supply_curves, mask).integral
+        return Curve.aggregate(self.supply_curves, mask).integral
 
     def utility(self, mask: str | None = None) -> interp1d:
-        return Curve.composite(self.demand_curves, mask).integral
+        return Curve.aggregate(self.demand_curves, mask).integral
 
     def welfare(self, mask: str | None = None) -> callable[np.array, np.array]:
         return lambda quantity: self.utility(mask)(quantity) - self.cost(mask)(quantity)
@@ -186,7 +186,7 @@ class SupplyDemand:
         else:
             [curve_type] = {type(c) for c in self.curves if c.name == mask}
             curves = [c for c in self.curves if isinstance(c, curve_type)]
-            composite_curve = Curve.composite(
+            composite_curve = Curve.aggregate(
                 [c.upsampled for c in curves], mask, individual_quantities=True
             )
             equilibrium_individual_quantity = max(
