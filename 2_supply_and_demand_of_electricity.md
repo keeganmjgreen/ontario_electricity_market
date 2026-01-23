@@ -117,9 +117,9 @@ Aggregated supply and demand curves of the two generators and two loads of Examp
 
 |        |                     Cost |                  Utility |         Producer Surplus |         Consumer Surplus |  Welfare |
 |-------:|-------------------------:|-------------------------:|-------------------------:|-------------------------:|---------:|
-|        | $C_\mathrm{G1} = \$12.0$ | $C_\mathrm{L1} = \$52.0$ | $S_\mathrm{G1} = \$12.0$ | $C_\mathrm{L1} = \$15.0$ |          |
-|        | $C_\mathrm{G2} = \$20.0$ | $C_\mathrm{L2} = \$27.0$ | $S_\mathrm{G2} = \$ 0.0$ | $C_\mathrm{L2} = \$20.0$ |          |
-| Total: |                 $\$20.0$ |                 $\$79.0$ |                 $\$12.0$ |                 $\$35.0$ | $\$47.0$ |
+|        | $C_\mathrm{G1} = \$12.0$ | $C_\mathrm{L1} = \$52.0$ | $S_\mathrm{G1} = \$12.0$ | $S_\mathrm{L1} = \$15.0$ |          |
+|        | $C_\mathrm{G2} = \$20.0$ | $C_\mathrm{L2} = \$27.0$ | $S_\mathrm{G2} = \$ 0.0$ | $S_\mathrm{L2} = \$20.0$ |          |
+| Total: | $                \$20.0$ | $                \$79.0$ | $                \$12.0$ | $                \$35.0$ | $\$47.0$ |
 ```
 
 ## The market network
@@ -136,7 +136,7 @@ $$
 
 ### Example 2.3: One generator node, one load node
 
-Recall the previous section's example of two generators and two loads. Consider now that the generators $\mathrm{G1}$ and $\mathrm{G2}$ are located at a node $\mathrm{A}$, and that the two loads $\mathrm{L1}$ and $\mathrm{L2}$ are located at a node $\mathrm{B}$. The two nodes are connected by a transmission line with 75% efficiency. This is an unrealistically poor efficiency, for illustrative purposes. The optimization problem becomes maximizing $W\!$ subject to the constraint that the total quantity bought, $Q_\mathrm{L}$, must equal 75% of the total quantity sold, $Q_\mathrm{G}$, meaning that for every 1 MW generated, only 0.75 MW are delivered to the load, the rest being lost to heat. Of the two quantities $Q_\mathrm{G}$ and $Q_\mathrm{L}$, either can be chosen as the optimization problem's sole decision variable, from which the other quantity can be calculated via the efficiency. The solution to the example at hand is $Q_\mathrm{G}^* = 9.\bar{3} \ \mathrm{MW}$, $Q_\mathrm{L}^* = 7 \ \mathrm{MW}$, $P_\mathrm{G}^* = \$4/\mathrm{MWh}$, $P_\mathrm{L}^* = \$5/\mathrm{MWh}$. This is shown in {ref}`fig_2_6`. The optimal cost, utility, and welfare are tabulated in {ref}`tab_2_2`.
+Recall the previous section's example of two generators and two loads. Consider now that the generators $\mathrm{G1}$ and $\mathrm{G2}$ are located at a node $\mathrm{A}$, and that the two loads $\mathrm{L1}$ and $\mathrm{L2}$ are located at a node $\mathrm{B}$. The two nodes are connected by a transmission line with 75% efficiency. This is an unrealistically poor efficiency, for illustrative purposes. The optimization problem becomes maximizing $W\!$ subject to the constraint that the total quantity bought, $Q_\mathrm{L}$, must equal 75% of the total quantity sold, $Q_\mathrm{G}$, meaning that for every 1 MW generated, only 0.75 MW are delivered to the load, the rest being lost to heat. Of the two quantities $Q_\mathrm{G}$ and $Q_\mathrm{L}$, either can be chosen as the optimization problem's sole decision variable, from which the other quantity can be calculated via the efficiency. The solution to the example at hand is $Q_\mathrm{G}^* = 9.\bar{3} \ \mathrm{MW}$, $Q_\mathrm{L}^* = 7 \ \mathrm{MW}$, $P_\mathrm{G}^* = \$4/\mathrm{MWh}$, $P_\mathrm{L}^* = \$5.\bar{3}/\mathrm{MWh}$. This is shown in {ref}`fig_2_6`. The optimal cost, utility, and welfare are tabulated in {ref}`tab_2_2`.
 
 <!-- How to quantify cost of transmission? Delta p times delta q? -->
 <!-- Who pays for losses? -->
@@ -152,12 +152,14 @@ Determining the market-clearing prices and quantities for the two-node grid of E
 ```{table} Optimal cost, utility, and welfare of Example 2.3.
 :label: tab_2_2
 
-|        |                           Cost |                  Utility |         Producer Surplus |         Consumer Surplus |        Welfare |
-|-------:|-------------------------------:|-------------------------:|-------------------------:|-------------------------:|---------------:|
-|        |       $C_\mathrm{G1} = \$12.0$ | $C_\mathrm{L1} = \$32.0$ | $S_\mathrm{G1} = \$12.0$ | $C_\mathrm{L1} = \$12.0$ |                |
-|        | $C_\mathrm{G2} = \$13.\bar{3}$ | $C_\mathrm{L2} = \$27.0$ | $S_\mathrm{G2} = \$ 0.0$ | $C_\mathrm{L2} = \$12.0$ |                |
-| Total: |                 $\$25.\bar{3}$ |                 $\$59.0$ |                 $\$12.0$ |                 $\$24.0$ | $\$33.\bar{6}$ |
+|        |                           Cost |                  Utility |         Producer Surplus |               Consumer Surplus |        Welfare |
+|-------:|-------------------------------:|-------------------------:|-------------------------:|-------------------------------:|---------------:|
+|        | $C_\mathrm{G1} = \$12.     0 $ | $C_\mathrm{L1} = \$32.0$ | $S_\mathrm{G1} = \$12.0$ | $S_\mathrm{L1} = \$11.     0 $ |                |
+|        | $C_\mathrm{G2} = \$13.\bar{3}$ | $C_\mathrm{L2} = \$27.0$ | $S_\mathrm{G2} = \$ 0.0$ | $S_\mathrm{L2} = \$10.\bar{6}$ |                |
+| Total: | $                \$25.\bar{3}$ | $                \$59.0$ | $                \$12.0$ | $                \$21.\bar{6}$ | $\$33.\bar{6}$ |
 ```
+
+With transmission losses, maximizing $U - C$ is only the same as maximizing $C_\mathrm{L} + C_\mathrm{G}$ if an additional constraint $Q_\mathrm{L} P_\mathrm{L} = Q_\mathrm{G} P_\mathrm{G}$ is applied.
 
 ### Example 2.4: One generator node, one combined generator/load node
 
