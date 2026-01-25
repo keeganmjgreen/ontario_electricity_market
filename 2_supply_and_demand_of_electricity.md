@@ -138,10 +138,6 @@ $$
 
 Recall the previous section's example of two generators and two loads. Consider now that the generators $\mathrm{G1}$ and $\mathrm{G2}$ are located at a node $\mathrm{A}$, and that the two loads $\mathrm{L1}$ and $\mathrm{L2}$ are located at a node $\mathrm{B}$. The two nodes are connected by a transmission line with 75% efficiency. This is an unrealistically poor efficiency, for illustrative purposes. The optimization problem becomes maximizing $W\!$ subject to the constraint that the total quantity bought, $Q_\mathrm{L}$, must equal 75% of the total quantity sold, $Q_\mathrm{G}$, meaning that for every 1 MW generated, only 0.75 MW are delivered to the load, the rest being lost to heat. Of the two quantities $Q_\mathrm{G}$ and $Q_\mathrm{L}$, either can be chosen as the optimization problem's sole decision variable, from which the other quantity can be calculated via the efficiency. The solution to the example at hand is $Q_\mathrm{G}^* = 9.\bar{3} \ \mathrm{MW}$, $Q_\mathrm{L}^* = 7 \ \mathrm{MW}$, $P_\mathrm{G}^* = \$4/\mathrm{MWh}$, $P_\mathrm{L}^* = \$5.\bar{3}/\mathrm{MWh}$. This is shown in {ref}`fig_2_6`. The optimal cost, utility, and welfare are tabulated in {ref}`tab_2_2`.
 
-<!-- How to quantify cost of transmission? Delta p times delta q? -->
-<!-- Who pays for losses? -->
-<!-- Welfare evenly distributed? -->
-
 ```{figure} img/fig_2_6.png
 :label: fig_2_6
 :width: 100%
@@ -159,7 +155,13 @@ Determining the market-clearing prices and quantities for the two-node grid of E
 | Total: | $                \$25.\bar{3} / \mathrm{h}$ | $                \$59.0 / \mathrm{h}$ | $                \$12.0 / \mathrm{h}$ | $                \$21.\bar{6} / \mathrm{h}$ | $\$33.\bar{6} / \mathrm{h}$ |
 ```
 
+Notice how the welfare has decreased from $\$47.0 / \mathrm{h}$ in Example 2.2 to $\$33.\bar{6} / \mathrm{h}$ in this example. The $\$13.\bar{3} / \mathrm{h}$ difference is the cost of having to transfer power between the generator and load nodes via lossy transmission lines. In this example, the producer surplus happened to stay the same ($\$12.0 / \mathrm{h}$) while the consumers' surpluses decreased with the introduction of transmission losses. So, in this example, only the consumers incurred the cost of trade. However, in general, the cost of trade is paid by both producers and consumers. This does not mean that trade is not worthwhile. On the contrary&mdash;in this example, transmission lines allowed the generator and load to find each other, and trade in general provides more optimal buying and selling opportunities for market participants.
+
+<!-- TODO: Cost of building transmission lines. -->
+
+``` {note}
 With transmission losses, maximizing $U - C$ is only the same as maximizing $C_\mathrm{L} + C_\mathrm{G}$ if an additional constraint $Q_\mathrm{L} P_\mathrm{L} = Q_\mathrm{G} P_\mathrm{G}$ is applied.
+```
 
 ### Example 2.4: One generator node, one combined generator/load node
 
