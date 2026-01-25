@@ -185,7 +185,14 @@ We can visualize this optimization problem as the 3D surface shown in {ref}`fig_
 Determining the market-clearing quantities $Q_\mathrm{G2}$ and $Q_\mathrm{L}$ that maximize $W\!$ in Example 2.4.
 ```
 
-The solution to the example at hand is $Q_\mathrm{G2}^* = 6.5 \ \mathrm{MW}$, $Q_\mathrm{L}^* = 11 \ \mathrm{MW}$, and $Q_\mathrm{G1}^* = 6 \ \mathrm{MW}$. The market-clearing prices at the two nodes are $P_{\! \mathrm{A}}^* = \$3/\mathrm{MWh}$ and $P_{\! \mathrm{B}}^* = \$4/\mathrm{MWh}$.
+The solution to the example at hand is $Q_\mathrm{G2}^* = 6.5 \ \mathrm{MW}$, $Q_\mathrm{L}^* = 11 \ \mathrm{MW}$, and $Q_\mathrm{G1}^* = 6 \ \mathrm{MW}$. The market-clearing prices at the two nodes are $P_{\! \mathrm{A}}^* = \$3/\mathrm{MWh}$ and $P_{\! \mathrm{B}}^* = \$4/\mathrm{MWh}$. This is shown in {ref}`fig_2_8`.
+
+```{figure} img/fig_2_8.png
+:label: fig_2_8
+:width: 100%
+
+Individual supply and demand curves of generator $\mathrm{G1}$ (at node $\mathrm{A}$) and generator $\mathrm{G2}$, load $\mathrm{L1}$, and load $\mathrm{L2}$ (at node $\mathrm{B}$), showing the resulting market-clearing prices and quantities.
+```
 
 ## Balancing power supply and demand
 
