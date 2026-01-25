@@ -12,4 +12,5 @@ project:
 site:
   options:
     folders: true
+    logo_text: How the Electricity Market Works
   template: book-theme
