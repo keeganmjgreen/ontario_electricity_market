@@ -115,11 +115,11 @@ Aggregated supply and demand curves of the two generators and two loads of Examp
 ```{table} Optimal cost, utility, and welfare of Example 2.2.
 :label: tab_2_1
 
-|        |                     Cost |                  Utility |         Producer Surplus |         Consumer Surplus |  Welfare |
-|-------:|-------------------------:|-------------------------:|-------------------------:|-------------------------:|---------:|
-|        | $C_\mathrm{G1} = \$12.0$ | $C_\mathrm{L1} = \$52.0$ | $S_\mathrm{G1} = \$12.0$ | $S_\mathrm{L1} = \$15.0$ |          |
-|        | $C_\mathrm{G2} = \$20.0$ | $C_\mathrm{L2} = \$27.0$ | $S_\mathrm{G2} = \$ 0.0$ | $S_\mathrm{L2} = \$20.0$ |          |
-| Total: | $                \$20.0$ | $                \$79.0$ | $                \$12.0$ | $                \$35.0$ | $\$47.0$ |
+|        |                                  Cost |                               Utility |                      Producer Surplus |                      Consumer Surplus |               Welfare |
+|-------:|--------------------------------------:|--------------------------------------:|--------------------------------------:|--------------------------------------:|----------------------:|
+|        | $C_\mathrm{G1} = \$12.0 / \mathrm{h}$ | $C_\mathrm{L1} = \$52.0 / \mathrm{h}$ | $S_\mathrm{G1} = \$12.0 / \mathrm{h}$ | $S_\mathrm{L1} = \$15.0 / \mathrm{h}$ |                       |
+|        | $C_\mathrm{G2} = \$20.0 / \mathrm{h}$ | $C_\mathrm{L2} = \$27.0 / \mathrm{h}$ | $S_\mathrm{G2} = \$ 0.0 / \mathrm{h}$ | $S_\mathrm{L2} = \$20.0 / \mathrm{h}$ |                       |
+| Total: | $                \$20.0 / \mathrm{h}$ | $                \$79.0 / \mathrm{h}$ | $                \$12.0 / \mathrm{h}$ | $                \$35.0 / \mathrm{h}$ | $\$47.0 / \mathrm{h}$ |
 ```
 
 ## The market network
@@ -152,11 +152,11 @@ Determining the market-clearing prices and quantities for the two-node grid of E
 ```{table} Optimal cost, utility, and welfare of Example 2.3.
 :label: tab_2_2
 
-|        |                           Cost |                  Utility |         Producer Surplus |               Consumer Surplus |        Welfare |
-|-------:|-------------------------------:|-------------------------:|-------------------------:|-------------------------------:|---------------:|
-|        | $C_\mathrm{G1} = \$12.     0 $ | $C_\mathrm{L1} = \$32.0$ | $S_\mathrm{G1} = \$12.0$ | $S_\mathrm{L1} = \$11.     0 $ |                |
-|        | $C_\mathrm{G2} = \$13.\bar{3}$ | $C_\mathrm{L2} = \$27.0$ | $S_\mathrm{G2} = \$ 0.0$ | $S_\mathrm{L2} = \$10.\bar{6}$ |                |
-| Total: | $                \$25.\bar{3}$ | $                \$59.0$ | $                \$12.0$ | $                \$21.\bar{6}$ | $\$33.\bar{6}$ |
+|        |                                        Cost |                               Utility |                      Producer Surplus |                            Consumer Surplus |                     Welfare |
+|-------:|--------------------------------------------:|--------------------------------------:|--------------------------------------:|--------------------------------------------:|----------------------------:|
+|        | $C_\mathrm{G1} = \$12.     0  / \mathrm{h}$ | $C_\mathrm{L1} = \$32.0 / \mathrm{h}$ | $S_\mathrm{G1} = \$12.0 / \mathrm{h}$ | $S_\mathrm{L1} = \$11.     0  / \mathrm{h}$ |                             |
+|        | $C_\mathrm{G2} = \$13.\bar{3} / \mathrm{h}$ | $C_\mathrm{L2} = \$27.0 / \mathrm{h}$ | $S_\mathrm{G2} = \$ 0.0 / \mathrm{h}$ | $S_\mathrm{L2} = \$10.\bar{6} / \mathrm{h}$ |                             |
+| Total: | $                \$25.\bar{3} / \mathrm{h}$ | $                \$59.0 / \mathrm{h}$ | $                \$12.0 / \mathrm{h}$ | $                \$21.\bar{6} / \mathrm{h}$ | $\$33.\bar{6} / \mathrm{h}$ |
 ```
 
 With transmission losses, maximizing $U - C$ is only the same as maximizing $C_\mathrm{L} + C_\mathrm{G}$ if an additional constraint $Q_\mathrm{L} P_\mathrm{L} = Q_\mathrm{G} P_\mathrm{G}$ is applied.
