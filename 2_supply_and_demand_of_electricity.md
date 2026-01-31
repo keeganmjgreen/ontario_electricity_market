@@ -1,6 +1,6 @@
 # Supply and Demand of Electricity
 
-## Introduction to economics: Your friendly neighborhood espresso market
+## Introduction to Economics: Your Friendly Neighborhood Espresso Market
 
 Imagine a neighborhood of cafés, all serving espresso. What a wondrous place to live! The baristas make as many espresso shots as customers buy. More specifically, at any given time, the rate at which baristas supply espresso shots (e.g., in shots per hour) is always equal to the rate at which customers demand them.
 
@@ -14,7 +14,7 @@ If the cafés have to make more espresso, they will have to purchase more espres
 
 A given café is willing to sell espresso at or above a certain price, and a given customer is willing to buy at or below a certain price.
 
-## The market clearing process
+## The Market Clearing Process
 
 The above principles are true not just for a neighborhood of cafés but for any capitalist market. These basic tenets of economics are the principles of supply and demand. They apply wherever a quantity $Q$ of a particular good is exchanged at a price $P$. $Q$ is measured in goods per hour, and $P$ is measured in dollars (or any other currency) per good.
 
@@ -33,7 +33,7 @@ Supply and demand curves.
 
 Obviously there is no regulatory body that allocates customers to cafés, no economist planted in town square finding the intersection between the supply and demand curves. Your friendly neighborhood espresso market clears itself. Cafés try to charge the highest price that the optimal number of customers are willing to pay, and customers naturally seek out the lowest price that cafés are willing to charge; the two sides meet somewhere in the middle.
 
-## The electricity market
+## The Electricity Market
 
 The principles of supply and demand are so universal that they apply to the power grid when operated as an electricity market. In this case, the good is not espresso shots but megawatt-hours of electricity&mdash;energy for machines, rather than for humans. The unit of measurement is not espresso shots per hour but megawatt-hours per hour&mdash;so, just megawatts (MW). In an electricity market, the rate at which electricity is supplied (the production, or generation) is always equal to the rate at which it is demanded (the consumption, or load). In the café analogy, generators are espresso machines, and loads&mdash;such as your local utility company&mdash;are customers. Everything that we've discussed so far in terms of cafés (and capitalist markets in general) applies to the electricity market.
 
@@ -47,13 +47,13 @@ The second reason for which the electricity market cannot clear itself is that r
 
 Thus, the electricity market must be administered by a regulatory body&mdash;the ISO&mdash;that monitors the demand, and tells each generator how much to supply such that the total supply exactly equals the demand at all times. It is worth it to have an organization that is different to the company or companies who own and operate the generators, because it fosters healthy competition between the generation companies, which reduces the cost of electricity.
 
-## Bids to buy and offers to sell power
+## Bids to Buy and Offers to Sell Power
 
 Loads and generators submit bids to buy power and offers to sell power, respectively. Bids and offers are known in general as market submissions. Each submission includes a list of price-quantity pairs. In a given price-quantity pair, the quantity is the maximum quantity of power that a generator is willing to sell, or that a load is willing to buy, at the corresponding price in the pair. The price is measured in dollars per MWh, and the quantity is measured in MW. For an offer, the price must monotonically increase as the quantity increases, and for a bid, the price must monotonically decrease as the quantity increases.
 
 If these sound similar to supply and demand curves, it's because they are! In an electricity market with one generator and one load, the generator's $(P_\mathrm{G}, Q_\mathrm{G})$ pairs would define the market's supply curve and the load's $(P_\mathrm{L}, Q_\mathrm{L})$ pairs would define the market's demand curve. The two curves' intersection determines the quantity $Q^*$ of power that will be delivered at the market-clearing price $P^*$, which maximizes $U - C$.
 
-### Example 2.1: One generator, one load
+### Example 2.1: One Generator, One Load
 
 Consider the example shown in {ref}`fig_2_2`. The generator says they are willing to produce up to 6 MW at \$2/MWh, or up to 9 MW at \$7/MWh. Note that this does not mean they are willing to produce the first 6 MW at \$2/MWh and only the remaining 3 MW at \$7/MWh; the generator has one price, and it changes if a certain volume is surpassed, like in the café analogy. The same principle applies on the demand side: the load says they are willing to consume up to 4 MW at \$8/MWh, or up to 8 MW at \$5/MWh. The market clears at $Q^* = 6 \ \mathrm{MW}$ and $P^* = \$5/\mathrm{MWh}$.
 
@@ -64,7 +64,7 @@ Consider the example shown in {ref}`fig_2_2`. The generator says they are willin
 Supply and demand curves formed by the price-quantity pairs of the one generator and one load of Example 2.1.
 ```
 
-### Example 2.2: Two generators, two loads
+### Example 2.2: Two Generators, Two Loads
 
 What if there are two generators, $\mathrm{G1}$ and $\mathrm{G2}$, and two loads, $\mathrm{L1}$ and $\mathrm{L2}$? Each generator and load has its own supply or demand curve formed by its price-quantity pairs, as shown in {ref}`fig_2_3`. These are known as individual supply and demand curves, as they represent individual participants in the market.
 
@@ -122,7 +122,7 @@ Aggregated supply and demand curves of the two generators and two loads of Examp
 | Total: | $                \$20.0 / \mathrm{h}$ | $                \$79.0 / \mathrm{h}$ | $                \$12.0 / \mathrm{h}$ | $                \$35.0 / \mathrm{h}$ | $\$47.0 / \mathrm{h}$ |
 ```
 
-## The market network
+## The Market Network
 
 <!-- TODO: Diagrams. -->
 
@@ -136,7 +136,7 @@ $$
 \eta = \frac{\text{power out}}{\text{power in}} = \frac{\text{power out}}{\text{power out} + \text{power lost}}
 $$
 
-### Example 2.3: One generator node, one load node
+### Example 2.3: One Generator Node, One Load Node
 
 Recall the previous section's example of two generators and two loads. Consider now that the generators $\mathrm{G1}$ and $\mathrm{G2}$ are located at a node $\mathrm{A}$, and that the two loads $\mathrm{L1}$ and $\mathrm{L2}$ are located at a node $\mathrm{B}$. The two nodes are connected by a transmission line with 75% efficiency. This is an unrealistically poor efficiency, for illustrative purposes. The optimization problem becomes maximizing $W\!$ subject to the constraint that the total quantity bought, $Q_\mathrm{L}$, must equal 75% of the total quantity sold, $Q_\mathrm{G}$, meaning that for every 1 MW generated, only 0.75 MW are delivered to the load, the rest being lost to heat. Of the two quantities $Q_\mathrm{G}$ and $Q_\mathrm{L}$, either can be chosen as the optimization problem's sole decision variable, from which the other quantity can be calculated via the efficiency. The solution to the example at hand is $Q_\mathrm{G}^* = 9.\bar{3} \ \mathrm{MW}$, $Q_\mathrm{L}^* = 7 \ \mathrm{MW}$, $P_\mathrm{G}^* = \$4/\mathrm{MWh}$, $P_\mathrm{L}^* = \$5.\bar{3}/\mathrm{MWh}$. This is shown in {ref}`fig_2_6`. The optimal cost, utility, and welfare are tabulated in {ref}`tab_2_2`.
 
@@ -165,7 +165,7 @@ Notice how the welfare has decreased from $\$47.0 / \mathrm{h}$ in Example 2.2 t
 With transmission losses, maximizing $U - C$ is only the same as maximizing $C_\mathrm{L} + C_\mathrm{G}$ if an additional constraint $Q_\mathrm{L} P_\mathrm{L} = Q_\mathrm{G} P_\mathrm{G}$ is applied.
 ```
 
-### Example 2.4: One generator node, one combined generator/load node
+### Example 2.4: One Generator Node, One Combined Generator/Load Node
 
 Now consider that only generator $\mathrm{G1}$ is located at node $\mathrm{A}$, while generator $\mathrm{G2}$ and both loads are located at node $\mathrm{B}$. The optimization problem becomes maximizing $W\!$ subject to the constraint that $0.75 \, Q_\mathrm{G1} + Q_\mathrm{G2} = Q_\mathrm{L}$. Any two of these three quantities can be chosen as the decision variables; we will use $Q_\mathrm{G2}$ and $Q_\mathrm{L}$ arbitrarily. The optimization problem is then:
 
@@ -194,7 +194,7 @@ The solution to the example at hand is $Q_\mathrm{G2}^* = 6.5 \ \mathrm{MW}$, $Q
 Individual supply and demand curves of generator $\mathrm{G1}$ (at node $\mathrm{A}$) and generator $\mathrm{G2}$, load $\mathrm{L1}$, and load $\mathrm{L2}$ (at node $\mathrm{B}$), showing the resulting market-clearing prices and quantities.
 ```
 
-## Balancing power supply and demand
+## Balancing Power Supply and Demand
 
 We previously mentioned that supply always equals demand in the electricity market. Indeed, according to the law of conservation of energy, the power flowing into the grid equals the power flowing out of the grid at any given time. However, we just said that an ISO is responsible for balancing power supply and demand in the grid. Furthermore, if you are already familiar with the power grid and electricity market, you will often hear about *balance* or *imbalance* between power supply and demand, even though an imbalance between power in and power out is not technically possible. So, what do people really mean when they talk about imbalance between supply and demand in the grid? To answer this question, we must first understand some nuances of how the grid works.
 
