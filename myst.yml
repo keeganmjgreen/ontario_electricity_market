@@ -8,6 +8,9 @@ project:
   exports:
     - format: pdf
       template: plain_latex
+      articles:
+        - 1_introduction.md
+        - 2_supply_and_demand_of_electricity.md
       output: exports/book.pdf
 site:
   options:
