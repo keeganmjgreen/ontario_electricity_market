@@ -1,48 +1,44 @@
-\documentclass{article}
+\documentclass[twocolumn]{article}
+\usepackage{fancyhdr}
+\usepackage{floatrow} \floatsetup[table]{font={footnotesize,sf}} % Small table text.
 \usepackage{hyperref}
 \usepackage{datetime}
+\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry}
 \usepackage{graphicx}
 \usepackage{natbib}
+\usepackage{pdfpages}
+\usepackage{sectsty}
+\usepackage{titling}
 \bibliographystyle{abbrvnat}
 
 [-IMPORTS-]
 
+\renewcommand{\include}{\input} % Avoid page breaks between sections.
+
 % colors for hyperlinks
 \hypersetup{colorlinks=true, allcolors=blue}
 
-[# if options.logo #]
-\newcommand{\logo}{
-  \href{https://curvenote.com}{\includegraphics[width=2cm]{curvenote.png}}
-}
-[# endif #]
-
 \title{[-doc.title-]}
 
-\author{[-doc.authors|join(" \\and ", "name")-]}
+\author{Keegan Trujillo-Green}
 
-\newdate{articleDate}{[-doc.date.day-]}{[-doc.date.month-]}{[-doc.date.year-]}
-\date{\displaydate{articleDate}}
+\pagestyle{fancy}
+\fancyhead[L]{\sf \thetitle}
+\fancyhead[R]{\sf \theauthor}
+\fancyfoot[C]{\sf \thepage}
+
+\allsectionsfont{\raggedright \sf}
 
 \begin{document}
-\maketitle
-[# if parts.abstract #]\begin{abstract}[-parts.abstract-]\end{abstract}[# endif #]
-[# if options.logo #]
-\begin{center}\logo\end{center}
-[# endif #]
 
-[# if options.link #]
-% Optional footnote with a link back to the online version of your article
-\newcommand{\documentnote}[1]{{%
-  \let\thempfn\relax% Remove footnote number printing mechanism
-  \footnotetext[0]{\emph{#1}}% Print footnote text
-}}
-\documentnote{Available online at:\\ \href{[-options.link-]}{[-options.link-]}}
-[# endif #]
+\includepdf{/Users/keegan_green/workspace/src/ontario_electricity_market/cover/cover.pdf}
 
 [-CONTENT-]
 
-
 [# if doc.bibliography #]
+\begin{flushleft}
 \bibliography{[- doc.bibliography | join(", ") -]}
+\end{flushleft}
 [# endif #]
+
 \end{document}

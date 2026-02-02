@@ -7,11 +7,11 @@ project:
     - file: 2_supply_and_demand_of_electricity.md
   exports:
     - format: pdf
-      template: plain_latex
+      template: ./ # plain_latex # https://github.com/myst-templates
       articles:
         - 1_introduction.md
         - 2_supply_and_demand_of_electricity.md
-      output: exports/book.pdf
+      output: how_electricity_markets_work.pdf
 site:
   options:
     folders: true
