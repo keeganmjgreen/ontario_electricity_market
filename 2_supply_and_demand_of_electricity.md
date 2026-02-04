@@ -138,7 +138,14 @@ $$
 
 ### Example 2.3: One Generator Node, One Load Node
 
-Recall the previous section's example of two generators and two loads. Consider now that the generators $\mathrm{G1}$ and $\mathrm{G2}$ are located at a node $\mathrm{A}$, and that the two loads $\mathrm{L1}$ and $\mathrm{L2}$ are located at a node $\mathrm{B}$. The two nodes are connected by a transmission line with 75% efficiency. This is an unrealistically poor efficiency, for illustrative purposes. The optimization problem becomes maximizing $W\!$ subject to the constraint that the total quantity bought, $Q_\mathrm{L}$, must equal 75% of the total quantity sold, $Q_\mathrm{G}$, meaning that for every 1 MW generated, only 0.75 MW are delivered to the load, the rest being lost to heat. Of the two quantities $Q_\mathrm{G}$ and $Q_\mathrm{L}$, either can be chosen as the optimization problem's sole decision variable, from which the other quantity can be calculated via the efficiency. The solution to the example at hand is $Q_\mathrm{G}^* = 9.\bar{3} \ \mathrm{MW}$, $Q_\mathrm{L}^* = 7 \ \mathrm{MW}$, $P_\mathrm{G}^* = \$4/\mathrm{MWh}$, $P_\mathrm{L}^* = \$5.\bar{3}/\mathrm{MWh}$. This is shown in {ref}`fig_2_6`. The optimal cost, utility, and welfare are tabulated in {ref}`tab_2_2`.
+Recall the previous section's example of two generators and two loads. Consider now that the generators $\mathrm{G1}$ and $\mathrm{G2}$ are located at a node $\mathrm{A}$, and that the two loads $\mathrm{L1}$ and $\mathrm{L2}$ are located at a node $\mathrm{B}$. The two nodes are connected by a transmission line with 75% efficiency. This is an unrealistically poor efficiency, for illustrative purposes. The optimization problem becomes maximizing $W\!$ subject to the constraint that the total quantity bought, $Q_\mathrm{L}$, must equal 75% of the total quantity sold, $Q_\mathrm{G}$, meaning that for every 1 MW generated, only 0.75 MW are delivered to the load, the rest being lost to heat. Of the two quantities $Q_\mathrm{G}$ and $Q_\mathrm{L}$, either can be chosen as the optimization problem's sole decision variable, from which the other quantity can be calculated via the efficiency. The solution to the example at hand is $Q_\mathrm{G}^* = 9.\bar{3} \ \mathrm{MW}$, $Q_\mathrm{L}^* = 7 \ \mathrm{MW}$, $P_\mathrm{A}^* = \$4/\mathrm{MWh}$, $P_\mathrm{B}^* = \$5.\bar{3}/\mathrm{MWh}$. This is shown in {ref}`example_2_3` and {ref}`fig_2_6`. The optimal cost, utility, and welfare are tabulated in {ref}`tab_2_2`.
+
+```{figure} img/diagrams-example_2_3.png
+:label: example_2_3
+:width: 64%
+
+Network of Example 2.3.
+```
 
 ```{figure} img/fig_2_6.png
 :label: fig_2_6
@@ -185,7 +192,14 @@ We can visualize this optimization problem as the 3D surface shown in {ref}`fig_
 Determining the market-clearing quantities $Q_\mathrm{G2}$ and $Q_\mathrm{L}$ that maximize $W\!$ in Example 2.4.
 ```
 
-The solution to the example at hand is $Q_\mathrm{G2}^* = 6.5 \ \mathrm{MW}$, $Q_\mathrm{L}^* = 11 \ \mathrm{MW}$, and $Q_\mathrm{G1}^* = 6 \ \mathrm{MW}$. The market-clearing prices at the two nodes are $P_{\! \mathrm{A}}^* = \$3/\mathrm{MWh}$ and $P_{\! \mathrm{B}}^* = \$4/\mathrm{MWh}$. This is shown in {ref}`fig_2_8`.
+The solution to the example at hand is $Q_\mathrm{G2}^* = 6.5 \ \mathrm{MW}$, $Q_\mathrm{L}^* = 11 \ \mathrm{MW}$, and $Q_\mathrm{G1}^* = 6 \ \mathrm{MW}$. The market-clearing prices at the two nodes are $P_{\! \mathrm{A}}^* = \$3/\mathrm{MWh}$ and $P_{\! \mathrm{B}}^* = \$4/\mathrm{MWh}$. This is shown in {ref}`example_2_4` and {ref}`fig_2_8`.
+
+```{figure} img/diagrams-example_2_4.png
+:label: example_2_4
+:width: 64%
+
+Network of Example 2.4.
+```
 
 ```{figure} img/fig_2_8.png
 :label: fig_2_8
