@@ -1,6 +1,5 @@
 version: 1
 project:
-  title: How the Ontario Electricity Market Works
   github: keeganmjgreen/ontario_electricity_market
   toc:
     - file: 1_introduction_to_electricity_markets.md
@@ -15,5 +14,5 @@ project:
 site:
   options:
     folders: true
-    logo_text: How the Electricity Market Works
+    logo_text: How Electricity Markets Work
   template: book-theme
