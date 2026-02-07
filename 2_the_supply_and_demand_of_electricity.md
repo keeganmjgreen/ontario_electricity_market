@@ -1,4 +1,4 @@
-# Supply and Demand of Electricity
+# The Supply and Demand of Electricity
 
 ## Introduction to Economics: Your Friendly Neighborhood Espresso Market
 
