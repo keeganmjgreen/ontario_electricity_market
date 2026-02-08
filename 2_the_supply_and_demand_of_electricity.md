@@ -51,7 +51,7 @@ Thus, the electricity market must be administered by a regulatory body&mdash;the
 
 Loads and generators submit bids to buy power and offers to sell power, respectively. Bids and offers are known in general as market submissions. Each submission includes a list of price-quantity pairs. In a given price-quantity pair, the quantity is the maximum quantity of power that a generator is willing to sell, or that a load is willing to buy, at the corresponding price in the pair. The price is measured in dollars per MWh, and the quantity is measured in MW. For an offer, the price must monotonically increase as the quantity increases, and for a bid, the price must monotonically decrease as the quantity increases.
 
-If these sound similar to supply and demand curves, it's because they are! In an electricity market with one generator and one load, the generator's $(P_\mathrm{G}, Q_\mathrm{G})$ pairs would define the market's supply curve and the load's $(P_\mathrm{L}, Q_\mathrm{L})$ pairs would define the market's demand curve. The two curves' intersection determines the quantity $Q^*$ of power that will be delivered at the market-clearing price $P^*$, which maximizes $U - C$.
+If these sound similar to supply and demand curves, it's because they are! In an electricity market with one load and one generator, the load's $(P_\mathrm{L}, Q_\mathrm{L})$ pairs would define the electricity market's demand curve and the generator's $(P_\mathrm{G}, Q_\mathrm{G})$ pairs would define the market's supply curve, also known as the *dispatch curve*. The intersection between the supply and demand curves determines the quantity $Q^*$ of power that will be delivered at the market-clearing price $P^*$, which maximizes $U - C$.
 
 ### Example 2.1: One Generator, One Load
 
