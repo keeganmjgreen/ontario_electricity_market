@@ -169,7 +169,7 @@ Notice how the welfare has decreased from $\$47.0 / \mathrm{h}$ in Example 2.2 t
 <!-- TODO: Cost of building transmission lines. -->
 
 ``` {note}
-With transmission losses, maximizing $U - C$ is only the same as maximizing $C_\mathrm{L} + C_\mathrm{G}$ if an additional constraint $Q_\mathrm{L} P_\mathrm{L} = Q_\mathrm{G} P_\mathrm{G}$ is applied.
+With transmission losses, maximizing $U - C$ is only the same as maximizing $S_\mathrm{L} + S_\mathrm{G}$ if an additional constraint $Q_\mathrm{L} P_\mathrm{L} = Q_\mathrm{G} P_\mathrm{G}$ is applied.
 ```
 
 ### Example 2.4: One Generator Node, One Combined Generator/Load Node
