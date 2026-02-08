@@ -75,7 +75,19 @@ What if there are two generators, $\mathrm{G1}$ and $\mathrm{G2}$, and two loads
 Individual supply and demand curves formed by the price-quantity pairs of the two generators and two loads of Example 2.2.
 ```
 
-In clearing the market, we still want to maximize $W = U - C$ subject to the constraint that the total quantity sold, $Q_\mathrm{G1} + Q_\mathrm{G2}$, must equal the total quantity bought, $Q_\mathrm{L1} + Q_\mathrm{L2}$. This constraint represents conservation of power flow.
+In clearing the market, we still want to maximize $W = U - C$. The total seller cost $C$ is the total area under each generator's individual supply curve, up to the quantity produced by each generator:
+
+$$
+C(Q_\mathrm{G1}, Q_\mathrm{G2}) = \int_0^{\, Q_\mathrm{G1}} p_\mathrm{G1}(q) \, \mathrm{d} q + \int_0^{\, Q_\mathrm{G2}} p_\mathrm{G2}(q) \, \mathrm{d} q
+$$
+
+And the total buyer utility $U$ is the total area under each load's individual demand curve, up to the quantity consumed by each load:
+
+$$
+U(Q_\mathrm{L1}, Q_\mathrm{L2}) = \int_0^{\, Q_\mathrm{L1}} p_\mathrm{L1}(q) \, \mathrm{d} q + \int_0^{\, Q_\mathrm{L2}} p_\mathrm{L2}(q) \, \mathrm{d} q
+$$
+
+Maximizing $W$ is an optimization problem known as the economic dispatch (ED) problem. The problem is subject to the constraint that the total quantity sold, $Q_\mathrm{G1} + Q_\mathrm{G2}$, must equal the total quantity bought, $Q_\mathrm{L1} + Q_\mathrm{L2}$. This constraint represents conservation of power flow.
 
 $$
 \begin{aligned}
@@ -84,19 +96,7 @@ $$
 \end{aligned}
 $$
 
-Where the total seller cost is the total area under each generator's individual supply curve, up to the quantity produced by each generator:
-
-$$
-C(Q_\mathrm{G1}, Q_\mathrm{G2}) = \int_0^{\, Q_\mathrm{G1}} p_\mathrm{G1}(q) \, \mathrm{d} q + \int_0^{\, Q_\mathrm{G2}} p_\mathrm{G2}(q) \, \mathrm{d} q
-$$
-
-And the total buyer utility is the total area under each load's individual demand curve, up to the quantity consumed by each load:
-
-$$
-U(Q_\mathrm{L1}, Q_\mathrm{L2}) = \int_0^{\, Q_\mathrm{L1}} p_\mathrm{L1}(q) \, \mathrm{d} q + \int_0^{\, Q_\mathrm{L2}} p_\mathrm{L2}(q) \, \mathrm{d} q
-$$
-
-This optimization problem can be simplified by splicing the generators' and loads' individual supply and demand curves into an aggregated supply curve and an aggregated demand curve, respectively. The aggregated demand curve can be formed by sorting the price-quantity pairs from high to low, and the aggregated supply curve can be formed by sorting them from low to high (known as *merit order*). The optimization problem can then be solved by finding the intersection between the aggregated supply and demand curves. The solution to the example at hand is $Q^* = 11$, $P^* = 4$. This is shown in {ref}`fig_2_5`, and {ref}`fig_2_4` shows how $Q^*$ corresponds to the individual quantities $Q_\mathrm{G1}^*$, $Q_\mathrm{G2}^*$, $Q_\mathrm{L1}^*$, and $Q_\mathrm{L2}^*$. The optimal cost, utility, and welfare are tabulated in {ref}`tab_2_1`.
+The optimization problem can be simplified by splicing the generators' and loads' individual supply and demand curves into an aggregated supply curve and an aggregated demand curve, respectively. The aggregated demand curve can be formed by sorting the price-quantity pairs from high to low, and the aggregated supply curve can be formed by sorting them from low to high (known as *merit order*). The optimization problem can then be solved by finding the intersection between the aggregated supply and demand curves. The solution to the example at hand is $Q^* = 11$, $P^* = 4$. This is shown in {ref}`fig_2_5`, and {ref}`fig_2_4` shows how $Q^*$ corresponds to the individual quantities $Q_\mathrm{G1}^*$, $Q_\mathrm{G2}^*$, $Q_\mathrm{L1}^*$, and $Q_\mathrm{L2}^*$. The optimal cost, utility, and welfare are tabulated in {ref}`tab_2_1`.
 
 ```{figure} img/fig_2_4.png
 :label: fig_2_4
