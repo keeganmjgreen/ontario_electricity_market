@@ -55,7 +55,7 @@ If these sound similar to supply and demand curves, it's because they are! In an
 
 ### Example 2.1: One Generator, One Load
 
-Consider the example shown in {ref}`fig_2_2`. The generator says they are willing to produce up to 6 MW at \$2/MWh, or up to 9 MW at \$7/MWh. Note that this does not mean they are willing to produce the first 6 MW at \$2/MWh and only the remaining 3 MW at \$7/MWh; the generator has one price, and it changes if a certain volume is surpassed, like in the café analogy. The same principle applies on the demand side: the load says they are willing to consume up to 4 MW at \$8/MWh, or up to 8 MW at \$5/MWh. The market clears at $Q^* = 6 \ \mathrm{MW}$ and $P^* = \$5/\mathrm{MWh}$.
+Consider the example shown in {ref}`fig_2_2`. The generator says they are willing to produce up to 6 MW at \$2/MWh, or up to 9 MW at \$7/MWh. Note that this does not mean they are willing to produce the first 6 MW at \$2/MWh and only the remaining 3 MW at \$7/MWh; the generator has one price, and it changes if a certain volume is surpassed, like in the café analogy. The same principle applies on the demand side: the load says they are willing to consume up to 4 MW at \$8/MWh, or up to 8 MW at \$5/MWh. These price-quantity pairs form the two "staircases"&mdash;the supply and demand curves&mdash;shown in the figure. The market clears at $Q^* = 6 \ \mathrm{MW}$ and $P^* = \$5/\mathrm{MWh}$.
 
 ```{figure} img/fig_2_2.png
 :label: fig_2_2
@@ -96,7 +96,7 @@ $$
 U(Q_\mathrm{L1}, Q_\mathrm{L2}) = \int_0^{\, Q_\mathrm{L1}} p_\mathrm{L1}(q) \, \mathrm{d} q + \int_0^{\, Q_\mathrm{L2}} p_\mathrm{L2}(q) \, \mathrm{d} q
 $$
 
-This optimization problem can be simplified by splicing the generators' and loads' individual supply and demand curves into an aggregated supply curve and an aggregated demand curve, respectively. The optimization problem can then be solved by finding the intersection between the aggregated supply and demand curves. The solution to the example at hand is $Q^* = 11$, $P^* = 4$. This is shown in {ref}`fig_2_5`, and {ref}`fig_2_4` shows how $Q^*$ corresponds to the individual quantities $Q_\mathrm{G1}^*$, $Q_\mathrm{G2}^*$, $Q_\mathrm{L1}^*$, and $Q_\mathrm{L2}^*$. The optimal cost, utility, and welfare are tabulated in {ref}`tab_2_1`.
+This optimization problem can be simplified by splicing the generators' and loads' individual supply and demand curves into an aggregated supply curve and an aggregated demand curve, respectively. The aggregated demand curve can be formed by sorting the price-quantity pairs from high to low, and the aggregated supply curve can be formed by sorting them from low to high (known as *merit order*). The optimization problem can then be solved by finding the intersection between the aggregated supply and demand curves. The solution to the example at hand is $Q^* = 11$, $P^* = 4$. This is shown in {ref}`fig_2_5`, and {ref}`fig_2_4` shows how $Q^*$ corresponds to the individual quantities $Q_\mathrm{G1}^*$, $Q_\mathrm{G2}^*$, $Q_\mathrm{L1}^*$, and $Q_\mathrm{L2}^*$. The optimal cost, utility, and welfare are tabulated in {ref}`tab_2_1`.
 
 ```{figure} img/fig_2_4.png
 :label: fig_2_4
@@ -122,9 +122,9 @@ Aggregated supply and demand curves of the two generators and two loads of Examp
 | Total: | $                \$20.0 / \mathrm{h}$ | $                \$79.0 / \mathrm{h}$ | $                \$12.0 / \mathrm{h}$ | $                \$35.0 / \mathrm{h}$ | $\$47.0 / \mathrm{h}$ |
 ```
 
-## The Market Network
+In the next section, we will see that the optimization cannot always be solved by splicing the generators' and loads' price-quantity pairs into one supply curve and one demand curve.
 
-<!-- TODO: Diagrams. -->
+## The Market Network
 
 We have established that for a given market, at a given time, there is one market price. For the purposes of market modeling, the grid consists of multiple pricing nodes, each of which has its own market price and in that sense acts like a market. Each node is analogous to one neighborhood of cafés. But, of course, the grid is an electrical network, and power can be transferred between its nodes through long-distance transmission and distribution lines. This is as if the neighborhoods of cafés were interconnected by an intricate network of pipes! Like electricity, espresso wouldn't even have to be made in the neighborhood in which it is consumed, and supply does not need to equal demand within a grid node. Because quantities of power can be traded between grid nodes, the entire grid must be cleared as one market in order to maximize the system-wide welfare $W\!$. The total welfare is generally higher with trade than without, which is why trade takes place.
 
@@ -207,6 +207,21 @@ Network of Example 2.4.
 
 Individual supply and demand curves of generator $\mathrm{G1}$ (at node $\mathrm{A}$) and generator $\mathrm{G2}$, load $\mathrm{L1}$, and load $\mathrm{L2}$ (at node $\mathrm{B}$), showing the resulting market-clearing prices and quantities.
 ```
+
+## Higher-Dimensional Optimization Problems
+
+The optimization problem of Example 2.4 could be formulated with as few as two decision variables, meaning that it can still be visualized easily and solved by brute force practically. However, a real electrical grid can have hundreds or thousands of nodes and decision variables, so an optimization algorithm must be used.
+
+Optimization algorithms often require or perform better when the objective function&mdash;$W$ in our case&mdash;is a linear function of the decision variables. However, as can be seen in {ref}`fig_2_6` and {ref}`fig_2_7`, $W$ is only a *piecewise* linear function of the decision variables. $W$ can be made into an entirely linear function by breaking down the decision variables $Q_\mathrm{G1}$, $Q_\mathrm{G2}$, and $Q_\mathrm{L}$ into a decision variable for each nonzero price-quantity pair, as shown in {ref}`fig_2_9`.
+
+```{figure} img/fig_2_9.png
+:label: fig_2_9
+:width: 100%
+
+Reformulating the optimization problem of Example 2.4 with one decision variable for each step in the generators' and loads' supply and demand "staircases".
+```
+
+This is essentially breaking up the piecewise supply and demand curves into their constituent pieces, with one piece for each nonzero price-quantity pair. You may be concerned that this discards the price-based sort order of the pieces (ascending price for supply, descending price for demand), but it doesn't. The maximization of $W$ will inherently maintain the sort order for each supply and demand curve. For example, $Q_\mathrm{G1,1}$ will be dispatched up to its maximum of $6.0 \ \mathrm{MW}$ before $Q_\mathrm{G2,1}$ is dispatched at $6.5 \ \mathrm{MW}$ because the former quantity is the cheapest (at $\$2.0/\mathrm{MWh}$) and the latter quantity is the next-cheapest (at $\$4.0/\mathrm{MWh}$).
 
 ## Balancing Power Supply and Demand
 
