@@ -126,7 +126,15 @@ In the next section, we will see that the optimization cannot always be solved b
 
 ## The Market Network
 
-We have established that for a given market, at a given time, there is one market price. For the purposes of market modeling, the grid consists of multiple pricing nodes, each of which has its own market price and in that sense acts like a market. Such a setup is called *nodal pricing* or *locational marginal pricing (LMP)*.
+We have established that for a given market, at a given time, there is one market price. However, the electrical grid is complex ({ref}`open_infra_map`). For the purposes of market modeling, the grid consists of multiple pricing nodes, each of which has its own market price and in that sense acts like a market. Such a setup is called *nodal pricing* or *locational marginal pricing (LMP)*.
+
+```{figure} img/Open-Infrastructure-Map-cropped.png
+:label: open_infra_map
+:width: 100%
+
+Grid infrastructure spanning Michigan, Ontario, and New York state. Copyright  OpenStreetMap and Open Infrastructure Map (https://www.openstreetmap.org/copyright, https://openinframap.org/copyright).
+```
+
 
 Each node is analogous to one neighborhood of cafés. But, of course, the grid is an electrical network, and power can be transferred between its nodes through long-distance transmission and distribution lines. This is as if the neighborhoods of cafés were interconnected by an intricate network of pipes! Like electricity, espresso wouldn't even have to be made in the neighborhood in which it is consumed, and supply does not need to equal demand within a grid node. Because quantities of power can be traded between grid nodes, the entire grid must be cleared as one market in order to maximize the system-wide welfare $W\!$. The total welfare is generally higher with trade than without, which is why trade takes place.
 
@@ -144,7 +152,7 @@ Recall the previous section's example of two generators and two loads. Consider 
 
 ```{figure} img/diagrams-example_2_3.png
 :label: example_2_3
-:width: 64%
+:width: 100% 
 
 Network of Example 2.3.
 ```
@@ -198,7 +206,7 @@ The solution to the example at hand is $Q_\mathrm{G2}^* = 6.5 \ \mathrm{MW}$, $Q
 
 ```{figure} img/diagrams-example_2_4.png
 :label: example_2_4
-:width: 64%
+:width: 100% 
 
 Network of Example 2.4.
 ```
