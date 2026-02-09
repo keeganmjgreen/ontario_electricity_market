@@ -152,7 +152,7 @@ Recall the previous section's example of two generators and two loads. Consider 
 
 ```{figure} img/diagrams-example_2_3.png
 :label: example_2_3
-:width: 100% 
+:width: 64%
 
 Network of Example 2.3.
 ```
@@ -206,7 +206,7 @@ The solution to the example at hand is $Q_\mathrm{G2}^* = 6.5 \ \mathrm{MW}$, $Q
 
 ```{figure} img/diagrams-example_2_4.png
 :label: example_2_4
-:width: 100% 
+:width: 64%
 
 Network of Example 2.4.
 ```

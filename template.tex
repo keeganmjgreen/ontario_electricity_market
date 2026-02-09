@@ -34,9 +34,12 @@
 
 \includepdf{/Users/keegan_green/workspace/src/ontario_electricity_market/cover/cover.pdf}
 
-\noindent
-{\footnotesize \textit{Available online at:}} \\
-{\footnotesize \url{keeganmjgreen.github.io/ontario_electricity_market/}}
+\newcommand{\documentnote}[1]{{
+  \let \thempfn \relax
+  \footnotetext[0]{#1}
+}}
+\documentnote{Cover image: Grid infrastructure spanning Michigan, Ontario, and New York state, copyright OpenStreetMap and Open Infrastructure Map (\url{https://www.openstreetmap.org/copyright}, \url{https://openinframap.org/copyright}).}
+\documentnote{This article is available online at: \url{keeganmjgreen.github.io/ontario_electricity_market/}}
 
 [-CONTENT-]
 
