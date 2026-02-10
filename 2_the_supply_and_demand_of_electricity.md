@@ -140,11 +140,35 @@ Each node is analogous to one neighborhood of cafés. But, of course, the grid i
 
 However, the network is leaky. Transmission and distribution lines are not ideal wires and have electrical resistance depending on their type and length. Thus, some power is lost to heat for each unit of power transferred. These transmission losses are analogous to a cost of trade between grid nodes. Power transfer between nodes is still usually necessary and beneficial. For example, it is likely be cheaper to use nuclear power transmitted over a great distance, with some lost along the way, than to use power from a nearby gas-fired plant. We need a way to model and account for the costs of trade when clearing the market, as they will affect the optimal quantities of power and cause prices to differ between nodes. In general, each node affects all other nodes.
 
-A line's transmission losses can be modeled by the line's efficiency, $\eta$:
+For the sake of simplicity when demonstrating the effect of transmission losses on the electricity market, we will assume a given transmission line to have a fixed efficiency, $\eta$:
 
 $$
-\eta = \frac{\text{power out}}{\text{power in}} = \frac{\text{power out}}{\text{power out} + \text{power lost}}
+\eta = \frac{\text{power out}}{\text{power in}} = 1 - \frac{\text{power lost}}{\text{power in}}
 $$
+
+``` {note}
+In reality, a transmission line's efficiency decreases as the power increases. Consider a transmission line transferring power from point $\mathrm{A}$ to point $\mathrm{B}$. The electric current through the transmission line is:
+
+$$
+I = \frac{\text{power in}}{V_\mathrm{A}} = \frac{\text{power out}}{V_\mathrm{B}}
+$$
+
+If the line has zero electrical resistance, then $\text{power in} = \text{power out}$ and $V_\mathrm{A} = V_\mathrm{B}$. If the line has resistance $R$, then 
+this is no longer the case; there will be a voltage drop $V_\mathrm{A} - V_\mathrm{B} = I R$ over the line and some power will be lost to heat:
+
+$$
+\text{power lost} = I^2 R = \left( \frac{\text{power in}}{V_\mathrm{A}} \right)^{\! 2} R
+$$
+
+This means that the line's efficiency is a function of the power in:
+
+$$
+\eta = 1 - \frac{\bigl( \frac{\text{power in}}{V_\mathrm{A}} \bigr)^2 R}{\text{power in}} = 1 - \frac{\text{power in}}{V_\mathrm{A}^2} \, R
+$$
+
+In the real world, even more complex transmission line models&mdash;which build upon the economic dispatch problem&mdash;are used when clearing the electricity market.
+```
+
 
 ### Example 2.3: One Generator Node, One Load Node
 
