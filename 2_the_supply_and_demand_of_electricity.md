@@ -55,7 +55,7 @@ If these sound similar to supply and demand curves, it's because they are! In an
 
 ### Example 2.1: One Generator, One Load
 
-Consider the example shown in {ref}`fig_2_2`. The generator says they are willing to produce up to 6 MW at \$2/MWh, or up to 9 MW at \$7/MWh. Note that this does not mean they are willing to produce the first 6 MW at \$2/MWh and only the remaining 3 MW at \$7/MWh; the generator has one price, and it changes if a certain volume is surpassed, like in the café analogy. The same principle applies on the demand side: the load says they are willing to consume up to 4 MW at \$8/MWh, or up to 8 MW at \$5/MWh. These price-quantity pairs form the two "staircases"&mdash;the supply and demand curves&mdash;shown in the figure. The market clears at $Q^* = 6 \ \mathrm{MW}$ and $P^* = \$5/\mathrm{MWh}$.
+Consider the example shown in {ref}`fig_2_2`. The generator says they are willing to produce up to $6 \ \mathrm{MW}$ at $\$2/\mathrm{MWh}$, or up to $9 \ \mathrm{MW}$ at $\$7/\mathrm{MWh}$. Note that this does not mean they are willing to produce the first $6 \ \mathrm{MW}$ at $\$2/\mathrm{MWh}$ and only the remaining $3 \ \mathrm{MW}$ at $\$7/\mathrm{MWh}$; the generator has one price, and it changes if a certain volume is surpassed, like in the café analogy. The same principle applies on the demand side: the load says they are willing to consume up to $4 \ \mathrm{MW}$ at $\$8/\mathrm{MWh}$, or up to $8 \ \mathrm{MW}$ at $\$5/\mathrm{MWh}$. These price-quantity pairs form the two "staircases"&mdash;the supply and demand curves&mdash;shown in the figure. The market clears at $Q^* = 6 \ \mathrm{MW}$ and $P^* = \$5/\mathrm{MWh}$.
 
 ```{figure} img/fig_2_2.png
 :label: fig_2_2
