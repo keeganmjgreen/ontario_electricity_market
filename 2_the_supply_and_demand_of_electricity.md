@@ -242,6 +242,10 @@ Network of Example 2.4.
 Individual supply and demand curves of generator $\mathrm{G1}$ (at node $\mathrm{A}$) and generator $\mathrm{G2}$, load $\mathrm{L1}$, and load $\mathrm{L2}$ (at node $\mathrm{B}$), showing the resulting market-clearing prices and quantities.
 :::
 
+:::{note}
+Examples 2.3 and 2.4 can be simplified by replacing the $75\%$-efficient transmission line with a lossless one, and replacing the generation at node $\mathrm{A}$ with $75\%$-efficient generation (incurring $33.\bar{3}\%$ more cost for the same quantity). This would essentially collapse the two nodes into one, allowing us to apply the simpler method of Example 2.2. However, this is not true in general&mdash;for example, if nodes $\mathrm{A}$ and $\mathrm{B}$ each contained both a generator and a load. Examples 2.3 and 2.4 are for illustrative purposes, having sufficiently few decision variables that $W$ can be plotted.
+:::
+
 ## Higher-Dimensional Optimization Problems
 
 The optimization problem of Example 2.4 could be formulated with as few as two decision variables, meaning that it can still be visualized easily and solved by brute force practically. However, a real electrical grid can have hundreds or thousands of nodes and decision variables, so an optimization algorithm must be used.
