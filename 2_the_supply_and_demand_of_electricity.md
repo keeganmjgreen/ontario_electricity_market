@@ -128,7 +128,7 @@ In the next section, we will see that the optimization cannot always be solved b
 
 We have established that for a given market, at a given time, there is one market price. However, the electrical grid is complex ({ref}`open_infra_map`). For the purposes of market modeling, the grid consists of multiple pricing nodes, each of which has its own market price and in that sense acts like a market. Such a setup is called *nodal pricing* or *locational marginal pricing (LMP)*.
 
-:::{figure} img/Open-Infrastructure-Map-cropped.png
+:::{figure} img/Open-Infrastructure-Map-cropped.jpg
 :label: open_infra_map
 :width: 100%
 
