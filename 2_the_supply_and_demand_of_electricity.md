@@ -206,6 +206,7 @@ Notice how the welfare has decreased from $\$47.0 / \mathrm{h}$ in Example 2.2 t
 With transmission losses, maximizing $U - C$ is only the same as maximizing $S_\mathrm{L} + S_\mathrm{G}$ if an additional constraint $Q_\mathrm{L} P_\mathrm{L} = Q_\mathrm{G} P_\mathrm{G}$ is applied.
 :::
 
+(supply_and_demand_of_electricity_example_2_4)=
 ### Example 2.4: One Generator Node, One Combined Generator/Load Node
 
 Now consider that only generator $\mathrm{G1}$ is located at node $\mathrm{A}$, while generator $\mathrm{G2}$ and both loads are located at node $\mathrm{B}$. The optimization problem becomes maximizing $W\!$ subject to the constraint that $0.75 \, Q_\mathrm{G1} + Q_\mathrm{G2} = Q_\mathrm{L}$. Any two of these three quantities can be chosen as the decision variables; we will use $Q_\mathrm{G2}$ and $Q_\mathrm{L}$ arbitrarily. The optimization problem is then:
@@ -246,6 +247,7 @@ Individual supply and demand curves of generator $\mathrm{G1}$ (at node $\mathrm
 Examples 2.3 and 2.4 can be simplified by replacing the $75\%$-efficient transmission line with a lossless one, and replacing the generation at node $\mathrm{A}$ with $75\%$-efficient generation (incurring $33.\bar{3}\%$ more cost for the same quantity). This would essentially collapse the two nodes into one, allowing us to apply the simpler method of Example 2.2. However, this is not true in general&mdash;for example, if nodes $\mathrm{A}$ and $\mathrm{B}$ each contained both a generator and a load. Examples 2.3 and 2.4 are for illustrative purposes, having sufficiently few decision variables that $W$ can be plotted.
 :::
 
+(supply_and_demand_of_electricity_higher_dimensional_optimization_problems)=
 ## Higher-Dimensional Optimization Problems
 
 The optimization problem of Example 2.4 could be formulated with as few as two decision variables, meaning that it can still be visualized easily and solved by brute force practically. However, a real electrical grid can have hundreds or thousands of nodes and decision variables, so an optimization algorithm must be used.
