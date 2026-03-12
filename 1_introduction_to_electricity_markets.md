@@ -1,3 +1,12 @@
+> <div style="display:flex; align-items: center;">
+>   <div style="width:25%;">
+>     <img src="img/pdf_fanout.png">
+>   </div>
+>   <div style="width:75%;">
+>     <a href="https://raw.githubusercontent.com/keeganmjgreen/ontario_electricity_market/main/how_electricity_markets_work.pdf">Download the PDF</a>
+>   </div>
+> </div>
+
 # Introduction to Electricity Markets
 
 The world's electrical grids stand alongside the internet and water supply networks as great systems and accomplishments of humanity. We rely on these systems every day, yet most of us do not understand how these complex systems work. We often take these systems for granted when they are functioning correctly, which they almost always do. When such systems fail, such as during a power outage, we realize how dramatically they improve our quality of life.

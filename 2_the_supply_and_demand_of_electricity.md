@@ -1,3 +1,12 @@
+> <div style="display:flex; align-items: center;">
+>   <div style="width:25%;">
+>     <img src="img/pdf_fanout.png">
+>   </div>
+>   <div style="width:75%;">
+>     <a href="https://raw.githubusercontent.com/keeganmjgreen/ontario_electricity_market/main/how_electricity_markets_work.pdf">Download the PDF</a>
+>   </div>
+> </div>
+
 # The Supply and Demand of Electricity
 
 ## Introduction to Economics: Your Friendly Neighborhood Espresso Market
