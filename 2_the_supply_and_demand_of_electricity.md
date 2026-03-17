@@ -138,7 +138,7 @@ Aggregated supply and demand curves of the two generators and two loads of Examp
 |-------:|--------------------------------------:|--------------------------------------:|--------------------------------------:|--------------------------------------:|----------------------:|
 |        | $C_\mathrm{G1} = \$12.0 / \mathrm{h}$ | $C_\mathrm{L1} = \$52.0 / \mathrm{h}$ | $S_\mathrm{G1} = \$12.0 / \mathrm{h}$ | $S_\mathrm{L1} = \$15.0 / \mathrm{h}$ |                       |
 |        | $C_\mathrm{G2} = \$20.0 / \mathrm{h}$ | $C_\mathrm{L2} = \$27.0 / \mathrm{h}$ | $S_\mathrm{G2} = \$ 0.0 / \mathrm{h}$ | $S_\mathrm{L2} = \$20.0 / \mathrm{h}$ |                       |
-| Total: | $                \$20.0 / \mathrm{h}$ | $                \$79.0 / \mathrm{h}$ | $                \$12.0 / \mathrm{h}$ | $                \$35.0 / \mathrm{h}$ | $\$47.0 / \mathrm{h}$ |
+| Total: | $                \$32.0 / \mathrm{h}$ | $                \$79.0 / \mathrm{h}$ | $                \$12.0 / \mathrm{h}$ | $                \$35.0 / \mathrm{h}$ | $\$47.0 / \mathrm{h}$ |
 ```
 
 In the next section, we will see that the optimization cannot always be solved by splicing the generators' and loads' price-quantity pairs into one supply curve and one demand curve.
