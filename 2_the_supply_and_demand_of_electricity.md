@@ -72,7 +72,7 @@ If these sound similar to supply and demand curves, it's because they are! In an
 
 ### Example 2.1: One Generator, One Load
 
-Consider the example shown in {ref}`fig_2_2`. The generator says they are willing to produce up to $6 \ \mathrm{MW}$ at $\$2/\mathrm{MWh}$, or up to $9 \ \mathrm{MW}$ at $\$7/\mathrm{MWh}$. Note that this does not mean they are willing to produce the first $6 \ \mathrm{MW}$ at $\$2/\mathrm{MWh}$ and only the remaining $3 \ \mathrm{MW}$ at $\$7/\mathrm{MWh}$; the generator has one price, and it changes if a certain volume is surpassed, like in the café analogy. The same principle applies on the demand side: the load says they are willing to consume up to $4 \ \mathrm{MW}$ at $\$8/\mathrm{MWh}$, or up to $8 \ \mathrm{MW}$ at $\$5/\mathrm{MWh}$. These price-quantity pairs form the two "staircases"&mdash;the supply and demand curves&mdash;shown in the figure. The market clears at $Q^* = 6 \ \mathrm{MW}$ and $P^* = \$5/\mathrm{MWh}$.
+Consider the example shown in {ref}`fig_2_2`. The generator says they are willing to produce up to $6 \ \mathrm{MW}$ at $\$2 / \mathrm{MWh}$, or up to $9 \ \mathrm{MW}$ at $\$7 / \mathrm{MWh}$. Note that this does not mean they are willing to produce the first $6 \ \mathrm{MW}$ at $\$2 / \mathrm{MWh}$ and only the remaining $3 \ \mathrm{MW}$ at $\$7 / \mathrm{MWh}$; the generator has one price, and it changes if a certain volume is surpassed, like in the café analogy. The same principle applies on the demand side: the load says they are willing to consume up to $4 \ \mathrm{MW}$ at $\$8 / \mathrm{MWh}$, or up to $8 \ \mathrm{MW}$ at $\$5 / \mathrm{MWh}$. These price-quantity pairs form the two "staircases"&mdash;the supply and demand curves&mdash;shown in the figure. The market clears at $Q^* = 6 \ \mathrm{MW}$ and $P^* = \$5 / \mathrm{MWh}$.
 
 ```{figure} img/fig_2_2.png
 :label: fig_2_2
@@ -190,11 +190,15 @@ $$
 In the real world, even more complex transmission line models&mdash;which build upon the economic dispatch problem&mdash;are used when clearing the electricity market.
 ```
 
+Losing some power to heat isn't just disadvantageous because it's wasteful. As transmission lines heat up, they expand, elongate, and sag. If a transmission line were to sag too close to a nearby object (such as a tree), electricity will arc to the object and cause a short circuit, requiring the line to be immediately disconnected from the rest of the grid. To avoid this situation, lines are rated for a maximum electric current or power based on how quickly they can dissipate heat, just like the wiring in your home. When a line is operating at maximum power, it is said to be congested. A congested line limits the amount of electricity that can be traded between grid nodes, requiring electricity to be sourced from other generators that are potentially more expensive, and delivered to other loads that might not be willing to pay as much. Like transmission losses, transmission congestion contributes to price differences between grid nodes.
+
+Let's first look at an example of how transmission losses alone affect the market, then add in the effect of transmission congestion.
+
 ### Example 2.3: One Generator Node, One Load Node
 
 Recall the previous section's example of two generators and two loads. Consider now that the generators $\mathrm{G1}$ and $\mathrm{G2}$ are located at a node $\mathrm{A}$, and that the two loads $\mathrm{L1}$ and $\mathrm{L2}$ are located at a node $\mathrm{B}$. The two nodes are connected by a transmission line with 75% efficiency. This is an unrealistically poor efficiency, for illustrative purposes. The optimization problem becomes maximizing $W\!$ subject to the constraint that the total quantity bought, $Q_\mathrm{L}$, must equal 75% of the total quantity sold, $Q_\mathrm{G}$, meaning that for every 1 MW generated, only 0.75 MW are delivered to the load, the rest being lost to heat. This is a linear constraint, but would be quadratic if modeling the line's electrical resistance. Of the two quantities $Q_\mathrm{G}$ and $Q_\mathrm{L}$, either can be chosen as the optimization problem's sole decision variable, from which the other quantity can be calculated via the efficiency.
 
-The solution to the example at hand is $Q_\mathrm{G}^* = 9.\bar{3} \ \mathrm{MW}$, $Q_\mathrm{L}^* = 7 \ \mathrm{MW}$, $P_\mathrm{A}^* = \$4/\mathrm{MWh}$, $P_\mathrm{B}^* = \$5.\bar{3}/\mathrm{MWh}$. This is shown in {ref}`example_2_3` and {ref}`fig_2_6`. The optimal cost, utility, and welfare are tabulated in {ref}`tab_2_2`.
+The solution to the example at hand is $Q_\mathrm{G}^* = 9.\bar{3} \ \mathrm{MW}$, $Q_\mathrm{L}^* = 7 \ \mathrm{MW}$, $P_\mathrm{A}^* = \$4 / \mathrm{MWh}$, and $P_\mathrm{B}^* = \$5.\bar{3} / \mathrm{MWh}$. This is shown in {ref}`example_2_3` and {ref}`fig_2_6`. The optimal cost, utility, and welfare are tabulated in {ref}`tab_2_2`.
 
 ```{figure} img/diagrams-example_2_3.png
 :label: example_2_3
@@ -224,8 +228,15 @@ Notice how the welfare has decreased from $\$47.0 / \mathrm{h}$ in Example 2.2 t
 
 <!-- TODO: Cost of building transmission lines. -->
 
-``` {note}
-With transmission losses, maximizing $U - C$ is only the same as maximizing $S_\mathrm{L} + S_\mathrm{G}$ if an additional constraint $Q_\mathrm{L} P_\mathrm{L} = Q_\mathrm{G} P_\mathrm{G}$ is applied.
+### Example 2.3 with Transmission Congestion
+
+Now assume that the transmission line between nodes $\mathrm{A}$ and $\mathrm{B}$ has an $8$-$\mathrm{MW}$ limit, which is lower than the optimal power injection of $Q_\mathrm{G}^* = 9.\bar{3} \ \mathrm{MW}$ that was previously determined for the line. With transmission congestion, the solution is now $Q_\mathrm{G}^* = 8 \ \mathrm{MW}$, $Q_\mathrm{L}^* = 6 \ \mathrm{MW}$, $P_\mathrm{A}^* = \$4 / \mathrm{MWh}$, and $P_\mathrm{B}^* = \$8 / \mathrm{MWh}$. This is shown in {ref}`fig_2_6b`. The welfare is now $\$31 / \mathrm{h}$, which is $\$2.\bar{6} / \mathrm{h}$ lower than in the non-congested case. Indeed, congested lines generally reduce the system welfare and affect the nodal prices, this example being no exception. In this example, the loads pay $Q_\mathrm{L}^* P_\mathrm{B}^* = \$48 / \mathrm{h}$ but the generators are paid only $Q_\mathrm{G}^* P_\mathrm{A}^* = \$32 / \mathrm{h}$. This difference is known as *congestion rent*, and is collected by the system operator. [@brown2025]
+
+```{figure} img/fig_2_6b.png
+:label: fig_2_6b
+:width: 100%
+
+Determining the market-clearing prices and quantities for the two-node grid of Example 2.3 with a congested 8-MW line.
 ```
 
 (supply_and_demand_of_electricity_example_2_4)=
@@ -249,7 +260,7 @@ We can visualize this optimization problem as the 3D surface shown in {ref}`fig_
 Determining the market-clearing quantities $Q_\mathrm{G2}$ and $Q_\mathrm{L}$ that maximize $W\!$ in Example 2.4.
 ```
 
-The solution to the example at hand is $Q_\mathrm{G2}^* = 6.5 \ \mathrm{MW}$, $Q_\mathrm{L}^* = 11 \ \mathrm{MW}$, and $Q_\mathrm{G1}^* = 6 \ \mathrm{MW}$. The market-clearing prices at the two nodes are $P_{\! \mathrm{A}}^* = \$3/\mathrm{MWh}$ and $P_{\! \mathrm{B}}^* = \$4/\mathrm{MWh}$. This is shown in {ref}`example_2_4` and {ref}`fig_2_8`.
+The solution to the example at hand is $Q_\mathrm{G2}^* = 6.5 \ \mathrm{MW}$, $Q_\mathrm{L}^* = 11 \ \mathrm{MW}$, and $Q_\mathrm{G1}^* = 6 \ \mathrm{MW}$. The market-clearing prices at the two nodes are $P_{\! \mathrm{A}}^* = \$3 / \mathrm{MWh}$ and $P_{\! \mathrm{B}}^* = \$4 / \mathrm{MWh}$. This is shown in {ref}`example_2_4` and {ref}`fig_2_8`.
 
 ```{figure} img/diagrams-example_2_4.png
 :label: example_2_4
@@ -283,7 +294,7 @@ Optimization algorithms often require or perform better when the objective funct
 Reformulating the optimization problem of Example 2.4 with one decision variable for each step in the generators' and loads' supply and demand "staircases".
 ```
 
-This is essentially breaking up the piecewise supply and demand curves into their constituent pieces, with one piece for each nonzero price-quantity pair. You may be concerned that this discards the price-based sort order of the pieces (ascending price for supply, descending price for demand), but it doesn't. The maximization of $W$ will inherently maintain the sort order for each supply and demand curve. For example, $Q_\mathrm{G1,1}$ will be dispatched up to its maximum of $6.0 \ \mathrm{MW}$ before $Q_\mathrm{G2,1}$ is dispatched at $6.5 \ \mathrm{MW}$ because the former quantity is the cheapest (at $\$2.0/\mathrm{MWh}$) and the latter quantity is the next-cheapest (at $\$4.0/\mathrm{MWh}$).
+This is essentially breaking up the piecewise supply and demand curves into their constituent pieces, with one piece for each nonzero price-quantity pair. You may be concerned that this discards the price-based sort order of the pieces (ascending price for supply, descending price for demand), but it doesn't. The maximization of $W$ will inherently maintain the sort order for each supply and demand curve. For example, $Q_\mathrm{G1,1}$ will be dispatched up to its maximum of $6.0 \ \mathrm{MW}$ before $Q_\mathrm{G2,1}$ is dispatched at $6.5 \ \mathrm{MW}$ because the former quantity is the cheapest (at $\$2.0 / \mathrm{MWh}$) and the latter quantity is the next-cheapest (at $\$4.0 / \mathrm{MWh}$).
 
 ## Balancing Power Supply and Demand
 
