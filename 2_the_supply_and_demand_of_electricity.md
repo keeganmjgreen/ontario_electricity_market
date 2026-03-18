@@ -1,3 +1,5 @@
+# The Supply and Demand of Electricity
+
 > <div style="display:flex; align-items: center;">
 >   <div style="width:25%;">
 >     <img src="img/pdf_fanout.png">
@@ -6,8 +8,6 @@
 >     <a href="https://raw.githubusercontent.com/keeganmjgreen/ontario_electricity_market/main/how_electricity_markets_work.pdf">Download the PDF</a>
 >   </div>
 > </div>
-
-# The Supply and Demand of Electricity
 
 To understand the wholesale electricity market, one must understand the economic principles of supply and demand. To do so, let's start with a market example that is unrelated to the electricity market, but familiar and intuitive.
 
