@@ -1,10 +1,10 @@
 # The Supply and Demand of Electricity
 
-> <div style="display:flex; align-items: center;">
->   <div style="width:25%;">
+> <div style="display: flex; align-items: center;">
+>   <div style="width: 20%; padding-right: 5%;">
 >     <img src="img/pdf_fanout.png">
 >   </div>
->   <div style="width:75%;">
+>   <div style="width: 75%;">
 >     <a href="https://raw.githubusercontent.com/keeganmjgreen/ontario_electricity_market/main/how_electricity_markets_work.pdf">Download the PDF</a>
 >   </div>
 > </div>
