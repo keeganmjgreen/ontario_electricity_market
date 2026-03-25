@@ -1,3 +1,7 @@
+---
+author: Keegan Green
+---
+
 # The Supply and Demand of Electricity
 
 > <div style="display: flex; align-items: center;">
@@ -6,6 +10,8 @@
 >   </div>
 >   <div style="width: 75%;">
 >     <a href="https://raw.githubusercontent.com/keeganmjgreen/ontario_electricity_market/main/how_electricity_markets_work.pdf">Download the PDF</a>
+>     <br>
+>     <a href="https://keeganmjgreen.github.io/blog/">Read more technical, AI-free content on my blog</a>
 >   </div>
 > </div>
 
