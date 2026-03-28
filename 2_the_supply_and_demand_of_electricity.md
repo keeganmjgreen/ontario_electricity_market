@@ -1,5 +1,5 @@
 ---
-author: Keegan Green
+author: Keegan Trujillo-Green
 ---
 
 # The Supply and Demand of Electricity

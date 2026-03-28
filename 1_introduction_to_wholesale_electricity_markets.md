@@ -1,5 +1,5 @@
 ---
-author: Keegan Green
+author: Keegan Trujillo-Green
 ---
 
 # Introduction to Wholesale Electricity Markets
