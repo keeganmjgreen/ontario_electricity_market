@@ -1,4 +1,6 @@
 import dataclasses
+from enum import Enum
+from typing import assert_never
 
 import numpy as np
 from matplotlib.axes import Axes
@@ -13,6 +15,13 @@ from src.supply_demand import (
     SupplyCurve,
     SupplyDemand,
 )
+
+
+class LegendLoc(Enum):
+    LOWER_LEFT = "lower left"
+    UPPER_RIGHT = "upper right"
+
+    DEFAULT = LOWER_LEFT
 
 
 @dataclasses.dataclass
@@ -46,8 +55,24 @@ class _BasePlotter:
             self.ax
         ).end.labeled(self.ax, self.yaxis_label, va="bottom")
 
-    def legend(self) -> None:
-        self.ax.legend(loc="lower left", bbox_to_anchor=(0.95, 0.5), fontsize=10)
+    def legend(self, loc: LegendLoc = LegendLoc.LOWER_LEFT) -> None:
+        fontsize = 10
+        match loc:
+            case LegendLoc.UPPER_RIGHT:
+                self.ax.legend(
+                    loc=loc.value,
+                    bbox_to_anchor=(1.05, 1.1),
+                    fontsize=fontsize,
+                    ncols=2,
+                )
+            case LegendLoc.LOWER_LEFT:
+                self.ax.legend(
+                    loc=loc.value,
+                    bbox_to_anchor=(0.95, 0.5),
+                    fontsize=fontsize,
+                )
+            case _ as unreachable:
+                assert_never(unreachable)
 
 
 @dataclasses.dataclass
@@ -83,14 +108,19 @@ class SupplyDemandPlotter(_BasePlotter):
                 label=rm(f"{curve.integral_name}, {curve.integral_symbol}"),
             )
 
-    def plot_all(self, supply_demand: SupplyDemand) -> None:
+    def plot_all(
+        self,
+        supply_demand: SupplyDemand,
+        legend_loc: LegendLoc | None = LegendLoc.DEFAULT,
+    ) -> None:
         equilibrium = supply_demand.equilibrium
         equilibrium_quantity = equilibrium.x if equilibrium is not None else None
         for curves in [supply_demand.supply_curves, supply_demand.demand_curves]:
             self.plot(Curve.aggregate(curves), equilibrium_quantity)
         if equilibrium is not None:
             equilibrium.drawn(self.ax)
-        self.legend()
+        if legend_loc is not None:
+            self.legend(legend_loc)
 
 
 @dataclasses.dataclass
@@ -133,6 +163,7 @@ class CostUtilityPlotter(_BasePlotter):
         quantity_vals: np.ndarray,
         welfare_vals: np.ndarray,
         equilibrium_quantity: float | None = None,
+        legend_loc: LegendLoc | None = LegendLoc.DEFAULT,
     ) -> None:
         self.ax.plot(
             quantity_vals, welfare_vals, color=Colors.WELFARE, label=rm("Welfare, $W$")
@@ -143,13 +174,21 @@ class CostUtilityPlotter(_BasePlotter):
             )
             optimum = Point(equilibrium_quantity, np.nanmax(welfare_vals))
             self.ax.plot(*optimum.xy, "ko", markersize=3, label=rm("Optimum"))
-        self.legend()
+        if legend_loc is not None:
+            self.legend(legend_loc)
 
-    def plot_welfare(self, supply_demand: SupplyDemand) -> None:
+    def plot_welfare(
+        self,
+        supply_demand: SupplyDemand,
+        legend_loc: LegendLoc | None = LegendLoc.DEFAULT,
+    ) -> None:
         welfare = supply_demand.welfare()
         welfare_vals = welfare(self.x_vals)
         self.plot_welfare_vals(
-            self.x_vals, welfare_vals, supply_demand.equilibrium_quantity()
+            self.x_vals,
+            welfare_vals,
+            supply_demand.equilibrium_quantity(),
+            legend_loc,
         )
 
     def plot_multiple(
@@ -157,6 +196,7 @@ class CostUtilityPlotter(_BasePlotter):
         curves: list[SupplyCurve | DemandCurve],
         total: bool = False,
         equilibrium_quantity: float | None = None,
+        legend_loc: LegendLoc | None = LegendLoc.DEFAULT,
     ) -> None:
         for curve in curves:
             self.plot_cost_or_utility(
@@ -164,14 +204,16 @@ class CostUtilityPlotter(_BasePlotter):
             )
         if total:
             self.plot_cost_or_utility(Curve.aggregate(curves), equilibrium_quantity)
-        self.legend()
+        if legend_loc is not None:
+            self.legend(legend_loc)
 
     def plot_all(
         self,
         supply_demand: SupplyDemand,
         total: bool = False,
         equilibrium_quantity: float | None = None,
+        legend_loc: LegendLoc | None = LegendLoc.DEFAULT,
     ) -> None:
         for curves in [supply_demand.supply_curves, supply_demand.demand_curves]:
-            self.plot_multiple(curves, total, equilibrium_quantity)
-        self.plot_welfare(supply_demand)
+            self.plot_multiple(curves, total, equilibrium_quantity, legend_loc)
+        self.plot_welfare(supply_demand, legend_loc)
