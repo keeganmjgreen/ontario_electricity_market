@@ -124,9 +124,13 @@ class Curve:
         [stepped] = {c.stepped for c in curves}
         return curve_type(
             points,
-            name=(curve.name if mask else f"{curve_type.name} (Total)"),
+            name=(
+                curve.name if mask or len(curves) == 1 else f"{curve_type.name} (Total)"
+            ),
             integral_name=(
-                curve.integral_name if mask else f"Total {curve_type.integral_name}"
+                curve.integral_name
+                if mask or len(curves) == 1
+                else f"Total {curve_type.integral_name}"
             ),
             integral_symbol=(
                 curve.integral_symbol if mask else curve_type.integral_symbol
