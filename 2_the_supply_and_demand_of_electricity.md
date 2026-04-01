@@ -76,7 +76,7 @@ Loads and generators submit bids to buy power and offers to sell power, respecti
 
 If these sound similar to supply and demand curves, it's because they are! In an electricity market with one load and one generator, the load's $(P_\mathrm{L}, Q_\mathrm{L})$ pairs would define the electricity market's demand curve and the generator's $(P_\mathrm{G}, Q_\mathrm{G})$ pairs would define the market's supply curve, also known as the *dispatch curve*. The intersection between the supply and demand curves determines the quantity $Q^*$ of power that will be delivered at the market-clearing price $P^*$, which maximizes $U - C$.
 
-### Example 2.1: One Generator, One Load
+### Example 1: One Generator, One Load
 
 Consider the example shown in {ref}`fig_2_2`. The generator says they are willing to produce up to $6 \ \mathrm{MW}$ at $\$2 / \mathrm{MWh}$, or up to $9 \ \mathrm{MW}$ at $\$7 / \mathrm{MWh}$. Note that this does not mean they are willing to produce the first $6 \ \mathrm{MW}$ at $\$2 / \mathrm{MWh}$ and only the remaining $3 \ \mathrm{MW}$ at $\$7 / \mathrm{MWh}$; the generator has one price, and it changes if a certain volume is surpassed, like in the café analogy. The same principle applies on the demand side: the load says they are willing to consume up to $4 \ \mathrm{MW}$ at $\$8 / \mathrm{MWh}$, or up to $8 \ \mathrm{MW}$ at $\$5 / \mathrm{MWh}$. These price-quantity pairs form the two "staircases"&mdash;the supply and demand curves&mdash;shown in the figure. The market clears at $Q^* = 6 \ \mathrm{MW}$ and $P^* = \$5 / \mathrm{MWh}$.
 
@@ -84,10 +84,10 @@ Consider the example shown in {ref}`fig_2_2`. The generator says they are willin
 :label: fig_2_2
 :width: 100%
 
-Supply and demand curves formed by the price-quantity pairs of the one generator and one load of Example 2.1.
+Supply and demand curves formed by the price-quantity pairs of the one generator and one load of Example 1.
 ```
 
-### Example 2.2: Two Generators, Two Loads
+### Example 2: Two Generators, Two Loads
 
 What if there are two generators, $\mathrm{G1}$ and $\mathrm{G2}$, and two loads, $\mathrm{L1}$ and $\mathrm{L2}$? Each generator and load has its own supply or demand curve formed by its price-quantity pairs, as shown in {ref}`fig_2_3`. These are known as *individual* supply and demand curves, as they represent individual participants in the market.
 
@@ -95,7 +95,7 @@ What if there are two generators, $\mathrm{G1}$ and $\mathrm{G2}$, and two loads
 :label: fig_2_3
 :width: 100%
 
-Individual supply and demand curves formed by the price-quantity pairs of the two generators and two loads of Example 2.2.
+Individual supply and demand curves formed by the price-quantity pairs of the two generators and two loads of Example 2.
 ```
 
 In clearing the market, we still want to maximize $W = U - C$. The total seller cost $C$ is the total of the areas under each generator's individual supply curve, up to the quantity produced by each generator:
@@ -127,17 +127,17 @@ The solution to the example at hand is $Q^* = 11$, $P^* = 4$. This is shown in {
 :label: fig_2_4
 :width: 100%
 
-Individual supply and demand curves of the two generators and two loads of Example 2.2, showing their optimal costs and utility values, respectively.
+Individual supply and demand curves of the two generators and two loads of Example 2, showing their optimal costs and utility values, respectively.
 ```
 
 ```{figure} img/fig_2_5.png
 :label: fig_2_5
 :width: 100%
 
-Aggregated supply and demand curves of the two generators and two loads of Example 2.2, respectively, showing the resulting market-clearing price and quantity.
+Aggregated supply and demand curves of the two generators and two loads of Example 2, respectively, showing the resulting market-clearing price and quantity.
 ```
 
-```{table} Optimal cost, utility, and welfare of Example 2.2.
+```{table} Optimal cost, utility, and welfare of Example 2.
 :label: tab_2_1
 
 |        |                                  Cost |                               Utility |                      Producer Surplus |                      Consumer Surplus |               Welfare |
@@ -200,27 +200,27 @@ Losing some power to heat isn't just disadvantageous because it's wasteful. As t
 
 Let's first look at an example of how transmission losses alone affect the market, then add in the effect of transmission congestion.
 
-### Example 2.3: One Generator Node, One Load Node
+### Example 3: One Generator Node, One Load Node
 
 Recall the previous section's example of two generators and two loads. Consider now that the generators $\mathrm{G1}$ and $\mathrm{G2}$ are located at a node $\mathrm{A}$, and that the two loads $\mathrm{L1}$ and $\mathrm{L2}$ are located at a node $\mathrm{B}$. The two nodes are connected by a transmission line with 75% efficiency. This is an unrealistically poor efficiency, for illustrative purposes. The optimization problem becomes maximizing $W\!$ subject to the constraint that the total quantity bought, $Q_\mathrm{L}$, must equal 75% of the total quantity sold, $Q_\mathrm{G}$, meaning that for every 1 MW generated, only 0.75 MW are delivered to the load, the rest being lost to heat. This is a linear constraint, but would be quadratic if modeling the line's electrical resistance. Of the two quantities $Q_\mathrm{G}$ and $Q_\mathrm{L}$, either can be chosen as the optimization problem's sole decision variable, from which the other quantity can be calculated via the efficiency.
 
-The solution to the example at hand is $Q_\mathrm{G}^* = 9.\bar{3} \ \mathrm{MW}$, $Q_\mathrm{L}^* = 7 \ \mathrm{MW}$, $P_\mathrm{A}^* = \$4 / \mathrm{MWh}$, and $P_\mathrm{B}^* = \$5.\bar{3} / \mathrm{MWh}$. This is shown in {ref}`example_2_3` and {ref}`fig_2_6`. The optimal cost, utility, and welfare are tabulated in {ref}`tab_2_2`.
+The solution to the example at hand is $Q_\mathrm{G}^* = 9.\bar{3} \ \mathrm{MW}$, $Q_\mathrm{L}^* = 7 \ \mathrm{MW}$, $P_\mathrm{A}^* = \$4 / \mathrm{MWh}$, and $P_\mathrm{B}^* = \$5.\bar{3} / \mathrm{MWh}$. This is shown in {ref}`example_3` and {ref}`fig_2_6`. The optimal cost, utility, and welfare are tabulated in {ref}`tab_2_2`.
 
-```{figure} img/diagrams-example_2_3.png
-:label: example_2_3
+```{figure} img/diagrams-example_3.png
+:label: example_3
 :width: 64%
 
-Network of Example 2.3.
+Network of Example 3.
 ```
 
 ```{figure} img/fig_2_6.png
 :label: fig_2_6
 :width: 100%
 
-Determining the market-clearing prices and quantities for the two-node grid of Example 2.3.
+Determining the market-clearing prices and quantities for the two-node grid of Example 3.
 ```
 
-```{table} Optimal cost, utility, and welfare of Example 2.3.
+```{table} Optimal cost, utility, and welfare of Example 3.
 :label: tab_2_2
 
 |        |                                        Cost |                               Utility |                      Producer Surplus |                            Consumer Surplus |                     Welfare |
@@ -230,11 +230,11 @@ Determining the market-clearing prices and quantities for the two-node grid of E
 | Total: | $                \$25.\bar{3} / \mathrm{h}$ | $                \$59.0 / \mathrm{h}$ | $                \$12.0 / \mathrm{h}$ | $                \$21.\bar{6} / \mathrm{h}$ | $\$33.\bar{6} / \mathrm{h}$ |
 ```
 
-Notice how the welfare has decreased from $\$47.0 / \mathrm{h}$ in Example 2.2 to $\$33.\bar{6} / \mathrm{h}$ in this example. The $\$13.\bar{3} / \mathrm{h}$ difference is the cost of having to transfer power between the generator and load nodes via lossy transmission lines. In this example, the producer surplus happened to stay the same ($\$12.0 / \mathrm{h}$) while the consumers' surpluses decreased with the introduction of transmission losses. So, in this example, only the consumers incurred the cost of trade. However, in general, the cost of trade is paid by both producers and consumers. This does not mean that trade is not worthwhile. On the contrary&mdash;in this example, transmission lines allowed the generator and load to find each other, and trade in general provides more optimal buying and selling opportunities for market participants.
+Notice how the welfare has decreased from $\$47.0 / \mathrm{h}$ in Example 2 to $\$33.\bar{6} / \mathrm{h}$ in this example. The $\$13.\bar{3} / \mathrm{h}$ difference is the cost of having to transfer power between the generator and load nodes via lossy transmission lines. In this example, the producer surplus happened to stay the same ($\$12.0 / \mathrm{h}$) while the consumers' surpluses decreased with the introduction of transmission losses. So, in this example, only the consumers incurred the cost of trade. However, in general, the cost of trade is paid by both producers and consumers. This does not mean that trade is not worthwhile. On the contrary&mdash;in this example, transmission lines allowed the generator and load to find each other, and trade in general provides more optimal buying and selling opportunities for market participants.
 
 <!-- TODO: Cost of building transmission lines. -->
 
-### Example 2.3 with Transmission Congestion
+### Example 3 with Transmission Congestion
 
 Now assume that the transmission line between nodes $\mathrm{A}$ and $\mathrm{B}$ has an $8$-$\mathrm{MW}$ limit, which is lower than the optimal power injection of $Q_\mathrm{G}^* = 9.\bar{3} \ \mathrm{MW}$ that was previously determined for the line. With transmission congestion, the solution is now $Q_\mathrm{G}^* = 8 \ \mathrm{MW}$, $Q_\mathrm{L}^* = 6 \ \mathrm{MW}$, $P_\mathrm{A}^* = \$4 / \mathrm{MWh}$, and $P_\mathrm{B}^* = \$8 / \mathrm{MWh}$. This is shown in {ref}`fig_2_6b`. The welfare is now $\$31 / \mathrm{h}$, which is $\$2.\bar{6} / \mathrm{h}$ lower than in the non-congested case. Indeed, congested lines generally reduce the system welfare and affect the nodal prices, this example being no exception. In this example, the loads pay $Q_\mathrm{L}^* P_\mathrm{B}^* = \$48 / \mathrm{h}$ but the generators are paid only $Q_\mathrm{G}^* P_\mathrm{A}^* = \$32 / \mathrm{h}$. This difference is known as *congestion rent*, and is collected by the system operator. [@brown2025]
 
@@ -242,11 +242,11 @@ Now assume that the transmission line between nodes $\mathrm{A}$ and $\mathrm{B}
 :label: fig_2_6b
 :width: 100%
 
-Determining the market-clearing prices and quantities for the two-node grid of Example 2.3 with a congested 8-MW line.
+Determining the market-clearing prices and quantities for the two-node grid of Example 3 with a congested 8-MW line.
 ```
 
-(supply_and_demand_of_electricity_example_2_4)=
-### Example 2.4: One Generator Node, One Combined Generator/Load Node
+(supply_and_demand_of_electricity_example_4)=
+### Example 4: One Generator Node, One Combined Generator/Load Node
 
 Now consider that only generator $\mathrm{G1}$ is located at node $\mathrm{A}$, while generator $\mathrm{G2}$ and both loads are located at node $\mathrm{B}$. The optimization problem becomes maximizing $W\!$ subject to the constraint that $0.75 \, Q_\mathrm{G1} + Q_\mathrm{G2} = Q_\mathrm{L}$. Any two of these three quantities can be chosen as the decision variables; we will use $Q_\mathrm{G2}$ and $Q_\mathrm{L}$ arbitrarily. The optimization problem is then:
 
@@ -263,16 +263,16 @@ We can visualize this optimization problem as the 3D surface shown in {ref}`fig_
 :label: fig_2_7
 :width: 100%
 
-Determining the market-clearing quantities $Q_\mathrm{G2}$ and $Q_\mathrm{L}$ that maximize $W\!$ in Example 2.4.
+Determining the market-clearing quantities $Q_\mathrm{G2}$ and $Q_\mathrm{L}$ that maximize $W\!$ in Example 4.
 ```
 
-The solution to the example at hand is $Q_\mathrm{G2}^* = 6.5 \ \mathrm{MW}$, $Q_\mathrm{L}^* = 11 \ \mathrm{MW}$, and $Q_\mathrm{G1}^* = 6 \ \mathrm{MW}$. The market-clearing prices at the two nodes are $P_{\! \mathrm{A}}^* = \$3 / \mathrm{MWh}$ and $P_{\! \mathrm{B}}^* = \$4 / \mathrm{MWh}$. This is shown in {ref}`example_2_4` and {ref}`fig_2_8`.
+The solution to the example at hand is $Q_\mathrm{G2}^* = 6.5 \ \mathrm{MW}$, $Q_\mathrm{L}^* = 11 \ \mathrm{MW}$, and $Q_\mathrm{G1}^* = 6 \ \mathrm{MW}$. The market-clearing prices at the two nodes are $P_{\! \mathrm{A}}^* = \$3 / \mathrm{MWh}$ and $P_{\! \mathrm{B}}^* = \$4 / \mathrm{MWh}$. This is shown in {ref}`example_4` and {ref}`fig_2_8`.
 
-```{figure} img/diagrams-example_2_4.png
-:label: example_2_4
+```{figure} img/diagrams-example_4.png
+:label: example_4
 :width: 64%
 
-Network of Example 2.4.
+Network of Example 4.
 ```
 
 ```{figure} img/fig_2_8.png
@@ -283,13 +283,13 @@ Individual supply and demand curves of generator $\mathrm{G1}$ (at node $\mathrm
 ```
 
 ```{note}
-Examples 2.3 and 2.4 can be simplified by replacing the $75\%$-efficient transmission line with a lossless one, and replacing the generation at node $\mathrm{A}$ with $75\%$-efficient generation (incurring $33.\bar{3}\%$ more cost for the same quantity). This would essentially collapse the two nodes into one, allowing us to apply the simpler method of Example 2.2. However, this is not true in general&mdash;for example, if nodes $\mathrm{A}$ and $\mathrm{B}$ each contained both a generator and a load. Examples 2.3 and 2.4 are for illustrative purposes, having sufficiently few decision variables that $W$ can be plotted.
+Examples 2.3 and 2.4 can be simplified by replacing the $75\%$-efficient transmission line with a lossless one, and replacing the generation at node $\mathrm{A}$ with $75\%$-efficient generation (incurring $33.\bar{3}\%$ more cost for the same quantity). This would essentially collapse the two nodes into one, allowing us to apply the simpler method of Example 2. However, this is not true in general&mdash;for example, if nodes $\mathrm{A}$ and $\mathrm{B}$ each contained both a generator and a load. Examples 2.3 and 2.4 are for illustrative purposes, having sufficiently few decision variables that $W$ can be plotted.
 ```
 
 (supply_and_demand_of_electricity_higher_dimensional_optimization_problems)=
 ## Higher-Dimensional Optimization Problems
 
-The optimization problem of Example 2.4 could be formulated with as few as two decision variables, meaning that it can still be visualized easily and solved by brute force practically. However, a real electrical grid can have hundreds or thousands of nodes and decision variables, so an optimization algorithm must be used.
+The optimization problem of Example 4 could be formulated with as few as two decision variables, meaning that it can still be visualized easily and solved by brute force practically. However, a real electrical grid can have hundreds or thousands of nodes and decision variables, so an optimization algorithm must be used.
 
 Optimization algorithms often require or perform better when the objective function&mdash;$W$ in our case&mdash;is a linear function of the decision variables. However, as can be seen in {ref}`fig_2_6` and {ref}`fig_2_7`, $W$ is only a *piecewise* linear function of the decision variables. $W$ can be made into an entirely linear function by breaking down the decision variables $Q_\mathrm{G1}$, $Q_\mathrm{G2}$, and $Q_\mathrm{L}$ into a decision variable for each nonzero price-quantity pair, as shown in {ref}`fig_2_9`.
 
@@ -297,7 +297,7 @@ Optimization algorithms often require or perform better when the objective funct
 :label: fig_2_9
 :width: 100%
 
-Reformulating the optimization problem of Example 2.4 with one decision variable for each step in the generators' and loads' supply and demand "staircases".
+Reformulating the optimization problem of Example 4 with one decision variable for each step in the generators' and loads' supply and demand "staircases".
 ```
 
 This is essentially breaking up the piecewise supply and demand curves into their constituent pieces, with one piece for each nonzero price-quantity pair. You may be concerned that this discards the price-based sort order of the pieces (ascending price for supply, descending price for demand), but it doesn't. The maximization of $W$ will inherently maintain the sort order for each supply and demand curve. For example, $Q_\mathrm{G1,1}$ will be dispatched up to its maximum of $6.0 \ \mathrm{MW}$ before $Q_\mathrm{G2,1}$ is dispatched at $6.5 \ \mathrm{MW}$ because the former quantity is the cheapest (at $\$2.0 / \mathrm{MWh}$) and the latter quantity is the next-cheapest (at $\$4.0 / \mathrm{MWh}$).
