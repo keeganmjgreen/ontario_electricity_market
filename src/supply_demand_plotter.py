@@ -83,8 +83,11 @@ class SupplyDemandPlotter(_BasePlotter):
         self,
         curve: SupplyCurve | DemandCurve,
         equilibrium_quantity: float | None = None,
+        lines: bool = True,
     ) -> None:
-        fmt = "o-" if curve.stepped else "-"
+        fmt = "o" if curve.stepped else ""
+        if lines:
+            fmt += "-"
         self.ax.plot(
             curve.xs,
             curve.ys,
