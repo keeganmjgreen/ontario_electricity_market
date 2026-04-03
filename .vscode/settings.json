@@ -1,4 +1,13 @@
 {
+    "[markdown]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "never"
+        },
+        "editor.formatOnSave": false
+    },
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
     "breadcrumbs.enabled": false,
     "cSpell.words": [
         "Andrade",
@@ -75,8 +84,18 @@
         "zorder",
         "zticks"
     ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    "editor.formatOnSave": true,
     "editor.lineNumbers": "off",
     "editor.rulers": [],
+    "files.exclude": {
+        "**/__pycache__/": true
+    },
+    "files.trimTrailingWhitespace": true,
     "jupyter.notebookFileRoot": "${workspaceFolder}",
-    "python.analysis.typeCheckingMode": "off"
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.typeCheckingMode": "standard"
 }
