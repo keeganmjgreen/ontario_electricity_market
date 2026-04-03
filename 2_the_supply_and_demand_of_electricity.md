@@ -27,7 +27,7 @@ But if a café tries to undercut its neighbors, the other cafés will follow sui
 
 Customers' demand for espresso shots is based on how much the cafés charge for each one; there will be fewer customers if the cafés charge more and vice versa. Thus, the rate at which customers buy espresso is a function of the price per espresso shot. This function is called the demand curve, which models buyer behavior in aggregate and is generally monotonically decreasing. The demand curve changes with time; for example, demand for espresso is greatest in the morning.
 
-If the cafés have to make more espresso, they will have to purchase more espresso beans. They will have to call upon additional baristas to help, or in general have to pay each barista more per hour&mdash;more per shot, essentially. In other words, the cafés have a cost per espresso shot, which is reflected in the price they charge for each one. However, the cafés' price per shot is not constant. If the cafés are overwhelmed with customers, they may charge more for each espresso shot to take advantage of the situation and make more profit per shot. The cafés may have to augment their baristas' hourly wages with bonus pay to keep them happy. To meet the demand, the cafés may also have to bust out their older, less efficient espresso machines from their back rooms that use more espresso beans per shot. On the other hand, if the cafés are having a slow day, they may reduce their price and sacrifice some profit per espresso shot to make the most of the low demand. This is called dynamic pricing. The price is a function of the rate at which espresso shots are being sold. This price is also known as the *marginal cost* of supplying an additional espresso shot (per hour). The price function is called the supply curve, which models seller behavior in aggregate and is generally monotonically increasing.
+If the cafés have to make more espresso, they will have to purchase more espresso beans. They will have to call upon additional baristas to help, or have to pay each barista more per hour&mdash;more per shot, essentially. In other words, the cafés have a cost per espresso shot, which is reflected in the price they charge for each one. However, the cafés' price per shot is not constant. If the cafés are overwhelmed with customers, they may charge more for each espresso shot to take advantage of the situation and make more profit per shot. The cafés may have to augment their baristas' hourly wages with bonus pay to keep them happy. To meet the demand, the cafés may also have to bust out their older, less efficient espresso machines from their back rooms that use more espresso beans per shot. On the other hand, if the cafés are having a slow day, they may reduce their price and sacrifice some profit per espresso shot to make the most of the low demand. This is called dynamic pricing. The price is a function of the rate at which espresso shots are being sold. This price is also known as the *marginal cost* of supplying an additional espresso shot (per hour). The price function is called the supply curve, which models seller behavior in aggregate and is generally monotonically increasing.
 
 A given café is willing to sell espresso at or above a certain price, and a given customer is willing to buy at or below a certain price.
 
@@ -50,9 +50,9 @@ Supply and demand curves.
 
 Obviously there is no regulatory body that allocates customers to cafés, no economist planted in town square finding the intersection between the supply and demand curves. Your friendly neighborhood espresso market clears itself. Cafés try to charge the highest price that the optimal number of customers are willing to pay, and customers naturally seek out the lowest price that cafés are willing to charge; the two sides generally meet somewhere in the middle.
 
-## The Wholesale Electricity Market
+## Clearing the Wholesale Electricity Market
 
-The principles of supply and demand are so universal that they apply to the power grid when operated as an electricity market. In this case, the good is not espresso shots but megawatt-hours of electricity&mdash;energy for machines, rather than for humans. The unit of measurement is not espresso shots per hour but megawatt-hours per hour&mdash;so, just megawatts (MW). In a wholesale electricity market, the rate at which electricity is supplied (the production, or generation) is always equal to the rate at which it is demanded (the consumption, or load). In the café analogy, generators are espresso machines, and loads&mdash;such as your local utility company&mdash;are customers. Everything that we've discussed so far in terms of cafés (and capitalist markets in general) applies to the wholesale electricity market.
+The principles of supply and demand are so universal that they apply to the electrical grid when operated as an electricity market. In this case, the good is not espresso shots but megawatt-hours of electricity&mdash;energy for machines, rather than for humans. The unit of measurement is not espresso shots per hour but megawatt-hours per hour&mdash;so, just megawatts (MW). In a wholesale electricity market, the rate at which electricity is supplied (the production, or generation) is always equal to the rate at which it is demanded (the consumption, or load). In the café analogy, generators are espresso machines, and loads&mdash;such as your local utility company&mdash;are customers. Everything that we've discussed so far in terms of cafés (and capitalist markets in general) applies to the wholesale electricity market.
 
 We assumed before that all cafés served identical espresso. In other words, we assumed that espresso is a *commodity*&mdash;a good that varies little between sellers and that buyers are not picky about. Obviously this isn't true about espresso in the real world! Examples of commodities include wheat, crude oil, and...electricity! Indeed, all electrons are created equal. Electricity may be produced from a variety of energy sources (nuclear, hydro, and so on) and travel varying distances to get to your home, but there is no differentiating between a nuclear-generated electron and a hydro-generated electron. People care about the origin and locality of their food more than that of their electricity. Yes, some people care about the environmental sustainability of their electricity&mdash;I among them&mdash;but we cannot choose between sustainable and unsustainable electrons. We can only choose to consume electricity at times of day when there is a higher proportion of sustainable electrons in the mix. But, at a given time, all electrons are equal.
 
@@ -74,7 +74,7 @@ On the supply side, there are also dispatchable and non-dispatchable generators.
 
 Loads and generators submit bids to buy power and offers to sell power, respectively. Each bid or offer includes a list of price-quantity pairs. In a given price-quantity pair, the quantity is the maximum quantity of power that a generator is willing to sell, or that a load is willing to buy, at the corresponding price in the pair. The price is measured in dollars per MWh, also known as the marginal cost of generating an additional MWh of electricity. The quantity is measured in MW. For an offer, the price must monotonically increase as the quantity increases, and for a bid, the price must monotonically decrease as the quantity increases.
 
-If these sound similar to supply and demand curves, it's because they are! In an electricity market with one load and one generator, the load's $(P_\mathrm{L}, Q_\mathrm{L})$ pairs would define the electricity market's demand curve and the generator's $(P_\mathrm{G}, Q_\mathrm{G})$ pairs would define the market's supply curve, also known as the *dispatch curve*. The intersection between the supply and demand curves determines the quantity $Q^*$ of power that will be delivered at the market-clearing price $P^*$, which maximizes $U - C$.
+If these sound similar to supply and demand curves, it's because they are! In an electricity market with one load and one generator, the load's $(P_\mathrm{L}, Q_\mathrm{L})$ pairs would define the electricity market's demand curve and the generator's $(P_\mathrm{G}, Q_\mathrm{G})$ pairs would define the market's supply curve, also known as the *dispatch curve*. The intersection between the supply and demand curves determines the quantity $Q^*$ of power that will be delivered at the market-clearing price $P^*$, which maximizes $W$.
 
 ### Example 1: One Generator, One Load
 
@@ -89,7 +89,7 @@ Supply and demand curves formed by the price-quantity pairs of the one generator
 
 ### Example 2: Two Generators, Two Loads
 
-What if there are two generators, $\mathrm{G1}$ and $\mathrm{G2}$, and two loads, $\mathrm{L1}$ and $\mathrm{L2}$? Each generator and load has its own supply or demand curve formed by its price-quantity pairs, as shown in {ref}`fig_2_3`. These are known as *individual* supply and demand curves, as they represent individual participants in the market.
+What if we have two generators, $\mathrm{G1}$ and $\mathrm{G2}$, and two loads, $\mathrm{L1}$ and $\mathrm{L2}$? Each generator and load has its own supply or demand curve formed by its price-quantity pairs, as shown in {ref}`fig_2_3`. These are known as *individual* supply and demand curves, as they represent individual participants in the market.
 
 ```{figure} img/fig_2_3.png
 :label: fig_2_3
@@ -159,7 +159,7 @@ Sometimes the pricing nodes are organized into larger *zones* for simplicity and
 :label: open_infra_map
 :width: 100%
 
-Grid infrastructure spanning Michigan, Ontario, and New York state. Copyright  OpenStreetMap and Open Infrastructure Map (https://www.openstreetmap.org/copyright, https://openinframap.org/copyright).
+Grid infrastructure spanning Michigan, Ontario, and New York state. Copyright OpenStreetMap and Open Infrastructure Map (https://www.openstreetmap.org/copyright, https://openinframap.org/copyright).
 ```
 
 
@@ -180,8 +180,7 @@ $$
 I = \frac{\text{power in}}{V_\mathrm{A}} = \frac{\text{power out}}{V_\mathrm{B}}
 $$
 
-If the line has zero electrical resistance, then $\text{power in} = \text{power out}$ and $V_\mathrm{A} = V_\mathrm{B}$. If the line has resistance $R$, then 
-this is no longer the case; there will be a voltage drop $V_\mathrm{A} - V_\mathrm{B} = I R$ over the line and some power will be lost to heat:
+If the line has zero electrical resistance, then $\text{power in} = \text{power out}$ and $V_\mathrm{A} = V_\mathrm{B}$. If the line has resistance $R$, then this is no longer the case; there will be a voltage drop $V_\mathrm{A} - V_\mathrm{B} = I R$ over the line and some power will be lost to heat:
 
 $$
 \text{power lost} = I^2 R = \left( \frac{\text{power in}}{V_\mathrm{A}} \right)^{\! 2} R
@@ -304,7 +303,7 @@ This is essentially breaking up the piecewise supply and demand curves into thei
 
 ## Balancing Power Supply and Demand
 
-We previously mentioned that supply always equals demand in the electricity market. Indeed, according to the law of conservation of energy, the power flowing into the grid equals the power flowing out of the grid at any given time. However, we just said that a system operator is responsible for balancing power supply and demand in the grid. Furthermore, if you are already familiar with the power grid and electricity market, you will often hear about *balance* or *imbalance* between power supply and demand, even though an imbalance between power in and power out is not technically possible. So, what do people really mean when they talk about imbalance between supply and demand in the grid? To answer this question, we must first understand some nuances of how the grid works.
+We previously mentioned that supply always equals demand in the electricity market. Indeed, according to the law of conservation of energy, the power flowing into the grid equals the power flowing out of the grid at any given time. However, we just said that a system operator is responsible for balancing power supply and demand in the grid. Furthermore, if you are already familiar with the electrical grid and electricity market, you will often hear about *balance* or *imbalance* between power supply and demand, even though an imbalance between power in and power out is not technically possible. So, what do people really mean when they talk about imbalance between supply and demand in the grid? To answer this question, we must first understand some nuances of how the grid works.
 
 The power transferred in the grid is driven by AC voltage, which oscillates approximately 50 or 60 times a second depending on the country. This rate of oscillation is called the grid's frequency, and is measured in hertz (Hz). A lot of equipment connected to the grid requires a frequency very close to 50 or 60 Hz.
 
