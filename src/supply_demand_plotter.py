@@ -172,10 +172,11 @@ class CostUtilityPlotter(_BasePlotter):
             quantity_vals, welfare_vals, color=Colors.WELFARE, label=rm("Welfare, $W$")
         )
         if equilibrium_quantity is not None:
-            print(
-                f"W(Q_opt) = {welfare_vals[list(quantity_vals).index(equilibrium_quantity)]:.3f}"
-            )
-            optimum = Point(equilibrium_quantity, np.nanmax(welfare_vals))
+            optimal_welfare = welfare_vals[
+                list(quantity_vals).index(equilibrium_quantity)
+            ]
+            print(f"W(Q_opt) = {optimal_welfare:.3f}")
+            optimum = Point(equilibrium_quantity, optimal_welfare)
             self.ax.plot(*optimum.xy, "ko", markersize=3, label=rm("Optimum"))
         if legend_loc is not None:
             self.legend(legend_loc)
