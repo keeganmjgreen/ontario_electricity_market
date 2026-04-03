@@ -5,17 +5,27 @@ transition: slide-left
 layout: intro
 ---
 
+<style>
+    h1 {
+        font-family: Instrument Serif;
+    }
+    img {
+        border-radius: 15px;
+        padding: 10px;
+    }
+</style>
+
 # How Electricity Markets Work
 
-## With Keegan Trujillo-Green
+## With **Keegan Trujillo-Green**
 
 ---
 layout: section
 ---
 
-Part I
+## **Part I**
 
-# Introduction to Wholesale Electricity Markets
+# Introduction to Wholesale <br> Electricity Markets
 
 ---
 
@@ -139,7 +149,7 @@ AKA Power Exchange (PX)
 layout: section
 ---
 
-Part II
+## **Part II**
 
 # The Supply and Demand of Electricity
 
@@ -165,7 +175,7 @@ Your Friendly Neighborhood Espresso Market
 
 <br><br>
 
-<small>Photo by [Blake Wisz on Unsplash](https://unsplash.com/@blakewisz).</small>
+<small style="color: gray;">Photo by [Blake Wisz on Unsplash](https://unsplash.com/@blakewisz).</small>
 
 ---
 layout: two-cols
@@ -291,7 +301,7 @@ layout: two-cols
 
 </v-clicks>
 
-<!-- TODO: Photo of café customers lining up to order / waiting for their orders to be fulfilled. -->
+<img src="/img/katt-galvan-149bjg2Zgzc-unsplash.jpg" style="border-radius: 0px; padding: 0px; height: 180px;"><small style="color: gray;">Photo by [Katt Galvan on Unsplash](https://unsplash.com/@kattgalvan).</small>
 
 ---
 
@@ -442,6 +452,9 @@ Grid infrastructure spanning Michigan, Ontario, and New York state ⏵
 <small style="color: gray;">Copyright OpenStreetMap and Open Infrastructure Map (https://www.openstreetmap.org/copyright, <br> https://openinframap.org/copyright).</small>
 
 ---
+layout: image-right
+image: img/tahoe-groeger-ioCEgIFVLos-unsplash.jpg
+---
 
 # Power Transmission
 
@@ -456,7 +469,9 @@ Grid infrastructure spanning Michigan, Ontario, and New York state ⏵
 
 </v-clicks>
 
-<!-- TODO: Photo of transmission lines. -->
+<br><br>
+
+<small style="color: gray;">Photo by [Tahoe Groeger on Unsplash](https://unsplash.com/@matinar).</small>
 
 ---
 
@@ -597,6 +612,8 @@ layout: two-cols
 ---
 layout: intro
 ---
+
+<img src="/img/pdf_fanout.png" align=right style="height: 400px;">
 
 # Learn More
 
