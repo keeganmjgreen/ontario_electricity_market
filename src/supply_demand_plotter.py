@@ -1,14 +1,14 @@
 import dataclasses
 
-from matplotlib.axes import Axes
 import numpy as np
+from matplotlib.axes import Axes
 
 from src.drawing_utils import Arrow, Point
 from src.plotting_utils import rm
 from src.supply_demand import (
     DX,
-    Curve,
     Colors,
+    Curve,
     DemandCurve,
     SupplyCurve,
     SupplyDemand,

@@ -6,10 +6,10 @@ from typing import Self
 
 import numpy as np
 import pandas as pd
+from scipy.interpolate import interp1d
 
 from src.drawing_utils import Point
 from src.plotting_utils import configure_matplotlib
-from scipy.interpolate import interp1d
 
 configure_matplotlib()
 
