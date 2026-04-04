@@ -6,6 +6,13 @@ uv run src/gradient_blur.py \
     --n-strips 100
 
 uv run src/gradient_blur.py \
+    --in slidev/img/revtlprojects-CU5vr-d98lI-unsplash.jpg \
+    --out slidev/img/revtlprojects-CU5vr-d98lI-unsplash-blur.jpg \
+    --direction left \
+    --max-blur 5 \
+    --n-strips 100
+
+uv run src/gradient_blur.py \
     --in slidev/img/arturo-castaneyra-oBUUbfmHKwM-unsplash.jpg \
     --out slidev/img/arturo-castaneyra-oBUUbfmHKwM-unsplash-blur.jpg \
     --direction left \

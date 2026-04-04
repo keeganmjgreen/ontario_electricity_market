@@ -20,17 +20,22 @@ background: img/tahoe-groeger-ioCEgIFVLos-unsplash-blur.jpg
 
 ## With **Keegan Trujillo-Green**
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
 
 <small style="color: gray;">Original photo by [Tahoe Groeger on Unsplash](https://unsplash.com/@matinar).</small>
 
 ---
-layout: section
+layout: cover
+background: img/revtlprojects-CU5vr-d98lI-unsplash-blur.jpg
 ---
 
 ## **Part I**
 
 # Introduction to Wholesale <br> Electricity Markets
+
+<br><br><br><br><br><br><br><br><br>
+
+<small style="color: gray;">Photo by [REVTLProjects on Unsplash](https://unsplash.com/@revtlproj).</small>
 
 ---
 layout: image
@@ -184,12 +189,17 @@ backgroundSize: contain
 <small style="color: gray;">Graph from [Drax Electric Insights Quarterly – Q2 2022](https://reports.electricinsights.co.uk/wp-content/uploads/2022/09/Drax_Electric_Insights_Report_2022_Q2.pdf).</small>
 
 ---
-layout: section
+layout: cover
+background: img/revtlprojects-CU5vr-d98lI-unsplash-blur.jpg
 ---
 
 ## **Part II**
 
-# The Supply and Demand of Electricity
+# The Supply and Demand <br> of Electricity
+
+<br><br><br><br><br><br><br><br><br>
+
+<small style="color: gray;">Original photo by [REVTLProjects on Unsplash](https://unsplash.com/@revtlproj).</small>
 
 ---
 layout: image-right
@@ -504,7 +514,8 @@ Grid infrastructure spanning Michigan, Ontario, and New York state ⏵
 
 ---
 layout: image-right
-image: img/revtlprojects-CU5vr-d98lI-unsplash.jpg
+image: img/A_network_diagram_of_the_'nesta_case1354_pegase_high_voltage'_electrical_power_system.png
+backgroundSize: contain
 ---
 
 # Power Transmission
@@ -522,7 +533,7 @@ image: img/revtlprojects-CU5vr-d98lI-unsplash.jpg
 
 <br><br><br>
 
-<small style="color: gray;">Photo by [REVTLProjects on Unsplash](https://unsplash.com/@revtlproj).</small>
+<small style="color: gray;">[Network diagram CC BY-SA 4.0 by Paul Cuffe](https://en.wikipedia.org/wiki/Electrical_grid#/media/File:A_network_diagram_of_the_'nesta_case1354_pegase_high_voltage'_electrical_power_system.png).</small>
 
 ---
 
