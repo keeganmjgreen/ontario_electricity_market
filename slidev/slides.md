@@ -2,7 +2,8 @@
 fonts:
     sans: Archivo
 transition: slide-left
-layout: intro
+layout: cover
+background: img/tahoe-groeger-ioCEgIFVLos-unsplash-blur.jpg
 ---
 
 <style>
@@ -19,6 +20,10 @@ layout: intro
 
 ## With **Keegan Trujillo-Green**
 
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+<small style="color: gray;">Original photo by [Tahoe Groeger on Unsplash](https://unsplash.com/@matinar).</small>
+
 ---
 layout: section
 ---
@@ -27,6 +32,9 @@ layout: section
 
 # Introduction to Wholesale <br> Electricity Markets
 
+---
+layout: image
+image: img/arturo-castaneyra-oBUUbfmHKwM-unsplash-blur.jpg
 ---
 
 # The Electrical Grid
@@ -43,7 +51,7 @@ layout: section
 
 - When they fail, we realize how dramatically they improve our quality of life
 
-- What happens when you turn a light on? 💡
+- What happens when you turn a light on?
 
     - Over a hundred years of human innovation kick in
     - Transmission and distribution lines supply more current
@@ -51,9 +59,14 @@ layout: section
 
 </v-clicks>
 
+<small style="color: gray;">Original photo by [Arturo Castaneyra on Unsplash](https://unsplash.com/@arturokst).</small>
+
+---
+layout: image-right
+image: img/1912EnV114-p142.jpg
 ---
 
-# The Electrical Grid --- A Brief History
+# The Electrical Grid --- <br> A Brief History
 
 <v-clicks>
 
@@ -66,6 +79,14 @@ layout: section
 
 </v-clicks>
 
+<br>
+
+<small style="color: gray;">Photo from [Grace's Guide To British Industrial History](https://www.gracesguide.co.uk/Deptford_Generating_Station).</small>
+<!-- https://unsplash.com/s/photos/power-exchanger -->
+
+---
+layout: image
+image: img/austin-hervias-VLpWpv3oDB4-unsplash-flipped.jpg
 ---
 
 # The Wholesale Electricity Market
@@ -91,6 +112,10 @@ AKA Power Exchange (PX)
 
 </v-clicks>
 
+<br>
+
+<small style="color: gray;">Original photo by [Austin Hervias on Unsplash](https://unsplash.com/@ahervias77).</small>
+
 ---
 
 # Wholesale Electricity Market Operation
@@ -114,6 +139,9 @@ AKA Power Exchange (PX)
 </v-clicks>
 
 ---
+layout: image
+image: img/arno-senoner-6lOxktnqo04-unsplash-flipped-blur.jpg
+---
 
 # Different Types of Markets
 
@@ -127,6 +155,14 @@ AKA Power Exchange (PX)
 
 </v-clicks>
 
+<br><br><br><br><br><br><br><br>
+
+<small>Original photo by [Arno Senoner on Unsplash](https://unsplash.com/@arnosenoner).</small>
+
+---
+layout: image-right
+image: img/411202c9-ef48-4dca-848c-39db8f491109_1292x604.jpg
+backgroundSize: contain
 ---
 
 # Open Vs. Closed Markets
@@ -144,6 +180,8 @@ AKA Power Exchange (PX)
     - Government restructuring, e.g., IESO founded 1998
 
 </v-clicks>
+
+<small style="color: gray;">Graph from [Drax Electric Insights Quarterly – Q2 2022](https://reports.electricinsights.co.uk/wp-content/uploads/2022/09/Drax_Electric_Insights_Report_2022_Q2.pdf).</small>
 
 ---
 layout: section
@@ -208,21 +246,27 @@ layout: two-cols
 </div>
 
 ---
+layout: image-right
+image: img/nick-brunner-5dgXQJ7ezuU-unsplash.jpg
+---
 
 # Clearing Markets
 
 <v-clicks depth="2">
 
-- A quantity $Q$ of a good is exchanged at a price $P$
+- Quantity $Q$ of a good is exchanged at price $P$
 - At equilibrium: market-clearing quantity $Q^*$ is exchanged at market-clearing price $P^*$
 - The market rewards:
     - Sellers who charge a low price
     - Buyers who are willing to pay a high price
 - Market clearing process:
     - Allocate buyers to sellers, starting with highest-price buyers and lowest-price sellers
-    - Determines buying price $=$ selling price $= \! P^*$
+    - Determines buying price $=$ selling price <br> $= \! P^*$
 
 </v-clicks>
+
+<small style="color: gray;">Graphic by [Nick Brunner
+ on Unsplash](https://unsplash.com/@nickbrunner).</small>
 
 ---
 layout: two-cols
@@ -318,16 +362,23 @@ layout: two-cols
 </v-clicks>
 
 ---
+layout: image-left
+image: img/chris-liverani-dBI_My696Rk-unsplash.jpg
+---
 
 # Time Variance
 
 <v-clicks>
 
 - Seen in supply/demand curves, quantities, and prices
-- Fluctuations and spikes in supply/demand $\to$ fluctuations and spikes in electricity prices
+- Fluctuations and spikes in supply/demand <br> $\to$ fluctuations and spikes in electricity prices
 - Price changes are characteristic of electricity markets
 
 </v-clicks>
+
+<br><br><br><br><br><br><br>
+
+<small style="color: gray;">Photo by [Chris Liverani on Unsplash](https://unsplash.com/@chrisliverani).</small>
 
 ---
 
@@ -453,7 +504,7 @@ Grid infrastructure spanning Michigan, Ontario, and New York state ⏵
 
 ---
 layout: image-right
-image: img/tahoe-groeger-ioCEgIFVLos-unsplash.jpg
+image: img/revtlprojects-CU5vr-d98lI-unsplash.jpg
 ---
 
 # Power Transmission
@@ -469,9 +520,9 @@ image: img/tahoe-groeger-ioCEgIFVLos-unsplash.jpg
 
 </v-clicks>
 
-<br><br>
+<br><br><br>
 
-<small style="color: gray;">Photo by [Tahoe Groeger on Unsplash](https://unsplash.com/@matinar).</small>
+<small style="color: gray;">Photo by [REVTLProjects on Unsplash](https://unsplash.com/@revtlproj).</small>
 
 ---
 
@@ -610,14 +661,15 @@ layout: two-cols
 <img v-click=4 src="/img/fig_2_8.png" width=80% style="margin-left: auto; margin-right: auto;"/>
 
 ---
-layout: intro
+layout: cover
+background: img/tahoe-groeger-ioCEgIFVLos-unsplash-blur.jpg
 ---
 
-<img src="/img/pdf_fanout.png" align=right style="height: 400px;">
+## Thanks for learning with me.
 
-# Learn More
+**Learn more** or get the PDF at: <br> [keeganmjgreen.github.io/blog/<br>introduction-to-wholesale-electricity-markets](https://keeganmjgreen.github.io/blog/introduction-to-wholesale-electricity-markets/)
 
-[keeganmjgreen.github.io/blog/introduction-to-wholesale-electricity-markets](https://keeganmjgreen.github.io/blog/introduction-to-wholesale-electricity-markets/)
+<img src="/img/pdf_fanout_2x.png" style="height: 200px;">
 
 <br><br>
 
