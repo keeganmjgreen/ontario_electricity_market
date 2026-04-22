@@ -26,7 +26,7 @@ background: img/tahoe-groeger-ioCEgIFVLos-unsplash-blur.jpg
 
 ---
 layout: cover
-background: img/revtlprojects-CU5vr-d98lI-unsplash-blur.jpg
+background: img/tahoe-groeger-ioCEgIFVLos-unsplash-blur.jpg
 ---
 
 ## **Part I**
@@ -35,7 +35,7 @@ background: img/revtlprojects-CU5vr-d98lI-unsplash-blur.jpg
 
 <br><br><br><br><br><br><br><br><br>
 
-<small style="color: gray;">Photo by [REVTLProjects on Unsplash](https://unsplash.com/@revtlproj).</small>
+<small style="color: gray;">Original photo by [Tahoe Groeger on Unsplash](https://unsplash.com/@matinar).</small>
 
 ---
 layout: image
@@ -71,7 +71,7 @@ layout: image-right
 image: img/1912EnV114-p142.jpg
 ---
 
-# The Electrical Grid --- <br> A Brief History
+# The Electrical Grid -- <br> A Brief History
 
 <v-clicks>
 
@@ -156,7 +156,7 @@ image: img/arno-senoner-6lOxktnqo04-unsplash-flipped-blur.jpg
     - Day-to-day operation
     - Real-time operation
 - Capacity market
-    - Generation for generations™
+    - Long-term capacity planning
 
 </v-clicks>
 
@@ -182,7 +182,7 @@ backgroundSize: contain
     - Goal: competition $\Rightarrow$ lower prices
     - AKA “privatization”, “deregulation”
     - Strict market rules still in place
-    - Government restructuring, e.g., IESO founded 1998
+    - Government restructuring, <br> e.g., IESO founded 1998
 
 </v-clicks>
 
@@ -190,7 +190,7 @@ backgroundSize: contain
 
 ---
 layout: cover
-background: img/revtlprojects-CU5vr-d98lI-unsplash-blur.jpg
+background: img/tahoe-groeger-ioCEgIFVLos-unsplash-blur.jpg
 ---
 
 ## **Part II**
@@ -199,7 +199,7 @@ background: img/revtlprojects-CU5vr-d98lI-unsplash-blur.jpg
 
 <br><br><br><br><br><br><br><br><br>
 
-<small style="color: gray;">Original photo by [REVTLProjects on Unsplash](https://unsplash.com/@revtlproj).</small>
+<small style="color: gray;">Original photo by [Tahoe Groeger on Unsplash](https://unsplash.com/@matinar).</small>
 
 ---
 layout: image-right
@@ -317,8 +317,8 @@ layout: two-cols
 
 |                | **In the café analogy** | **In the electrical grid** |
 |----------------|-------------------------|----------------------------|
-| Good:          | Espresso shots          | Megawatt-hours             |
-| Quantity unit: | Espresso shots per hour | Megawatts                  |
+| Good:          | Espresso shots          | Megawatt-hours (MWh)       |
+| Quantity unit: | Espresso shots per hour | Megawatts (MW)             |
 | Producers:     | Espresso machines       | Generators                 |
 | Consumers:     | Café customers          | Loads                      |
 
@@ -332,10 +332,10 @@ layout: two-cols
 
 - Commodity goods:
 
-    - Espresso? ❌
+    - Espresso? Not a chance.
     - Wheat
     - Crude oil
-    - **Electricity** --- regardless of energy source
+    - **Electricity** -- regardless of energy source
         - Nuclear
         - Hydro
         - Etc.
@@ -348,10 +348,10 @@ layout: two-cols
 
 <v-clicks>
 
-|                                            | Cafés                                                       | Electricity market                                                 |
-|--------------------------------------------|-------------------------------------------------------------|--------------------------------------------------------------------|
-| Buffer between production and consumption? | Yes --- customers can wait for their orders to be fulfilled | No --- loads simply take, without having to wait for power         |
-| Resources pooled?                          | No --- each order is fulfilled by one barista               | Yes --- Increases in load can be shared across multiple generators |
+|                                            | Cafés                                                      | Electricity market                                                |
+|--------------------------------------------|------------------------------------------------------------|-------------------------------------------------------------------|
+| Buffer between production and consumption? | Yes -- customers can wait for their orders to be fulfilled | No -- loads simply take, without having to wait for power         |
+| Resources pooled?                          | No -- each order is fulfilled by one barista               | Yes -- Increases in load can be shared across multiple generators |
 
 </v-clicks>
 
@@ -394,9 +394,9 @@ image: img/chris-liverani-dBI_My696Rk-unsplash.jpg
 
 # Inelastic Loads
 
-|                   | Café customer                                  | Non-dispatchable load                                                     |
-|-------------------|------------------------------------------------|---------------------------------------------------------------------------|
-| Elastic consumer? | Yes --- aware of and responsive to café prices | No --- utility customers are unresponsive to real-time electricity prices |
+|                   | Café customer                                 | Non-dispatchable load                                                    |
+|-------------------|-----------------------------------------------|--------------------------------------------------------------------------|
+| Elastic consumer? | Yes -- aware of and responsive to café prices | No -- utility customers are unresponsive to real-time electricity prices |
 
 <br>
 
@@ -449,6 +449,15 @@ layout: two-cols
     <img v-click=5 class="absolute" src="/img/fig_2_2-3.png"/>
     <img v-click=9 class="absolute" src="/img/fig_2_2-4.png"/>
     <img v-click=10 class="absolute" src="/img/fig_2_2-5.png"/>
+    <img v-click=11 class="absolute" src="/img/fig_2_2-7.png"/>
+    <img v-click=12 class="absolute" src="/img/fig_2_2-8.png"/>
+    <img v-click=13 class="absolute" src="/img/fig_2_2-9.png"/>
+    <img v-click=14 class="absolute" src="/img/fig_2_2-10.png"/>
+    <img v-click=15 class="absolute" src="/img/fig_2_2-11.png"/>
+    <img v-click=16 class="absolute" src="/img/fig_2_2-12.png"/>
+    <img v-click=17 class="absolute" src="/img/fig_2_2-13.png"/>
+    <img v-click=18 class="absolute" src="/img/fig_2_2-14.png"/>
+    <img v-click=19 class="absolute" src="/img/fig_2_2-5.png"/>
 </div>
 <img v-click=10 class="-mt-55" src="/img/fig_2_2-6.png"/>
 
@@ -487,6 +496,19 @@ layout: two-cols
     <img v-click=11 class="absolute" src="/img/fig_2_5-3.png"/>
     <img v-click=12 class="absolute" src="/img/fig_2_5-4.png"/>
 </div>
+
+---
+layout: cover
+background: img/tahoe-groeger-ioCEgIFVLos-unsplash-blur.jpg
+---
+
+## **Part III**
+
+# Locational <br> Marginal Pricing
+
+<br><br><br><br><br><br><br><br><br>
+
+<small style="color: gray;">Original photo by [Tahoe Groeger on Unsplash](https://unsplash.com/@matinar).</small>
 
 ---
 layout: image-right
@@ -673,7 +695,7 @@ layout: two-cols
 
 ---
 layout: cover
-background: img/tahoe-groeger-ioCEgIFVLos-unsplash-blur.jpg
+background: img/revtlprojects-CU5vr-d98lI-unsplash-blur.jpg
 ---
 
 ## Thanks for learning with me.
@@ -682,6 +704,11 @@ background: img/tahoe-groeger-ioCEgIFVLos-unsplash-blur.jpg
 
 <img src="/img/pdf_fanout_2x.png" style="height: 200px;">
 
-<br><br>
 
+[github.com/keeganmjgreen](https://github.com/keeganmjgreen)
+<br>
 [linkedin.com/in/keegan-green](https://www.linkedin.com/in/keegan-green/)
+
+<br>
+
+<small>Original photo by [REVTLProjects on Unsplash](https://unsplash.com/@revtlproj).</small>
