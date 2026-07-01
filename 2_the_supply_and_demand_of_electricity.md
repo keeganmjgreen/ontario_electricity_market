@@ -207,7 +207,7 @@ The solution to the example at hand is $Q_\mathrm{G}^* = 9.\bar{3} \ \mathrm{MW}
 
 ```{figure} img/diagrams-example_3.png
 :label: example_3
-:width: 64%
+:width: 100%
 
 Network of Example 3.
 ```
@@ -269,7 +269,7 @@ The solution to the example at hand is $Q_\mathrm{G2}^* = 6.5 \ \mathrm{MW}$, $Q
 
 ```{figure} img/diagrams-example_4.png
 :label: example_4
-:width: 64%
+:width: 100%
 
 Network of Example 4.
 ```
