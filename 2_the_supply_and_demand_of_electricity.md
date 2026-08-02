@@ -68,7 +68,7 @@ It is worth re-iterating that everything involved in the market clearing process
 
 Another difference between the electricity market and other markets is the disconnect between end customers and the market prices. When you purchase espresso (or any other good), you are aware of the price at the time of purchase. However, residential and commercial grid users (and thus the utility companies through whom they purchase electricity) decide how much electricity to consume based on a crude approximation of the real-time price, such as fixed electricity rates that are higher during the day and lower at night. Such loads are described as *inelastic* because they are inflexible or unresponsive to the real-time price. Inelastic loads, also known as *non-dispatchable loads*, are modeled by a demand curve that is perfectly vertical and representative of a fixed quantity of power being bought at a given point in time. This lack of flexibility can make the price volatile, causing price spikes to occur when demand is high, or when the supply of cheap electricity is intermittent (e.g., wind or solar). Industrial consumers avoid price spikes by becoming *dispatchable loads*, consuming only at or below a certain price. Similarly, utility companies use demand response programs to curtail EV charging or air conditioning at times when the demand and price would otherwise be excessively high.
 
-On the supply side, there are also dispatchable and non-dispatchable generators. We will assume all loads and generators to be dispatchable, as that is the general case and any non-dispatchable resource can be modeled as a dispatchable one.
+On the supply side, there are also dispatchable and non-dispatchable generators. We will assume all loads and generators to be dispatchable, as that is the general case and any non-dispatchable resource can be modeled as a dispatchable one. A caveat is that the non-dispatchable power quantities that are used when clearing the market are based on *predicted* generation (wind, solar) and load, unlike the concrete quantities offered by a dispatchable generator.
 
 ## Bids to Buy and Offers to Sell Power
 
@@ -151,7 +151,7 @@ In the next section, we will see that the optimization cannot always be solved b
 
 ## The Market Network
 
-We have established that for a given market, at a given time, there is one market price. However, the electrical grid is complex&mdash;more complex than this ({ref}`open_infra_map`). For the purposes of market modeling, the grid consists of multiple pricing nodes, each of which has its own market price and in that sense acts like a market. Such a setup is called *nodal pricing* or *locational marginal pricing (LMP)*.
+We have established that for a given market, at a given time, there is one market price. However, the electrical grid is complex&mdash;more complex than this ({ref}`open_infra_map`). For the purposes of market modeling, the grid consists of multiple pricing locations/nodes, each of which has its own market price and in that sense acts like a market. Such a setup is called *nodal pricing* or *locational marginal pricing (LMP)*.
 
 Sometimes the pricing nodes are organized into larger *zones* for simplicity and one price is set throughout each zone. Such a setup is called *zonal pricing*.
 
