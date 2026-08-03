@@ -18,7 +18,7 @@ background: img/tahoe-groeger-ioCEgIFVLos-unsplash-blur.jpg
 
 # How Electricity Markets Work
 
-## With **Keegan Trujillo-Green**
+## Keegan Trujillo-Green, BASc. Mechatronic Systems Engineering
 
 <br><br><br><br><br><br><br><br><br><br><br>
 
@@ -187,6 +187,26 @@ backgroundSize: contain
 </v-clicks>
 
 <small style="color: gray;">Graph from [Drax Electric Insights Quarterly – Q2 2022](https://reports.electricinsights.co.uk/wp-content/uploads/2022/09/Drax_Electric_Insights_Report_2022_Q2.pdf).</small>
+
+---
+layout: cover
+background: img/revtlprojects-CU5vr-d98lI-unsplash-blur.jpg
+---
+
+## Thanks for learning with me.
+
+**Learn more** or get the PDF at: <br> [keeganmjgreen.github.io/blog/<br>introduction-to-wholesale-electricity-markets](https://keeganmjgreen.github.io/blog/introduction-to-wholesale-electricity-markets/)
+
+<img src="/img/pdf_fanout_2x.png" style="height: 200px;">
+
+
+[github.com/keeganmjgreen](https://github.com/keeganmjgreen)
+<br>
+[linkedin.com/in/keegan-green](https://www.linkedin.com/in/keegan-green/)
+
+<br>
+
+<small>Original photo by [REVTLProjects on Unsplash](https://unsplash.com/@revtlproj).</small>
 
 ---
 layout: cover
@@ -496,6 +516,26 @@ layout: two-cols
     <img v-click=11 class="absolute" src="/img/fig_2_5-3.png"/>
     <img v-click=12 class="absolute" src="/img/fig_2_5-4.png"/>
 </div>
+
+---
+layout: cover
+background: img/revtlprojects-CU5vr-d98lI-unsplash-blur.jpg
+---
+
+## Thanks for learning with me.
+
+**Learn more** or get the PDF at: <br> [keeganmjgreen.github.io/blog/<br>introduction-to-wholesale-electricity-markets](https://keeganmjgreen.github.io/blog/introduction-to-wholesale-electricity-markets/)
+
+<img src="/img/pdf_fanout_2x.png" style="height: 200px;">
+
+
+[github.com/keeganmjgreen](https://github.com/keeganmjgreen)
+<br>
+[linkedin.com/in/keegan-green](https://www.linkedin.com/in/keegan-green/)
+
+<br>
+
+<small>Original photo by [REVTLProjects on Unsplash](https://unsplash.com/@revtlproj).</small>
 
 ---
 layout: cover

@@ -15,6 +15,16 @@ author: Keegan Trujillo-Green
 >   </div>
 > </div>
 
+> <div style="display: flex; align-items: center;">
+>   <div style="width: 20%; padding-right: 5%;">
+>     <a href="https://youtu.be/wP49q-dszD4?si=yMnaOcYanSXMpDzY"><img src="img/video_thumbnails/part_ii.png"></a>
+>   </div>
+>   <div style="width: 75%;">
+>     <a href="https://youtu.be/wP49q-dszD4?si=yMnaOcYanSXMpDzY">Watch Part II</a>
+>     <br>
+>   </div>
+> </div>
+
 To understand the wholesale electricity market, one must understand the economic principles of supply and demand. To do so, let's start with a market example that is unrelated to the electricity market, but familiar and intuitive.
 
 ## Introduction to Economics: Your Friendly Neighborhood Espresso Market
@@ -151,6 +161,16 @@ In the next section, we will see that the optimization cannot always be solved b
 
 ## The Market Network
 
+> <div style="display: flex; align-items: center;">
+>   <div style="width: 20%; padding-right: 5%;">
+>     <a href="https://youtu.be/OAcv4si5MBY?si=OeKhp2smXS4YxubN"><img src="img/video_thumbnails/part_iii.png"></a>
+>   </div>
+>   <div style="width: 75%;">
+>     <a href="https://youtu.be/OAcv4si5MBY?si=OeKhp2smXS4YxubN">Watch Part III</a>
+>     <br>
+>   </div>
+> </div>
+
 We have established that for a given market, at a given time, there is one market price. However, the electrical grid is complex&mdash;more complex than this ({ref}`open_infra_map`). For the purposes of market modeling, the grid consists of multiple pricing locations/nodes, each of which has its own market price and in that sense acts like a market. Such a setup is called *nodal pricing* or *locational marginal pricing (LMP)*.
 
 Sometimes the pricing nodes are organized into larger *zones* for simplicity and one price is set throughout each zone. Such a setup is called *zonal pricing*.
@@ -162,10 +182,9 @@ Sometimes the pricing nodes are organized into larger *zones* for simplicity and
 Grid infrastructure spanning Michigan, Ontario, and New York state. Copyright OpenStreetMap and Open Infrastructure Map (https://www.openstreetmap.org/copyright, https://openinframap.org/copyright).
 ```
 
-
 Each node is analogous to one neighborhood of cafés. But, of course, the grid is an electrical network, and power can be transferred between its nodes through long-distance transmission and distribution lines. This is as if the neighborhoods of cafés were interconnected by an intricate network of pipes! Like electricity, espresso wouldn't even have to be made in the neighborhood in which it is consumed, and supply does not need to equal demand within a grid node. Because quantities of power can be traded between grid nodes, the entire grid must be cleared as one market to maximize the system-wide welfare $W\!$. The total welfare is generally higher with trade than without, which is why trade takes place.
 
-However, the network is leaky. Transmission and distribution lines are not ideal wires and have electrical resistance depending on their type and length. Thus, some power is lost to heat for each unit of power transferred. These transmission losses are analogous to a cost of trade between grid nodes. Power transfer between nodes is still usually necessary and beneficial. For example, it is likely be cheaper to use nuclear power transmitted over a great distance, with some lost along the way, than to use power from a nearby gas-fired plant. We need a way to model and account for the costs of trade when clearing the market, as they will affect the optimal quantities of power and cause prices to differ between nodes. In general, each node affects all other nodes.
+However, the network is leaky. Transmission and distribution lines are not ideal wires and have electrical resistance depending on their type and length. Thus, some power is lost to heat for each unit of power transferred. These transmission losses are analogous to a cost of trade between grid nodes. Power transfer between nodes is still usually necessary and beneficial. For example, it is likely to be cheaper to use nuclear power transmitted over a great distance, with some lost along the way, than to use power from a nearby gas-fired plant. We need a way to model and account for the costs of trade when clearing the market, as they will affect the optimal quantities of power and cause prices to differ between nodes. In general, each node affects all other nodes.
 
 For the sake of simplicity when demonstrating the effect of transmission losses on the electricity market, we will assume a given transmission line to have a fixed efficiency, $\eta$:
 

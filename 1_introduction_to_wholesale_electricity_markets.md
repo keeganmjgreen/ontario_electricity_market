@@ -15,6 +15,16 @@ author: Keegan Trujillo-Green
 >   </div>
 > </div>
 
+> <div style="display: flex; align-items: center;">
+>   <div style="width: 20%; padding-right: 5%;">
+>     <a href="https://youtu.be/_wfiQfarEH8?si=USLHzQCEUH_x_xmI"><img src="img/video_thumbnails/part_i.png"></a>
+>   </div>
+>   <div style="width: 75%;">
+>     <a href="https://youtu.be/_wfiQfarEH8?si=USLHzQCEUH_x_xmI">Watch Part I</a>
+>     <br>
+>   </div>
+> </div>
+
 The world's electrical grids stand alongside the internet and water supply networks as great systems and accomplishments of humanity. We rely on these systems every day, yet most of us do not understand how these complex systems work. We often take these systems for granted when they are functioning correctly, which they almost always do. When such systems fail, such as during a power outage, we realize how dramatically they improve our quality of life.
 
 The ability to flip a switch and flood a room with light in the middle of the night is the result of over a hundred years of human innovation and people working around the clock to keep the world's grids running smoothly&mdash;to literally keep the lights on. What happens every time we turn on an appliance often eludes us. Nonetheless, without fail, slightly more current gets drawn through tens or hundreds of kilometers of transmission and distribution lines. And, in tandem, the generators at the end of those transmission lines start to work slightly harder, whether in a power station or a solar or wind farm.
