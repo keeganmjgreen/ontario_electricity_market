@@ -2,7 +2,7 @@
 author: Keegan Trujillo-Green
 ---
 
-# Real-Time and Day-Ahead Markets
+# Real-Time and Day-Ahead Electricity Markets
 
 > <div style="display: flex; align-items: center;">
 >   <div style="width: 20%; padding-right: 5%;">
