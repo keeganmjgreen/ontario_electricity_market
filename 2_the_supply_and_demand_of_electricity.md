@@ -17,7 +17,7 @@ author: Keegan Trujillo-Green
 
 > <div style="display: flex; align-items: center;">
 >   <div style="width: 20%; padding-right: 5%;">
->     <a href="https://youtu.be/wP49q-dszD4?si=yMnaOcYanSXMpDzY"><img src="img/video_thumbnails/part_ii.png"></a>
+>     <img src="img/video_thumbnails/part_ii.png">
 >   </div>
 >   <div style="width: 75%;">
 >     <a href="https://youtu.be/wP49q-dszD4?si=yMnaOcYanSXMpDzY">Watch Part II</a>
@@ -163,7 +163,7 @@ In the next section, we will see that the optimization cannot always be solved b
 
 > <div style="display: flex; align-items: center;">
 >   <div style="width: 20%; padding-right: 5%;">
->     <a href="https://youtu.be/OAcv4si5MBY?si=OeKhp2smXS4YxubN"><img src="img/video_thumbnails/part_iii.png"></a>
+>     <img src="img/video_thumbnails/part_iii.png">
 >   </div>
 >   <div style="width: 75%;">
 >     <a href="https://youtu.be/OAcv4si5MBY?si=OeKhp2smXS4YxubN">Watch Part III</a>

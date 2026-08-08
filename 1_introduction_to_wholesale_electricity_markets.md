@@ -17,7 +17,7 @@ author: Keegan Trujillo-Green
 
 > <div style="display: flex; align-items: center;">
 >   <div style="width: 20%; padding-right: 5%;">
->     <a href="https://youtu.be/_wfiQfarEH8?si=USLHzQCEUH_x_xmI"><img src="img/video_thumbnails/part_i.png"></a>
+>     <img src="img/video_thumbnails/part_i.png">
 >   </div>
 >   <div style="width: 75%;">
 >     <a href="https://youtu.be/_wfiQfarEH8?si=USLHzQCEUH_x_xmI">Watch Part I</a>
