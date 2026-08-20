@@ -27,7 +27,7 @@ Due to all these time-based constraints, the choice made for one dispatch time m
 
 ## The Day-Ahead Market
 
-Because the startup time and minimum up/down time can be many hours long, the optimization problem is solved simultaneously for all 24 hours of the dispatch date $d$, a day in advance (on date $d - 1$). Solving this optimization problem clears what we call the day-ahead market, or DAM. The DAM is typically cleared in one-hour or 15-minute intervals, limited by the resolution at which non-dispatchable generation and load are predicted (a finer resolution would be expecting too much accuracy from the predictions). Each of these one-hour or 15-minute intervals is known as a DAM interval. The solution to the optimization problem determines the values of the market-clearing price $P^\mathrm{DAM}_t$ and quantity $Q^\mathrm{DAM}_t$ throughout the next day ($d \leq t \le d + 1$). However, being based on coarse and imperfect predictions, the prices are not final and the quantities are not used for dispatch. For a given dispatchable generator (or dispatchable load) $g$, the quantity $Q^\mathrm{DAM}_{g,\,t}$ determines whether the generator must be ready to supply up to that quantity of power; if greater than zero, the generator is said to be "scheduled" in the DAM.
+Because the startup time and minimum up/down time can be many hours long, the optimization problem is solved simultaneously for all 24 hours of the dispatch date $d$, a day in advance (on date $d - 1$). Solving this optimization problem clears what we call the day-ahead market, or DAM. The DAM is typically cleared in one-hour or 15-minute intervals, limited by the resolution at which non-dispatchable generation and load are predicted (a finer resolution would be expecting too much accuracy from the predictions). Each of these one-hour or 15-minute intervals is known as a DAM interval. The solution to the optimization problem determines the values of the market-clearing price $P^\mathrm{DAM}_t$ and quantity $Q^\mathrm{DAM}_t$ throughout the next day ($d \leq t \le d + 1$). However, being based on coarse and imperfect predictions, the prices are not final and the quantities are not used for dispatch. For a given dispatchable generator (or dispatchable load) $g$, the quantity $Q^\mathrm{DAM}_{g,\,t}$ determines whether the generator must be ready to supply that quantity of power; if greater than zero, the generator is said to be "scheduled" in the DAM.
 
 ## The Real-Time Market
 
@@ -43,8 +43,8 @@ The lifecycle of a bid or offer through the DAM and RTM is as follows:
 
 2. On date $d - 1$, the DAM closes and clears. If $g$ had bids or offers, clearing the DAM determines whether $g$ is scheduled in the DAM, when, and at what quantity of power.
 
-3. Before the RTM closes for date $d$'s RTM interval $t$, dispatchable resource $g$ participates in the RTM. If they participated in the DAM, they participate in the RTM by revising their existing bid or offer. Otherwise, they participate in the RTM by submitting a new bid or offer.
+3. Before the RTM closes for date $d$'s RTM interval $t$, dispatchable resource $g$ participates in the RTM. If they participated in the DAM, they participate in the RTM by keeping or revising their existing bid or offer. Otherwise, they participate in the RTM by submitting a new bid or offer.
 
-4. Just before each RTM interval $t$ on date $d$, the RTM closes and clears. Clearing the RTM determines whether $g$ will be dispatched, and at what quantity of power. If $g$ participated in the DAM, but was not scheduled, then $g$ will not be dispatched.
+4. Just before each RTM interval $t$ on date $d$, the RTM closes and clears. Clearing the RTM determines whether $g$ will be dispatched, and at what quantity of power.
 
 <!-- ## The Two-Settlement System -->

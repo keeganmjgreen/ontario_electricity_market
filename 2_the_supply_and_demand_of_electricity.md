@@ -88,7 +88,7 @@ If these sound similar to supply and demand curves, it's because they are! In an
 
 ### Example 1: One Generator, One Load
 
-Consider the example shown in {ref}`fig_2_2`. The generator says they are willing to produce up to $6 \ \mathrm{MW}$ at $\$2 / \mathrm{MWh}$, or up to $9 \ \mathrm{MW}$ at $\$7 / \mathrm{MWh}$. Note that this does not mean they are willing to produce the first $6 \ \mathrm{MW}$ at $\$2 / \mathrm{MWh}$ and only the remaining $3 \ \mathrm{MW}$ at $\$7 / \mathrm{MWh}$; the generator has one price, and it changes if a certain volume is surpassed, like in the café analogy. The same principle applies on the demand side: the load says they are willing to consume up to $4 \ \mathrm{MW}$ at $\$8 / \mathrm{MWh}$, or up to $8 \ \mathrm{MW}$ at $\$5 / \mathrm{MWh}$. These price-quantity pairs form the two "staircases"&mdash;the supply and demand curves&mdash;shown in the figure. The market clears at $Q^* = 6 \ \mathrm{MW}$ and $P^* = \$5 / \mathrm{MWh}$.
+Consider the example shown in {ref}`fig_2_2`. The generator says they are willing to produce up to $6 \ \mathrm{MW}$ at $\$2 / \mathrm{MWh}$, or up to $9 \ \mathrm{MW}$ at $\$7 / \mathrm{MWh}$. Note that this does not mean they are willing to produce the first $6 \ \mathrm{MW}$ at $\$2 / \mathrm{MWh}$ and only the remaining $3 \ \mathrm{MW}$ at $\$7 / \mathrm{MWh}$; the generator has one price, and it changes if a certain volume is surpassed, like in the café analogy. The same principle applies on the demand side: the load says they are willing to consume up to $4 \ \mathrm{MW}$ at $\$8 / \mathrm{MWh}$, or up to $8 \ \mathrm{MW}$ at $\$5 / \mathrm{MWh}$. These price-quantity pairs form the two "staircases"&mdash;the supply and demand curves&mdash;shown in the figure. The market clears at $Q^* = 6 \ \mathrm{MW}$ and $P^* = \$5 / \mathrm{MWh}$. The system operator collects $Q^* P^* = \$30/\mathrm{h}$ from the load and pays it to the generator.
 
 ```{figure} img/fig_2_2.png
 :label: fig_2_2
@@ -131,7 +131,7 @@ $$
 
 This optimization problem can be simplified by splicing the generators' and loads' individual supply and demand curves into an aggregated supply curve and an aggregated demand curve, respectively. The aggregated demand curve can be formed by sorting the price-quantity pairs from high to low, and the aggregated supply curve can be formed by sorting them from low to high (known as *merit order*). The optimization problem can then be solved by finding the intersection between the aggregated supply and demand curves.
 
-The solution to the example at hand is $Q^* = 11$, $P^* = 4$. This is shown in {ref}`fig_2_5`, and {ref}`fig_2_4` shows how $Q^*$ corresponds to the individual quantities $Q_\mathrm{G1}^*$, $Q_\mathrm{G2}^*$, $Q_\mathrm{L1}^*$, and $Q_\mathrm{L2}^*$. The optimal cost, utility, and welfare are tabulated in {ref}`tab_2_1`.
+The solution to the example at hand is $Q^* = 11$, $P^* = 4$. This is shown in {ref}`fig_2_5`, and {ref}`fig_2_4` shows how $Q^*$ corresponds to the individual quantities $Q_\mathrm{G1}^*$, $Q_\mathrm{G2}^*$, $Q_\mathrm{L1}^*$, and $Q_\mathrm{L2}^*$. The optimal cost, utility, and welfare are tabulated in {ref}`tab_2_1`. Resource $\mathrm{G2}$ is known as the *price-setting resource*, or *price-setter*, because one of its price-quantity pairs dictated the market-clearing price.
 
 ```{figure} img/fig_2_4.png
 :label: fig_2_4
@@ -152,8 +152,8 @@ Aggregated supply and demand curves of the two generators and two loads of Examp
 
 |        |                                  Cost |                               Utility |                      Producer Surplus |                      Consumer Surplus |               Welfare |
 |-------:|--------------------------------------:|--------------------------------------:|--------------------------------------:|--------------------------------------:|----------------------:|
-|        | $C_\mathrm{G1} = \$12.0 / \mathrm{h}$ | $C_\mathrm{L1} = \$52.0 / \mathrm{h}$ | $S_\mathrm{G1} = \$12.0 / \mathrm{h}$ | $S_\mathrm{L1} = \$15.0 / \mathrm{h}$ |                       |
-|        | $C_\mathrm{G2} = \$20.0 / \mathrm{h}$ | $C_\mathrm{L2} = \$27.0 / \mathrm{h}$ | $S_\mathrm{G2} = \$ 0.0 / \mathrm{h}$ | $S_\mathrm{L2} = \$20.0 / \mathrm{h}$ |                       |
+|        | $C_\mathrm{G1} = \$12.0 / \mathrm{h}$ | $U_\mathrm{L1} = \$52.0 / \mathrm{h}$ | $S_\mathrm{G1} = \$12.0 / \mathrm{h}$ | $S_\mathrm{L1} = \$15.0 / \mathrm{h}$ |                       |
+|        | $C_\mathrm{G2} = \$20.0 / \mathrm{h}$ | $U_\mathrm{L2} = \$27.0 / \mathrm{h}$ | $S_\mathrm{G2} = \$ 0.0 / \mathrm{h}$ | $S_\mathrm{L2} = \$20.0 / \mathrm{h}$ |                       |
 | Total: | $                \$32.0 / \mathrm{h}$ | $                \$79.0 / \mathrm{h}$ | $                \$12.0 / \mathrm{h}$ | $                \$35.0 / \mathrm{h}$ | $\$47.0 / \mathrm{h}$ |
 ```
 
@@ -243,8 +243,8 @@ Determining the market-clearing prices and quantities for the two-node grid of E
 
 |        |                                        Cost |                               Utility |                      Producer Surplus |                            Consumer Surplus |                     Welfare |
 |-------:|--------------------------------------------:|--------------------------------------:|--------------------------------------:|--------------------------------------------:|----------------------------:|
-|        | $C_\mathrm{G1} = \$12.     0  / \mathrm{h}$ | $C_\mathrm{L1} = \$32.0 / \mathrm{h}$ | $S_\mathrm{G1} = \$12.0 / \mathrm{h}$ | $S_\mathrm{L1} = \$11.     0  / \mathrm{h}$ |                             |
-|        | $C_\mathrm{G2} = \$13.\bar{3} / \mathrm{h}$ | $C_\mathrm{L2} = \$27.0 / \mathrm{h}$ | $S_\mathrm{G2} = \$ 0.0 / \mathrm{h}$ | $S_\mathrm{L2} = \$10.\bar{6} / \mathrm{h}$ |                             |
+|        | $C_\mathrm{G1} = \$12.     0  / \mathrm{h}$ | $U_\mathrm{L1} = \$32.0 / \mathrm{h}$ | $S_\mathrm{G1} = \$12.0 / \mathrm{h}$ | $S_\mathrm{L1} = \$11.     0  / \mathrm{h}$ |                             |
+|        | $C_\mathrm{G2} = \$13.\bar{3} / \mathrm{h}$ | $U_\mathrm{L2} = \$27.0 / \mathrm{h}$ | $S_\mathrm{G2} = \$ 0.0 / \mathrm{h}$ | $S_\mathrm{L2} = \$10.\bar{6} / \mathrm{h}$ |                             |
 | Total: | $                \$25.\bar{3} / \mathrm{h}$ | $                \$59.0 / \mathrm{h}$ | $                \$12.0 / \mathrm{h}$ | $                \$21.\bar{6} / \mathrm{h}$ | $\$33.\bar{6} / \mathrm{h}$ |
 ```
 
@@ -297,7 +297,7 @@ Network of Example 4.
 :label: fig_2_8
 :width: 100%
 
-Individual supply and demand curves of generator $\mathrm{G1}$ (at node $\mathrm{A}$) and generator $\mathrm{G2}$, load $\mathrm{L1}$, and load $\mathrm{L2}$ (at node $\mathrm{B}$), showing the resulting market-clearing prices and quantities.
+Individual supply and demand curves of generator $\mathrm{G1}$ (at node $\mathrm{A}$) and generator $\mathrm{G2}$, load $\mathrm{L1}$, and load $\mathrm{L2}$ (at node $\mathrm{B}$) of Example 4, showing the resulting market-clearing prices and quantities.
 ```
 
 ```{note}
